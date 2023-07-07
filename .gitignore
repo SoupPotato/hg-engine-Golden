@@ -83,3 +83,4 @@ sdat/*
 tools/swav2swar.exe
 
 *:Zone.Identifier
+wsl.exe
