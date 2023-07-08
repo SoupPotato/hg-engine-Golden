@@ -112,7 +112,7 @@ heightentry SPECIES_KINGLER, 6, 6, 12, 12
 heightentry SPECIES_VOLTORB, "null", 20, "null", 25
 heightentry SPECIES_ELECTRODE, "null", 16, "null", 17
 heightentry SPECIES_EXEGGCUTE, 23, 23, 21, 21
-heightentry SPECIES_EXEGGUTOR, 10, 10, 3, 3
+heightentry SPECIES_EXEGGUTOR,  7,  7, 3, 3
 heightentry SPECIES_CUBONE, 12, 12, 21, 21
 heightentry SPECIES_MAROWAK, 9, 9, 12, 12
 heightentry SPECIES_HITMONLEE, "null", 5, "null", 12
@@ -384,7 +384,7 @@ heightentry SPECIES_BAGON, 8, 8, 17, 17
 heightentry SPECIES_SHELGON, 17, 17, 18, 18
 heightentry SPECIES_SALAMENCE, 4, 4, 5, 5
 heightentry SPECIES_BELDUM, "null", 13, "null", 22
-heightentry SPECIES_METANG, "null", 16, "null", 14
+heightentry SPECIES_METANG, "null", 7, "null", 14
 heightentry SPECIES_METAGROSS, "null", 8, "null", 15
 heightentry SPECIES_REGIROCK, "null", 8, "null", 7
 heightentry SPECIES_REGICE, "null", 16, "null", 11
