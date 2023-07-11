@@ -18,19 +18,9 @@ extern const u8 StatBoostModifiers[][2];
 
 const u16 SoundproofMoveList[] =
 {
-    MOVE_GROWL,
-    MOVE_ROAR,
-    MOVE_SING,
-    MOVE_SUPERSONIC,
-    MOVE_SCREECH,
-    MOVE_SNORE,
-    MOVE_UPROAR,
-    MOVE_METAL_SOUND,
-    MOVE_GRASS_WHISTLE,
-    MOVE_HYPER_VOICE,
-    MOVE_BUG_BUZZ,
-    MOVE_CHATTER,
     MOVE_BOOMBURST,
+    MOVE_BUG_BUZZ,
+    MOVE_CHATTER,	
     MOVE_CLANGING_SCALES,
     MOVE_CLANGOROUS_SOUL,
     //MOVE_CLANGOROUS_SOULBLAZE,
@@ -38,18 +28,27 @@ const u16 SoundproofMoveList[] =
     MOVE_DISARMING_VOICE,
     MOVE_ECHOED_VOICE,
     MOVE_EERIE_SPELL,
+    MOVE_GRASS_WHISTLE,
+    MOVE_GROWL,
     //MOVE_HEAL_BELL,
     //MOVE_HOWL,
     MOVE_HYPER_VOICE,
+    MOVE_METAL_SOUND,	
     MOVE_NOBLE_ROAR,
     MOVE_OVERDRIVE,
     MOVE_PARTING_SHOT,
     MOVE_PERISH_SONG,
     MOVE_RELIC_SONG,
+    MOVE_ROAR,
     MOVE_ROUND,
+    MOVE_SCREECH,
     //MOVE_SHADOW_PANIC,
+    MOVE_SING,
     MOVE_SNARL,
+    MOVE_SNORE,
     MOVE_SPARKLING_ARIA,
+    MOVE_SUPERSONIC,
+    MOVE_UPROAR,
 };
 
 const u16 BulletproofMoveList[] =
@@ -82,13 +81,13 @@ const u16 BulletproofMoveList[] =
 
 const u16 PowderMoveList[] = {
     MOVE_COTTON_SPORE,
+    MOVE_MAGIC_POWDER,
     MOVE_POISON_POWDER,
-    MOVE_SLEEP_POWDER,
-    MOVE_STUN_SPORE,	
-    MOVE_SPORE,
     MOVE_POWDER,
     MOVE_RAGE_POWDER,
-    MOVE_MAGIC_POWDER,
+    MOVE_SLEEP_POWDER,
+    MOVE_STUN_SPORE,
+    MOVE_SPORE,
 };
 
 int MoveCheckDamageNegatingAbilities(struct BattleStruct *sp, int attacker, int defender)
@@ -239,6 +238,10 @@ enum
     SWITCH_IN_CHECK_FAIRY_AURA,
     SWITCH_IN_CHECK_AURA_BREAK,
     SWITCH_IN_CHECK_IMPOSTER,
+
+// items that display messages.
+    SWITCH_IN_CHECK_AIR_BALLOON,
+
     SWITCH_IN_CHECK_END,
 };
 
@@ -262,6 +265,11 @@ BOOL IntimidateCheckHelper(u16 ability) //TODO adjust Intimidate switch-in check
             return FALSE;
     }
 }
+
+
+// this function is actually sorta just run whenever it can, but it's best to think of it as on switch in
+// other item functions happen when they can and aren't ever really on switch in, so those meant to be covered on switch in are done so here
+
 
 int SwitchInAbilityCheck(void *bw, struct BattleStruct *sp)
 {   int i;
@@ -966,7 +974,7 @@ int SwitchInAbilityCheck(void *bw, struct BattleStruct *sp)
                 }
 
                 sp->attack_client = client_no; // attack transforms into defence
-                sp->current_move_index = MOVE_TRANSFORM;
+                sp->current_move_index = MOVE_TRANSFORM; // force move anim to play
                 if (sp->battlemon[BATTLER_OPPONENT(client_no)].hp != 0 && sp->battlemon[BATTLER_ACROSS(client_no)].hp != 0)
                 {
                     sp->defence_client = (client_no & 1) + ((BattleRand(bw) & 1) * 2); // get random defender
@@ -1011,6 +1019,7 @@ int SwitchInAbilityCheck(void *bw, struct BattleStruct *sp)
                 sp->battlemon[sp->attack_client].moveeffect.slow_start_count = sp->total_turn + 1;
                 sp->battlemon[sp->attack_client].slow_start_flag = 0;
                 sp->battlemon[sp->attack_client].slow_start_end_flag = 0;
+                ClearBattleMonFlags(sp, sp->attack_client); // clear extra flags here too
                 
                 for(i = 0; i < 4; i++)
                 {
@@ -1025,6 +1034,28 @@ int SwitchInAbilityCheck(void *bw, struct BattleStruct *sp)
                     }
                 }
                 break;
+
+
+            case SWITCH_IN_CHECK_AIR_BALLOON:
+                for(i = 0; i < client_set_max; i++)
+                {
+                    client_no = sp->turn_order[i];
+                    if ((sp->battlemon[client_no].air_ballon_flag == 0)
+                     && (sp->battlemon[client_no].hp)
+                     && (BattleItemDataGet(sp, sp->battlemon[client_no].item, 1) == HOLD_EFFECT_UNGROUND_DESTROYED_ON_HIT))
+                    {
+                        sp->battlemon[client_no].air_ballon_flag = 1;
+                        sp->client_work = client_no;
+                        scriptnum = SUB_SEQ_HANDLE_AIR_BALLOON_MESSAGE;
+                        ret = SWITCH_IN_CHECK_MOVE_SCRIPT;
+                        break;
+                    }
+                }
+                if(i == client_set_max){
+                    sp->switch_in_check_seq_no++;
+                }
+
+
                 // 02253D78
             case SWITCH_IN_CHECK_END:
                 sp->switch_in_check_seq_no = 0;
@@ -1239,7 +1270,7 @@ BOOL CanPickpocketStealClientItem(struct BattleStruct *sp, int client_no)
     switch(GetBattleMonItem(sp, client_no))
     {
         case ITEM_GRASS_MAIL ... ITEM_BRICK_MAIL:
-        case ITEM_MEGA_STONE_VENUSAUR ... ITEM_MEGA_STONE_DIANCIE:
+        case ITEM_VENUSAURITE ... ITEM_DIANCITE:
         case ITEM_BLUE_ORB:
         case ITEM_RED_ORB:
         case ITEM_GRISEOUS_ORB:

@@ -583,3 +583,189 @@ Galladite
 Audinite
 Diancite
 Pixie Plate
+Absorb Bulb
+Air Balloon
+BalmMushroom
+Big Nugget
+Binding Band
+Casteliacone
+Cell Battery
+Comet Shard
+Dream Ball
+Eject Button
+Eviolite
+Float Stone
+Pearl String
+Prism Scale
+Red Card
+Ring Target
+Rocky Helmet
+Sweet Heart
+Ability Pill
+Assault Vest
+LuminousMoss
+Lumiose Cake
+Sachet
+Safe Goggles
+Shalour Cake
+Snowball
+Weak Policy
+WhippedDream
+Adrenal Orb
+Beast Ball
+Big Malasada
+Bottle Cap
+Bottle Cap
+ElectricSeed
+Grassy Seed
+Misty Seed
+Psychic Seed
+Ice Stone
+Protect Pads
+GroundExtend
+AbilityPatch
+Blk Augurite
+Berry Sweet
+Clover Sweet
+Flower Sweet
+Love Sweet
+Ribbon Sweet
+Star Sweet
+Berry Sweet
+Miss Policy
+Chipped Pot
+Cracked Pot
+Eject Pack
+Exp Candy S
+Exp Candy M
+Exp Candy L
+Exp Candy XS
+Exp Candy XL
+Galar Cuff
+Galar Twig
+Galar Wreath
+Heavy Boots
+Linking Cord
+MoomooCheese
+Peat Block
+Room Service
+Rusty Shield
+Rusty Sword
+Sweet Apple
+Tart Apple
+Throat Spray
+UtilUmbrella
+Ability Lock
+Holy Armor
+Boost Energy
+Clear Amulet
+Covert Cloak
+Gimmighoul $
+Leader Crest
+Loaded Dice
+Cursed Armor
+Mirror Herb
+Boxing Glove
+Roseli Berry
+Kee Berry
+MarangaBerry
+Burn Drive
+Chill Drive
+Douse Drive
+Shock Drive
+Cover Fossil
+Plume Fossil
+Jaw Fossil
+Sail Fossil
+Bird Fossil
+Dino Fossil
+Drake Fossil
+Fish Fossil
+Normal Gem
+Fighting Gem
+Flying Gem
+Poison Gem
+Ground Gem
+Rock Gem
+Bug Gem
+Ghost Gem
+Steel Gem
+Fire Gem
+Water Gem
+Grass Gem
+Electric Gem
+Psychic Gem
+Ice Gem
+Dragon Gem
+Dark Gem
+Fairy Gem
+Fight Memory
+FlyingMemory
+PoisonMemory
+GroundMemory
+Rock Memory
+Bug Memory
+Ghost Memory
+Steel Memory
+Fire Memory
+Water Memory
+Grass Memory
+ElectrcMemory
+PsychicMemory
+Ice Memory
+DragonMemory
+Dark Memory
+Fairy Memory
+Red Nectar
+YellowNectar
+Pink Nectar
+PurpleNectar
+Blank Plate
+Legend Plate
+Relic Copper
+Relic Silver
+Relic Gold
+Relic Vase
+Relic Band
+Relic Statue
+Relic Crown
+Health Wing
+Muscle Wing
+Resist Wing
+Genius Wing
+Clever Wing
+Swift Wing
+Pretty Wing
+DNA Splicers
+Reveal Glass
+Jail Bottle
+Catch Charm
+Exp. Charm
+Oval Charm
+Shiny Charm
+N Solarizer
+N Lunarizer
+Box Link
+Zygarde Cube
+Sun Flute
+Moon Flute
+Light Stone
+Dark Stone
+Icy Carrot
+Shady Carrot
+Unity Reins
+Wooden Crown
+Rotom Book
+Adamant Gem
+Lustrous Gem
+Griseous Gem
+Dark Scroll
+Water Scroll
+Mega Ring
+Autograph
+Gold Teeth
+Key Stone
+Lift Key
+Pewter Snack
+Silph Scope
+Tea

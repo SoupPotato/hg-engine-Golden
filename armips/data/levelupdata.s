@@ -21957,7 +21957,7 @@ levelup SPECIES_PALKIA_ORIGIN
     terminatelearnset
 
 
-levelup SPECIES_BASCULIN_BLUE_STRIPED
+levelup SPECIES_BASCULIN_RED_STRIPED
 	learnset MOVE_TAIL_WHIP, 1
 	learnset MOVE_TACKLE, 1
 	learnset MOVE_WATER_GUN, 1
@@ -21979,7 +21979,7 @@ levelup SPECIES_BASCULIN_BLUE_STRIPED
 	terminatelearnset
 
 
-levelup SPECIES_BASCULIN_WHITE_STRIPED
+levelup SPECIES_BASCULIN_BLUE_STRIPED
     learnset MOVE_TAIL_WHIP, 1
     learnset MOVE_TACKLE, 1
     learnset MOVE_WATER_GUN, 1

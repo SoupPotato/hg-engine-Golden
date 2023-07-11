@@ -63,59 +63,60 @@ static const u8 HeldItemPowerUpTable[][2]={
     {HOLD_EFFECT_PLATE_BOOST_DRAGON, TYPE_DRAGON},
     {HOLD_EFFECT_PLATE_BOOST_DARK, TYPE_DARK},
     {HOLD_EFFECT_PLATE_BOOST_STEEL, TYPE_STEEL},
+    {HOLD_EFFECT_PLATE_BOOST_NORMAL, TYPE_NORMAL},	
 #if FAIRY_TYPE_IMPLEMENTED == 1
-    {HOLD_EFFECT_PLATE_BOOST_FAIRY, TYPE_FAIRY},
+    {HOLD_EFFECT_PLATE_BOOST_FAIRY, TYPE_FAIRY},	
 #endif
 };
 
 static const u16 IronFistMovesTable[] = {
-    MOVE_ICE_PUNCH,
-    MOVE_FIRE_PUNCH,
-    MOVE_THUNDER_PUNCH,
-    MOVE_MACH_PUNCH,
-    MOVE_FOCUS_PUNCH,
-    MOVE_DIZZY_PUNCH,
-    MOVE_DYNAMIC_PUNCH,
-    MOVE_HAMMER_ARM,
-    MOVE_MEGA_PUNCH,
-    MOVE_COMET_PUNCH,
-    MOVE_METEOR_MASH,
-    MOVE_SHADOW_PUNCH,
-    MOVE_DRAIN_PUNCH,
     MOVE_BULLET_PUNCH,
-    MOVE_SKY_UPPERCUT,	
+    MOVE_COMET_PUNCH,
+    MOVE_DIZZY_PUNCH,
     MOVE_DOUBLE_IRON_BASH,
+    MOVE_DRAIN_PUNCH,
+    MOVE_DYNAMIC_PUNCH,
+    MOVE_FIRE_PUNCH,
+    MOVE_FOCUS_PUNCH,
+    MOVE_HAMMER_ARM,
+    MOVE_HEADLONG_RUSH,
     MOVE_ICE_HAMMER,
-    MOVE_POWER_UP_PUNCH,
+    MOVE_ICE_PUNCH,
+    MOVE_JET_PUNCH,
+    MOVE_MACH_PUNCH,
+    MOVE_MEGA_PUNCH,
+    MOVE_METEOR_MASH,
     MOVE_PLASMA_FISTS,
+    MOVE_POWER_UP_PUNCH,
     MOVE_RAGE_FIST,
+    MOVE_SHADOW_PUNCH,
+    MOVE_SKY_UPPERCUT,
     MOVE_SURGING_STRIKES,
-    MOVE_WICKED_BLOW,	
-    MOVE_HEADLONG_RUSH,		
-    MOVE_JET_PUNCH,	
+    MOVE_THUNDER_PUNCH,
+    MOVE_WICKED_BLOW,
 };
 
 static const u16 StrongJawMovesTable[] = {
         MOVE_BITE,
         MOVE_CRUNCH,
         MOVE_FIRE_FANG,
+        MOVE_FISHIOUS_REND,
         MOVE_HYPER_FANG,
         MOVE_ICE_FANG,
-        MOVE_POISON_FANG,
-        MOVE_THUNDER_FANG,
-        MOVE_PSYCHIC_FANGS,
-        MOVE_FISHIOUS_REND,
         MOVE_JAW_LOCK,
+        MOVE_POISON_FANG,
+        MOVE_PSYCHIC_FANGS,
+        MOVE_THUNDER_FANG,
 };
 
 static const u16 MegaLauncherMovesTable[] = {
         MOVE_AURA_SPHERE,
         MOVE_DARK_PULSE,
         MOVE_DRAGON_PULSE,
+        MOVE_HEAL_PULSE,
+        MOVE_ORIGIN_PULSE,
+        MOVE_TERRAIN_PULSE,
         MOVE_WATER_PULSE,
-        MOVE_HEAL_PULSE,		
-//        MOVE_ORIGIN_PULSE,
-//        MOVE_TERRAIN_PULSE,
 };
 
 static const u16 SharpnessMovesTable[] = {
@@ -123,26 +124,26 @@ static const u16 SharpnessMovesTable[] = {
         MOVE_AIR_CUTTER,
         MOVE_AIR_SLASH,
         MOVE_AQUA_CUTTER,
-        MOVE_CEASELESS_EDGE,
-        MOVE_FURY_CUTTER,
-        MOVE_LEAF_BLADE,
-        MOVE_NIGHT_SLASH,
-        MOVE_PSYCHO_CUT,
-        MOVE_RAZOR_SHELL,
-        MOVE_SACRED_SWORD,
-        MOVE_SECRET_SWORD,		
-        MOVE_SLASH,
-        MOVE_STONE_AXE,
-        MOVE_X_SCISSOR,
         MOVE_BEHEMOTH_BLADE,
         MOVE_BITTER_BLADE,
+        MOVE_CEASELESS_EDGE,
         MOVE_CROSS_POISON,
         MOVE_CUT,
+        MOVE_FURY_CUTTER,
         MOVE_KOWTOW_CLEAVE,
+        MOVE_LEAF_BLADE,
+        MOVE_NIGHT_SLASH,
+        MOVE_POPULATION_BOMB,			
         MOVE_PSYBLADE,		
+        MOVE_PSYCHO_CUT,
+        MOVE_RAZOR_SHELL,
         MOVE_RAZOR_LEAF,
+        MOVE_SACRED_SWORD,
+        MOVE_SECRET_SWORD,
+        MOVE_SLASH,
         MOVE_SOLAR_BLADE,
-        MOVE_POPULATION_BOMB,		
+        MOVE_STONE_AXE,
+        MOVE_X_SCISSOR,
 };
 
 //int NormalTypeChangeAbilityHelper(int ability)
@@ -160,7 +161,7 @@ static const u16 SharpnessMovesTable[] = {
 //        case ABILITY_AERILATE:
 //            movetype = TYPE_FLYING;
 //            break;
-//        case ABILITY_REFRIDGERATE:
+//        case ABILITY_REFRIGERATE:
 //            movetype = TYPE_ICE;
 //            break;
 //        default:
@@ -178,7 +179,7 @@ static const u16 SharpnessMovesTable[] = {
 //        case ABILITY_GALVANIZE:
 //        case ABILITY_PIXILATE:
 //        case ABILITY_AERILATE:
-//        case ABILITY_REFRIDGERATE:
+//        case ABILITY_REFRIGERATE:
 //            return TRUE;
 //        default:
 //            return FALSE;
@@ -386,6 +387,11 @@ int CalcBaseDamage(void *bw, struct BattleStruct *sp, int moveno, u32 side_cond,
     // handle metal powder
     if ((DefendingMon.item_held_effect == HOLD_EFFECT_METAL_POWDER) && (DefendingMon.species == SPECIES_DITTO))
         defense *= 2;
+
+    // handle eviolite
+   // if ((DefendingMon.item_held_effect == HOLD_EFFECT_EVIOLITE)
+   //     defense *= 2;
+   //     sp_defense *= 2;	
 
     // handle thick club
     if ((AttackingMon.item_held_effect == HOLD_EFFECT_THICK_CLUB)

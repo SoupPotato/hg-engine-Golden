@@ -780,7 +780,7 @@ evodata SPECIES_ABRA
 
 evodata SPECIES_KADABRA
     evolution EVO_TRADE, 0, SPECIES_ALAKAZAM
-    evolution EVO_NONE, 0, SPECIES_NONE
+    evolution EVO_USE_ITEM, ITEM_LINKING_CORD, SPECIES_ALAKAZAM
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -816,7 +816,7 @@ evodata SPECIES_MACHOP
 
 evodata SPECIES_MACHOKE
     evolution EVO_TRADE, 0, SPECIES_MACHAMP
-    evolution EVO_NONE, 0, SPECIES_NONE
+    evolution EVO_USE_ITEM, ITEM_LINKING_CORD, SPECIES_MACHAMP
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -912,7 +912,7 @@ evodata SPECIES_GEODUDE
 
 evodata SPECIES_GRAVELER
     evolution EVO_TRADE, 0, SPECIES_GOLEM
-    evolution EVO_NONE, 0, SPECIES_NONE
+    evolution EVO_USE_ITEM, ITEM_LINKING_CORD, SPECIES_GOLEM
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -1128,7 +1128,7 @@ evodata SPECIES_GASTLY
 
 evodata SPECIES_HAUNTER
     evolution EVO_TRADE, 0, SPECIES_GENGAR
-    evolution EVO_NONE, 0, SPECIES_NONE
+    evolution EVO_USE_ITEM, ITEM_LINKING_CORD, SPECIES_GENGAR
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -1488,7 +1488,7 @@ evodata SPECIES_MR_MIME
 
 evodata SPECIES_SCYTHER
     evolution EVO_TRADE_ITEM, ITEM_METAL_COAT, SPECIES_SCIZOR
-    evolution EVO_NONE, 0, SPECIES_NONE
+    evolution EVO_USE_ITEM, ITEM_BLACK_AUGURITE, SPECIES_KLEAVOR
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -1607,8 +1607,8 @@ evodata SPECIES_DITTO
     terminateevodata
 
 evodata SPECIES_EEVEE
-    evolution EVO_LEVEL_MOSSY_STONE, 0, SPECIES_LEAFEON
-    evolution EVO_LEVEL_ICY_STONE, 0, SPECIES_GLACEON
+    evolution EVO_USE_ITEM, ITEM_LEAF_STONE, SPECIES_LEAFEON
+    evolution EVO_USE_ITEM, ITEM_ICE_STONE, SPECIES_GLACEON
     evolution EVO_USE_ITEM, ITEM_THUNDERSTONE, SPECIES_JOLTEON
     evolution EVO_USE_ITEM, ITEM_WATER_STONE, SPECIES_VAPOREON
     evolution EVO_USE_ITEM, ITEM_FIRE_STONE, SPECIES_FLAREON
@@ -2615,7 +2615,7 @@ evodata SPECIES_TEDDIURSA
     terminateevodata
 
 evodata SPECIES_URSARING
-    evolution EVO_NONE, 0, SPECIES_NONE
+    evolution EVO_USE_ITEM_NIGHT, ITEM_PEAT_BLOCK, SPECIES_URSALUNA
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -2819,7 +2819,7 @@ evodata SPECIES_PORYGON2
     terminateevodata
 
 evodata SPECIES_STANTLER
-    evolution EVO_NONE, 0, SPECIES_NONE
+    evolution EVO_KNOWS_MOVE, MOVE_PSYSHIELD_BASH, SPECIES_WYRDEER //placeholder
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -4200,7 +4200,7 @@ evodata SPECIES_ARMALDO
 
 evodata SPECIES_FEEBAS
     evolution EVO_MAX_BEAUTY, 170, SPECIES_MILOTIC
-    evolution EVO_NONE, 0, SPECIES_NONE
+    evolution EVO_TRADE_ITEM, ITEM_PRISM_SCALE, SPECIES_MILOTIC
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -6916,7 +6916,7 @@ evodata SPECIES_ROGGENROLA
 
 evodata SPECIES_BOLDORE
     evolution EVO_TRADE, 0, SPECIES_GIGALITH
-    evolution EVO_NONE, 0, SPECIES_NONE
+    evolution EVO_USE_ITEM, ITEM_LINKING_CORD, SPECIES_GIGALITH
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -7012,7 +7012,7 @@ evodata SPECIES_TIMBURR
 
 evodata SPECIES_GURDURR
     evolution EVO_TRADE, 0, SPECIES_CONKELDURR
-    evolution EVO_NONE, 0, SPECIES_NONE
+    evolution EVO_USE_ITEM, ITEM_LINKING_CORD, SPECIES_CONKELDURR
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -7215,8 +7215,8 @@ evodata SPECIES_LILLIGANT
     terminateevodata
 
 evodata SPECIES_BASCULIN
-    evolution EVO_NONE, 0, SPECIES_NONE
-    evolution EVO_NONE, 0, SPECIES_NONE
+    evolutionwithform EVO_LEVEL_MALE, 0, SPECIES_BASCULEGION, 0
+    evolutionwithform EVO_LEVEL_FEMALE, 0, SPECIES_BASCULEGION, 3
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -9483,7 +9483,7 @@ evodata SPECIES_VIKAVOLT
 terminateevodata
 
 evodata SPECIES_CRABRAWLER
-    evolution EVO_LEVEL_ICY_STONE, 0, SPECIES_CRABOMINABLE
+    evolution EVO_USE_ITEM, ITEM_ICE_STONE, SPECIES_CRABOMINABLE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -12091,7 +12091,7 @@ evodata SPECIES_GROUDON_PRIMAL
 terminateevodata
 
 evodata SPECIES_RATTATA_ALOLAN
-    evolution EVO_LEVEL_UP, 20, SPECIES_RATICATE
+    evolutionwithform EVO_LEVEL_NIGHT, 20, SPECIES_RATICATE, 1
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -12127,7 +12127,7 @@ evodata SPECIES_RAICHU_ALOLAN
 terminateevodata
 
 evodata SPECIES_SANDSHREW_ALOLAN
-    evolution EVO_LEVEL_ICY_STONE, 0, SPECIES_SANDSLASH
+    evolutionwithform EVO_USE_ITEM, ITEM_ICE_STONE, SPECIES_SANDSLASH, 1
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -12151,7 +12151,7 @@ evodata SPECIES_SANDSLASH_ALOLAN
 terminateevodata
 
 evodata SPECIES_VULPIX_ALOLAN
-    evolution EVO_LEVEL_ICY_STONE, 0, SPECIES_NINETALES
+    evolutionwithform EVO_USE_ITEM, ITEM_ICE_STONE, SPECIES_NINETALES, 1
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -12175,7 +12175,7 @@ evodata SPECIES_NINETALES_ALOLAN
 terminateevodata
 
 evodata SPECIES_DIGLETT_ALOLAN
-    evolution EVO_LEVEL_UP, 26, SPECIES_DUGTRIO
+    evolutionwithform EVO_LEVEL_UP, 26, SPECIES_DUGTRIO, 1
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -12199,7 +12199,7 @@ evodata SPECIES_DUGTRIO_ALOLAN
 terminateevodata
 
 evodata SPECIES_MEOWTH_ALOLAN
-    evolution EVO_HAPPINESS, 28, SPECIES_PERSIAN
+    evolutionwithform EVO_HAPPINESS, 0, SPECIES_PERSIAN, 1
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -12223,7 +12223,7 @@ evodata SPECIES_PERSIAN_ALOLAN
 terminateevodata
 
 evodata SPECIES_GEODUDE_ALOLAN
-    evolution EVO_LEVEL_UP, 25, SPECIES_GRAVELER
+    evolutionwithform EVO_LEVEL_UP, 25, SPECIES_GRAVELER, 1
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -12235,8 +12235,8 @@ evodata SPECIES_GEODUDE_ALOLAN
 terminateevodata
 
 evodata SPECIES_GRAVELER_ALOLAN
-    evolution EVO_TRADE, 0, SPECIES_GOLEM
-    evolution EVO_NONE, 0, SPECIES_NONE
+    evolutionwithform EVO_TRADE, 0, SPECIES_GOLEM, 1
+    evolutionwithform EVO_USE_ITEM, ITEM_LINKING_CORD, SPECIES_GOLEM, 1
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -12259,7 +12259,7 @@ evodata SPECIES_GOLEM_ALOLAN
 terminateevodata
 
 evodata SPECIES_GRIMER_ALOLAN
-    evolution EVO_LEVEL_UP, 38, SPECIES_MUK
+    evolutionwithform EVO_LEVEL_UP, 38, SPECIES_MUK, 1
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -12319,7 +12319,7 @@ evodata SPECIES_MEOWTH_GALARIAN
 terminateevodata
 
 evodata SPECIES_PONYTA_GALARIAN
-    evolution EVO_LEVEL_UP, 40, SPECIES_RAPIDASH
+    evolutionwithform EVO_LEVEL_UP, 40, SPECIES_RAPIDASH, 1
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -12343,8 +12343,8 @@ evodata SPECIES_RAPIDASH_GALARIAN
 terminateevodata
 
 evodata SPECIES_SLOWPOKE_GALARIAN
-    evolution EVO_USE_ITEM, ITEM_GALARICA_CUFF, SPECIES_SLOWBRO
-    evolution EVO_USE_ITEM, ITEM_GALARICA_WREATH, SPECIES_SLOWKING
+    evolutionwithform EVO_USE_ITEM, ITEM_GALARICA_CUFF, SPECIES_SLOWBRO, 1
+    evolutionwithform EVO_USE_ITEM, ITEM_GALARICA_WREATH, SPECIES_SLOWKING, 1
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -12463,7 +12463,7 @@ evodata SPECIES_CORSOLA_GALARIAN
 terminateevodata
 
 evodata SPECIES_ZIGZAGOON_GALARIAN
-    evolution EVO_LEVEL_UP, 20, SPECIES_LINOONE
+    evolutionwithform EVO_LEVEL_UP, 20, SPECIES_LINOONE, 1
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -12487,7 +12487,7 @@ evodata SPECIES_LINOONE_GALARIAN
 terminateevodata
 
 evodata SPECIES_DARUMAKA_GALARIAN
-    evolution EVO_LEVEL_ICY_STONE, 0, SPECIES_DARMANITAN
+    evolutionwithform EVO_USE_ITEM, ITEM_ICE_STONE, SPECIES_DARMANITAN, 1
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -12798,7 +12798,7 @@ evodata SPECIES_PALKIA_ORIGIN
     evolution EVO_NONE, 0, SPECIES_NONE
 terminateevodata
 
-evodata SPECIES_BASCULIN_BLUE_STRIPED
+evodata SPECIES_BASCULIN_RED_STRIPED
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -12810,9 +12810,9 @@ evodata SPECIES_BASCULIN_BLUE_STRIPED
     evolution EVO_NONE, 0, SPECIES_NONE
 terminateevodata
 
-evodata SPECIES_BASCULIN_WHITE_STRIPED
-    evolutionwithform EVO_LEVEL_MALE, 0, SPECIES_BASCULEGION, 2 // set to invalid form to force male form
-    evolutionwithform EVO_LEVEL_FEMALE, 0, SPECIES_BASCULEGION, 1
+evodata SPECIES_BASCULIN_BLUE_STRIPED
+    evolution EVO_NONE, 0, SPECIES_NONE
+    evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -14323,7 +14323,7 @@ evodata SPECIES_ENAMORUS_THERIAN
 terminateevodata
 
 evodata SPECIES_GROWLITHE_HISUIAN
-    evolution EVO_USE_ITEM, ITEM_FIRE_STONE, SPECIES_ARCANINE
+    evolutionwithform EVO_USE_ITEM, ITEM_FIRE_STONE, SPECIES_ARCANINE, 1
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -14347,7 +14347,7 @@ evodata SPECIES_ARCANINE_HISUIAN
 terminateevodata
 
 evodata SPECIES_VOLTORB_HISUIAN
-    evolution EVO_LEVEL_UP, 30, SPECIES_ELECTRODE
+    evolutionwithform EVO_USE_ITEM, ITEM_LEAF_STONE, SPECIES_ELECTRODE, 1
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -14431,7 +14431,7 @@ evodata SPECIES_LILLIGANT_HISUIAN
 terminateevodata
 
 evodata SPECIES_ZORUA_HISUIAN
-    evolution EVO_LEVEL_UP, 30, SPECIES_ZOROARK
+    evolutionwithform EVO_LEVEL_UP, 30, SPECIES_ZOROARK, 1
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -14467,7 +14467,7 @@ evodata SPECIES_BRAVIARY_HISUIAN
 terminateevodata
 
 evodata SPECIES_SLIGGOO_HISUIAN
-    evolution EVO_KNOWS_MOVE, MOVE_RAIN_DANCE, SPECIES_GOODRA
+    evolutionwithform EVO_LEVEL_RAIN, 50, SPECIES_GOODRA, 1
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
