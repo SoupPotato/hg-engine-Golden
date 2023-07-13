@@ -8306,6 +8306,7 @@ levelup SPECIES_BUIZEL
     learnset MOVE_AQUA_TAIL, 38
     learnset MOVE_AGILITY, 41
     learnset MOVE_HYDRO_PUMP, 45
+    learnset MOVE_WAVE_CRASH, 49
     terminatelearnset
 
 
@@ -8329,6 +8330,7 @@ levelup SPECIES_FLOATZEL
     learnset MOVE_AQUA_TAIL, 46
     learnset MOVE_AGILITY, 51
     learnset MOVE_HYDRO_PUMP, 57
+    learnset MOVE_WAVE_CRASH, 62
     terminatelearnset
 
 
