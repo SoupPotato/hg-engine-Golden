@@ -7,8 +7,6 @@
 //#define DEBUG_ADJUSTED_ACCURACY
 
 // DEBUG_ADJUSTED_DAMAGE is used to debug the adjusted damage for testing abilities that affect damage output.
-// this is used in combination with a lua script to dynamically display the adjusted damage.
-// uncomment the define to have the information written to 0x23DF000
 //#define DEBUG_ADJUSTED_DAMAGE
 
 // DEBUG_HIDDEN_ABILITIES is used to debug hidden abilities by forcing all generated mons to have the hidden ability bit set.
@@ -33,5 +31,14 @@
 
 // DEBUG_SOUND_SBNK_LOADS prints out sseq loads from the SDAT and the free space left after the load.
 //#define DEBUG_SOUND_SBNK_LOADS
+
+// GUARANTEE_CAPTURES guarantees captures
+//#define GUARANTEE_CAPTURES
+
+// DEBUG_SQRT prints debug information for the gpio sqrt function
+//#define DEBUG_SQRT
+
+// DEBUG_PRINT_EXPERIENCE_VALUES prints debug information for experience outputs
+//#define DEBUG_PRINT_EXPERIENCE_VALUES
 
 #endif // DEBUG_H

@@ -51,7 +51,7 @@ ArchiveDataLoad = 0x02007509;
 ArchiveDataLoadMallocOfs = 0x0200757C | 1;
 NARC_ctor = 0x02007688 | 1;
 ArchiveDataLoadOfs = 0x02007560 | 1;
-sqrt = 0x0200048A | 1;
+/*sqrt = 0x0200048A | 1;*/
 
 /*Pokemon*/
 AllocMonZeroed = 0x0206DD2C | 1;
@@ -150,6 +150,7 @@ OAM_LoadResourcePlttWorkArc = 0x0200D644 |1;
 OAM_LoadResourceCellArc = 0x0200D6D4 | 1;
 OAM_LoadResourceCellAnmArc = 0x0200D704 |1;
 OAM_LoadResourceCharArc = 0x0200D4A4 |1;
+OAM_ObjectAnimeSeqSetCap = 0x0200DC4C | 1;
 
 OAM_ObjectAdd_S = 0x0200D734 |1;
 OAM_ObjectUpdate = 0x0200DC0C |1;
@@ -200,7 +201,7 @@ ChooseRandomTarget = 0x02253DA0 | 1;
 CountBattlerMoves = 0x02252EA8 | 1;
 AbilityStatusRecoverCheck = 0x022543A0 | 1;
 HeldItemHealCheck = 0x02254E7C | 1;
-LoadBattleSubSeqScript = 0x172DC + 0x022378C1;
+/*LoadBattleSubSeqScript = 0x172DC + 0x022378C1;*/
 HeldItemHoldEffectGet = 0x02255830 | 1;
 HeldItemAtkGet = 0x02255844 | 1;
 IsMovingAfterClient = 0x0225561C | 1;
@@ -237,7 +238,7 @@ Battle_GetClientPartyMon = 0x0223a880 | 1;
 
 /*Battle Script Functions*/
 IncrementBattleScriptPtr = 0x02245508 | 1;
-read_battle_script_param = 0x022454E8 | 1;
+/*read_battle_script_param = 0x022454E8 | 1;*/
 TagNickParaMake = 0x022522E0 | 1;
 JumpToMoveEffectScript = 0x02245518 | 1;
 BGCallback_Waza = 0x0226748C | 1;
@@ -442,3 +443,13 @@ Summary_PrintStringGeneric = 0x0208C850 | 1;
 CopyBoxPokemonToPokemon = 0x02071780 | 1;
 
 GetExpByGrowthRateAndLevel = 0x0206FD30 | 1;
+
+ServerGetExpCheck = 0x0224DD18 | 1;
+ServerZenmetsuCheck = 0x0224D7EC | 1;
+ST_ServerDir2ClientNoGet = 0x02257E98 | 1;
+
+/* tasks */
+CreateSysTask = 0x0200E320 | 1;
+DestroySysTask = 0x0200E390 | 1;
+
+BattleWorkClientParamGet = 0x0223A7E8 | 1;

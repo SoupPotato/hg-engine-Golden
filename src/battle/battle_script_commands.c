@@ -18,6 +18,8 @@
 BOOL btl_scr_cmd_E1_reduceweight(void *bw, struct BattleStruct *sp);
 BOOL btl_scr_cmd_E2_heavyslamdamagecalc(void *bw, struct BattleStruct *sp);
 BOOL btl_scr_cmd_E3_isuserlowerlevel(void *bw, struct BattleStruct *sp);
+BOOL btl_scr_cmd_E4_settailwind(void *bw, struct BattleStruct *sp);
+BOOL btl_scr_cmd_E5_iftailwindactive(void *bw, struct BattleStruct *sp);
 
 typedef BOOL (*btl_scr_cmd_func)(void *bw, struct BattleStruct *sp);
 #define START_OF_NEW_BTL_SCR_CMDS 0xE1
@@ -255,6 +257,8 @@ const u8 *BattleScrCmdNames[] =
     "reduceweight",
     "heavyslamdamagecalc",
     "isuserlowerlevel",
+    "settailwind",
+    "iftailwindactive",
 };
 
 u32 cmdAddress = 0;
@@ -266,6 +270,202 @@ const btl_scr_cmd_func NewBattleScriptCmdTable[] =
     [0xE1 - START_OF_NEW_BTL_SCR_CMDS] = btl_scr_cmd_E1_reduceweight,
     [0xE2 - START_OF_NEW_BTL_SCR_CMDS] = btl_scr_cmd_E2_heavyslamdamagecalc,
     [0xE3 - START_OF_NEW_BTL_SCR_CMDS] = btl_scr_cmd_E3_isuserlowerlevel,
+    [0xE4 - START_OF_NEW_BTL_SCR_CMDS] = btl_scr_cmd_E4_settailwind,
+    [0xE5 - START_OF_NEW_BTL_SCR_CMDS] = btl_scr_cmd_E5_iftailwindactive,
+};
+
+
+
+// entries before 0xFFFE are banned for mimic and metronome--after is just banned for metronome.  table ends with 0xFFFF
+u16 sMetronomeMimicMoveBanList[] =
+{
+    MOVE_METRONOME,
+    MOVE_STRUGGLE,
+    MOVE_SKETCH,
+    MOVE_MIMIC,
+    MOVE_CHATTER,
+    MOVE_BEHEMOTH_BLADE,
+    MOVE_BEHEMOTH_BASH,
+
+// z moves
+    MOVE_BREAKNECK_BLITZ_PHYSICAL,
+    MOVE_BREAKNECK_BLITZ_SPECIAL,
+    MOVE_ALL_OUT_PUMMELING_PHYSICAL,
+    MOVE_ALL_OUT_PUMMELING_SPECIAL,
+    MOVE_SUPERSONIC_SKYSTRIKE_PHYSICAL,
+    MOVE_SUPERSONIC_SKYSTRIKE_SPECIAL,
+    MOVE_ACID_DOWNPOUR_PHYSICAL,
+    MOVE_ACID_DOWNPOUR_SPECIAL,
+    MOVE_TECTONIC_RAGE_PHYSICAL,
+    MOVE_TECTONIC_RAGE_SPECIAL,
+    MOVE_CONTINENTAL_CRUSH_PHYSICAL,
+    MOVE_CONTINENTAL_CRUSH_SPECIAL,
+    MOVE_SAVAGE_SPIN_OUT_PHYSICAL,
+    MOVE_SAVAGE_SPIN_OUT_SPECIAL,
+    MOVE_NEVER_ENDING_NIGHTMARE_PHYSICAL,
+    MOVE_NEVER_ENDING_NIGHTMARE_SPECIAL,
+    MOVE_CORKSCREW_CRASH_PHYSICAL,
+    MOVE_CORKSCREW_CRASH_SPECIAL,
+    MOVE_INFERNO_OVERDRIVE_PHYSICAL,
+    MOVE_INFERNO_OVERDRIVE_SPECIAL,
+    MOVE_HYDRO_VORTEX_PHYSICAL,
+    MOVE_HYDRO_VORTEX_SPECIAL,
+    MOVE_BLOOM_DOOM_PHYSICAL,
+    MOVE_BLOOM_DOOM_SPECIAL,
+    MOVE_GIGAVOLT_HAVOC_PHYSICAL,
+    MOVE_GIGAVOLT_HAVOC_SPECIAL,
+    MOVE_SHATTERED_PSYCHE_PHYSICAL,
+    MOVE_SHATTERED_PSYCHE_SPECIAL,
+    MOVE_SUBZERO_SLAMMER_PHYSICAL,
+    MOVE_SUBZERO_SLAMMER_SPECIAL,
+    MOVE_DEVASTATING_DRAKE_PHYSICAL,
+    MOVE_DEVASTATING_DRAKE_SPECIAL,
+    MOVE_BLACK_HOLE_ECLIPSE_PHYSICAL,
+    MOVE_BLACK_HOLE_ECLIPSE_SPECIAL,
+    MOVE_TWINKLE_TACKLE_PHYSICAL,
+    MOVE_TWINKLE_TACKLE_SPECIAL,
+
+    MOVE_CATASTROPIKA,
+    MOVE_10_000_000_VOLT_THUNDERBOLT,
+    MOVE_STOKED_SPARKSURFER,
+    MOVE_EXTREME_EVOBOOST,
+    MOVE_PULVERIZING_PANCAKE,
+    MOVE_GENESIS_SUPERNOVA,
+    MOVE_SINISTER_ARROW_RAID,
+    MOVE_MALICIOUS_MOONSAULT,
+    MOVE_OCEANIC_OPERETTA,
+    MOVE_SPLINTERED_STORMSHARDS,
+    MOVE_LETS_SNUGGLE_FOREVER,
+    MOVE_CLANGOROUS_SOULBLAZE,
+    MOVE_GUARDIAN_OF_ALOLA,
+    MOVE_SEARING_SUNRAZE_SMASH,
+    MOVE_MENACING_MOONRAZE_MAELSTROM,
+    MOVE_LIGHT_THAT_BURNS_THE_SKY,
+    MOVE_SOUL_STEALING_7_STAR_STRIKE,
+
+// max moves
+    MOVE_MAX_GUARD,
+    MOVE_DYNAMAX_CANNON,
+    MOVE_MAX_FLARE,
+    MOVE_MAX_FLUTTERBY,
+    MOVE_MAX_LIGHTNING,
+    MOVE_MAX_STRIKE,
+    MOVE_MAX_KNUCKLE,
+    MOVE_MAX_PHANTASM,
+    MOVE_MAX_HAILSTORM,
+    MOVE_MAX_OOZE,
+    MOVE_MAX_GEYSER,
+    MOVE_MAX_AIRSTREAM,
+    MOVE_MAX_STARFALL,
+    MOVE_MAX_WYRMWIND,
+    MOVE_MAX_MINDSTORM,
+    MOVE_MAX_ROCKFALL,
+    MOVE_MAX_QUAKE,
+    MOVE_MAX_DARKNESS,
+    MOVE_MAX_OVERGROWTH,
+    MOVE_MAX_STEELSPIKE,
+
+    0xFFFE,
+    MOVE_AFTER_YOU,
+    MOVE_APPLE_ACID,
+    MOVE_ASSIST,
+    MOVE_ASTRAL_BARRAGE,
+    MOVE_AURA_WHEEL,
+    MOVE_BANEFUL_BUNKER,
+    MOVE_BEAK_BLAST,
+    MOVE_BELCH,
+    MOVE_BESTOW,
+    MOVE_BODY_PRESS,
+    MOVE_BRANCH_POKE,
+    MOVE_BREAKING_SWIPE,
+    MOVE_CELEBRATE,
+    MOVE_CLANGOROUS_SOUL,
+    MOVE_COPYCAT,
+    MOVE_COUNTER,
+    MOVE_COVET,
+    MOVE_CRAFTY_SHIELD,
+    MOVE_DECORATE,
+    MOVE_DESTINY_BOND,
+    MOVE_DETECT,
+    MOVE_DIAMOND_STORM,
+    MOVE_DOUBLE_IRON_BASH,
+    MOVE_DRAGON_ASCENT,
+    MOVE_DRAGON_ENERGY,
+    MOVE_DRAGON_HAMMER,
+    MOVE_DRUM_BEATING,
+    MOVE_DYNAMAX_CANNON,
+    MOVE_ENDURE,
+    MOVE_ETERNABEAM,
+    MOVE_FALSE_SURRENDER,
+    MOVE_FEINT,
+    MOVE_FIERY_WRATH,
+    MOVE_FLEUR_CANNON,
+    MOVE_FOCUS_PUNCH,
+    MOVE_FOLLOW_ME,
+    MOVE_FREEZE_SHOCK,
+    MOVE_FREEZING_GLARE,
+    MOVE_GLACIAL_LANCE,
+    MOVE_GRAV_APPLE,
+    MOVE_HELPING_HAND,
+    MOVE_HOLD_HANDS,
+    MOVE_HYPERSPACE_FURY,
+    MOVE_HYPERSPACE_HOLE,
+    MOVE_ICE_BURN,
+    MOVE_INSTRUCT,
+    MOVE_JUNGLE_HEALING,
+    MOVE_KINGS_SHIELD,
+    MOVE_LIFE_DEW,
+    MOVE_LIGHT_OF_RUIN,
+    MOVE_MAT_BLOCK,
+    MOVE_ME_FIRST,
+    MOVE_METEOR_ASSAULT,
+    MOVE_MIND_BLOWN,
+    MOVE_MIRROR_COAT,
+    MOVE_MIRROR_MOVE,
+    MOVE_MOONGEIST_BEAM,
+    MOVE_NATURE_POWER,
+    MOVE_NATURES_MADNESS,
+    MOVE_OBSTRUCT,
+    MOVE_ORIGIN_PULSE,
+    MOVE_OVERDRIVE,
+    MOVE_PHOTON_GEYSER,
+    MOVE_PLASMA_FISTS,
+    MOVE_PRECIPICE_BLADES,
+    MOVE_PROTECT,
+    MOVE_PYRO_BALL,
+    MOVE_QUASH,
+    MOVE_QUICK_GUARD,
+    MOVE_RAGE_POWDER,
+    MOVE_RELIC_SONG,
+    MOVE_SECRET_SWORD,
+    MOVE_SHELL_TRAP,
+    MOVE_SLEEP_TALK,
+    MOVE_SNAP_TRAP,
+    MOVE_SNARL,
+    MOVE_SNATCH,
+    MOVE_SNORE,
+    MOVE_SPECTRAL_THIEF,
+    MOVE_SPIKY_SHIELD,
+    MOVE_SPIRIT_BREAK,
+    MOVE_SPOTLIGHT,
+    MOVE_STEAM_ERUPTION,
+    MOVE_STEEL_BEAM,
+    MOVE_STRANGE_STEAM,
+    MOVE_SUNSTEEL_STRIKE,
+    MOVE_SURGING_STRIKES,
+    MOVE_SWITCHEROO,
+    MOVE_TECHNO_BLAST,
+    MOVE_THIEF,
+    MOVE_THOUSAND_ARROWS,
+    MOVE_THOUSAND_WAVES,
+    MOVE_THUNDER_CAGE,
+    MOVE_THUNDEROUS_KICK,
+    MOVE_TRANSFORM,
+    MOVE_TRICK,
+    MOVE_V_CREATE,
+    MOVE_WICKED_BLOW,
+    MOVE_WIDE_GUARD,
+    0xFFFF
 };
 
 
@@ -274,7 +474,9 @@ BOOL BattleScriptCommandHandler(void *bw, struct BattleStruct *sp)
 {
     BOOL ret;
     u32 command;
+#ifdef DEBUG_BATTLE_SCRIPT_COMMANDS
     u8 buf[64];
+#endif //DEBUG_BATTLE_SCRIPT_COMMANDS
 
     do {
         command = sp->SkillSeqWork[sp->skill_seq_no];
@@ -306,6 +508,307 @@ BOOL BattleScriptCommandHandler(void *bw, struct BattleStruct *sp)
     sp->battle_progress_flag = 0;
 
     return ret;
+}
+
+
+int __attribute__((long_call)) read_battle_script_param(struct BattleStruct *sp)
+{
+    int data;
+
+    data = sp->SkillSeqWork[sp->skill_seq_no];
+    sp->skill_seq_no++;
+
+    return data;
+}
+
+
+// doesn't just handle subseq, but i will get around to changing this eventually
+void __attribute__((long_call)) LoadBattleSubSeqScript(struct BattleStruct *sp, int kind, int index)
+{
+    sp->skill_arc_kind = kind;
+    sp->skill_arc_index = index;
+    sp->skill_seq_no = 0;
+    ArchiveDataLoad(&sp->SkillSeqWork, kind, index);
+}
+
+
+void __attribute__((long_call)) PushAndLoadBattleScript(struct BattleStruct *sp, int kind, int index)
+{
+    sp->push_skill_arc_kind[sp->push_count] = sp->skill_arc_kind;
+    sp->push_skill_arc_index[sp->push_count] = sp->skill_arc_index;
+    sp->push_skill_seq_no[sp->push_count] = sp->skill_seq_no;
+    sp->push_count++;
+    sp->skill_arc_kind = kind;
+    sp->skill_arc_index = index;
+    sp->skill_seq_no = 0;
+    ArchiveDataLoad(&sp->SkillSeqWork, kind, index);
+}
+
+
+
+enum
+{
+    BTL_PARAM_BATTLER_ALL              = 0x00,
+    BTL_PARAM_BATTLER_ATTACKER         = 0x01,
+    BTL_PARAM_BATTLER_DEFENDER         = 0x02,
+    BTL_PARAM_BATTLER_PLAYER           = 0x03,
+    BTL_PARAM_BATTLER_OPPONENT         = 0x04,
+    BTL_PARAM_BATTLER_FAINTED          = 0x05,
+    BTL_PARAM_BATTLER_REPLACE          = 0x06,
+    BTL_PARAM_BATTLER_ADDL_EFFECT      = 0x07,
+    BTL_PARAM_BATTLER_CHAR_CHECKED     = 0x08,
+    BTL_PARAM_BATTLER_PLAYER_LEFT      = 0x09,
+    BTL_PARAM_BATTLER_ENEMY_LEFT       = 0x0a,
+    BTL_PARAM_BATTLER_PLAYER_RIGHT     = 0x0b,
+    BTL_PARAM_BATTLER_ENEMY_RIGHT      = 0x0c,
+    BTL_PARAM_BATTLER_x0D              = 0x0d,
+    BTL_PARAM_BATTLER_ATTACKER2        = 0x0e,
+    BTL_PARAM_BATTLER_DEFENDER2        = 0x0f,
+    BTL_PARAM_BATTLER_ATTACKER_PARTNER = 0x10,
+    BTL_PARAM_BATTLER_DEFENDER_PARTNER = 0x11,
+    BTL_PARAM_BATTLER_WHIRLWINDED      = 0x12,
+    BTL_PARAM_BATTLER_x13              = 0x13,
+    BTL_PARAM_BATTLER_x14              = 0x14,
+    BTL_PARAM_BATTLER_x15              = 0x15,
+    BTL_PARAM_BATTLER_ALL_REPLACED     = 0x16,
+    BTL_PARAM_BATTLER_xFF              = 0xFF,
+    BTL_PARAM_BATTLER_WORK             = 0xFF,
+
+    BTL_PARAM_BATTLER_ALLY             = 0x8000,
+    BTL_PARAM_BATTLER_ENEMY            = 0x4000,
+    BTL_PARAM_BATTLER_ACROSS           = 0x2000,
+};
+
+int __attribute__((long_call)) GrabClientFromBattleScriptParam(void *bw, struct BattleStruct *sp, int side)
+{
+    int client_no;
+    u32 ally_bits = side & 0xE000;
+    side = side & 0x1FFF;
+
+    switch (side)
+    {
+    default:
+    case BTL_PARAM_BATTLER_ATTACKER:
+        client_no = sp->attack_client;
+        break;
+    case BTL_PARAM_BATTLER_DEFENDER:
+        client_no = sp->defence_client;
+        break;
+    case BTL_PARAM_BATTLER_FAINTED:
+        client_no = sp->fainting_client;
+        break;
+    case BTL_PARAM_BATTLER_REPLACE:
+    case BTL_PARAM_BATTLER_ALL_REPLACED:
+        client_no = sp->reshuffle_client;
+        break;
+    case BTL_PARAM_BATTLER_ADDL_EFFECT:
+        client_no = sp->state_client;
+        break;
+    case BTL_PARAM_BATTLER_CHAR_CHECKED:
+        client_no = sp->ability_client;
+        break;
+    case BTL_PARAM_BATTLER_OPPONENT:
+        {
+            struct CLIENT_PARAM *cp;
+            int client_set_max;
+
+            client_set_max = BattleWorkClientSetMaxGet(bw);
+            for (client_no = 0; client_no < client_set_max ; client_no++)
+            {
+                cp = BattleWorkClientParamGet(bw, client_no);
+                if (cp->client_type & 1)
+                {
+                    break;
+                }
+            }
+        }
+        break;
+    case BTL_PARAM_BATTLER_ENEMY_LEFT:
+        {
+            struct CLIENT_PARAM *cp;
+            int client_set_max;
+
+            client_set_max = BattleWorkClientSetMaxGet(bw);
+            for (client_no = 0; client_no < client_set_max; client_no++)
+            {
+                cp = BattleWorkClientParamGet(bw, client_no);
+                if ((cp->client_type == 3) || (cp->client_type == 1))
+                {
+                    break;
+                }
+            }
+        }
+        break;
+    case BTL_PARAM_BATTLER_ENEMY_RIGHT:
+        {
+            struct CLIENT_PARAM *cp;
+            int client_set_max;
+            int type;
+
+            if (BattleTypeGet(bw) & BATTLE_TYPE_MULTI)
+                type = 5;
+            else
+                type = 1;
+
+            client_set_max = BattleWorkClientSetMaxGet(bw);
+            for (client_no = 0; client_no < client_set_max; client_no++)
+            {
+                cp = BattleWorkClientParamGet(bw, client_no);
+                if (cp->client_type == type)
+                {
+                    break;
+                }
+            }
+        }
+        break;
+    case BTL_PARAM_BATTLER_PLAYER:
+        {
+            struct CLIENT_PARAM *cp;
+            int client_set_max;
+
+            client_set_max = BattleWorkClientSetMaxGet(bw);
+            for (client_no = 0; client_no < client_set_max; client_no++)
+            {
+                cp = BattleWorkClientParamGet(bw, client_no);
+                if ((cp->client_type & 1) == 0)
+                {
+                    break;
+                }
+            }
+        }
+        break;
+    case BTL_PARAM_BATTLER_PLAYER_LEFT:
+        {
+            struct CLIENT_PARAM *cp;
+            int client_set_max;
+
+            client_set_max = BattleWorkClientSetMaxGet(bw);
+            for (client_no = 0; client_no < client_set_max; client_no++)
+            {
+                cp = BattleWorkClientParamGet(bw, client_no);
+                if ((cp->client_type == 2) || (cp->client_type == 0))
+                {
+                    break;
+                }
+            }
+        }
+        break;
+    case BTL_PARAM_BATTLER_PLAYER_RIGHT:
+        {
+            struct CLIENT_PARAM *cp;
+            int client_set_max;
+            int type;
+
+            if (BattleTypeGet(bw) & BATTLE_TYPE_MULTI)
+            {
+                type = 4;
+            }
+            else
+            {
+                type = 0;
+            }
+
+            client_set_max = BattleWorkClientSetMaxGet(bw);
+            for (client_no = 0; client_no < client_set_max; client_no++)
+            {
+                cp = BattleWorkClientParamGet(bw, client_no);
+                if (cp->client_type == type)
+                {
+                    break;
+                }
+            }
+        }
+        break;
+    case BTL_PARAM_BATTLER_ATTACKER2:
+        client_no = sp->attack_client_work;
+        break;
+    case BTL_PARAM_BATTLER_DEFENDER2:
+        client_no = sp->defence_client_work;
+        break;
+    case BTL_PARAM_BATTLER_ATTACKER_PARTNER:
+        {
+            int client_set_max;
+
+            client_set_max = BattleWorkClientSetMaxGet(bw);
+            for (client_no = 0; client_no < client_set_max; client_no++)
+            {
+                if ((client_no != sp->attack_client)
+                 && (IsClientEnemy(bw, client_no) == IsClientEnemy(bw, sp->attack_client)))
+                {
+                    break;
+                }
+            }
+            if (client_no == client_set_max)
+            {
+                client_no = 0;
+            }
+        }
+        break;
+    case BTL_PARAM_BATTLER_DEFENDER_PARTNER:
+        {
+            int client_set_max;
+
+            client_set_max = BattleWorkClientSetMaxGet(bw);
+            for (client_no = 0; client_no < client_set_max; client_no++)
+            {
+                if ((client_no != sp->defence_client)
+                 && (IsClientEnemy(bw, client_no) == IsClientEnemy(bw, sp->defence_client)))
+                {
+                    break;
+                }
+            }
+            if (client_no == client_set_max)
+            {
+                client_no = 0;
+            }
+        }
+        break;
+    case BTL_PARAM_BATTLER_x13:
+        {
+            int client_set_max;
+            int dir;
+
+            client_set_max = BattleWorkClientSetMaxGet(bw);
+            dir = IsClientEnemy(bw, sp->attack_client);
+            for (client_no = 0; client_no < client_set_max; client_no++)
+            {
+                if (dir != IsClientEnemy(bw, client_no))
+                {
+                    break;
+                }
+            }
+        }
+        break;
+    case BTL_PARAM_BATTLER_x14:
+        {
+            int client_set_max;
+            int dir;
+
+            client_set_max = BattleWorkClientSetMaxGet(bw);
+            dir = IsClientEnemy(bw, sp->defence_client);
+            for (client_no = 0; client_no < client_set_max; client_no++)
+            {
+                if (dir != IsClientEnemy(bw, client_no))
+                {
+                    break;
+                }
+            }
+        }
+        break;
+    case BTL_PARAM_BATTLER_WORK:
+    case BTL_PARAM_BATTLER_x15:
+        client_no = sp->client_work;
+        break;
+    }
+
+    if (ally_bits & BTL_PARAM_BATTLER_ALLY)
+        return BATTLER_ALLY(client_no);
+    else if (ally_bits & BTL_PARAM_BATTLER_ACROSS)
+        return BATTLER_ACROSS(client_no);
+    else if (ally_bits & BTL_PARAM_BATTLER_ENEMY)
+        return BATTLER_OPPONENT(client_no);
+    else
+        return client_no;
 }
 
 
@@ -361,8 +864,8 @@ BOOL btl_scr_cmd_18_playanimation2(void *bw, struct BattleStruct *sp)
         move = sp->current_move_index;
     }
 
-    cli_a = SideClientNoGet(bw, sp, attack);
-    cli_d = SideClientNoGet(bw, sp, defence);
+    cli_a = GrabClientFromBattleScriptParam(bw, sp, attack);
+    cli_d = GrabClientFromBattleScriptParam(bw, sp, defence);
 
     if ((((sp->server_status_flag & SERVER_STATUS_FLAG_NO_ANIMATIONS)==0)
       && (BattleWorkConfigWazaEffectOnOffCheck(bw) == TRUE))
@@ -471,30 +974,32 @@ BOOL btl_scr_cmd_27_shouldgetexp(void *bw, struct BattleStruct *sp)
 
 //#if EXPERIENCE_FORMULA_GEN < 5 || EXPERIENCE_FORMULA_GEN == 6 // flat exp rate.  we move this to the task calc itself if the scaled is enabled
 //        int i;
-//        int total_exp;
-//        int mons_getting_exp = 0;
-//        int mons_getting_exp_from_item = 0;
+//        //int mons_getting_exp = 0;
+//        //int mons_getting_exp_from_item = 0;
 //        u16 item;
 //        u32 totalexp;
 //        int eqp;
 //        struct PartyPokemon *pp;
 //
+//        sp->mons_getting_exp = 0;
+//        sp->mons_getting_exp_from_item = 0;
+//
 //        for (i = 0; i < BattleWorkPokePartyGet(bw, 0)->PokeCount; i++)
 //        {
 //            pp = BattleWorkPokemonParamGet(bw, 0, i);
-//            if ((GetMonData(pp, ID_PARA_monsno, NULL)) && (GetMonData(pp, ID_PARA_hp, NULL)))
+//            if ((GetMonData(pp, MON_DATA_SPECIES, NULL)) && (GetMonData(pp, MON_DATA_HP, NULL)))
 //            {
 //                if (sp->obtained_exp_right_flag[(sp->fainting_client >> 1) & 1] & No2Bit(i))
 //                {
-//                    mons_getting_exp++;
+//                    sp->mons_getting_exp++;
 //                }
 //
-//                item = GetMonData(pp, ID_PARA_item, NULL);
+//                item = GetMonData(pp, MON_DATA_HELD_ITEM, NULL);
 //                eqp = BattleItemDataGet(sp, item, 1);
 //
 //                if (eqp == HOLD_EFFECT_EXP_SHARE)
 //                {
-//                    mons_getting_exp_from_item++;
+//                    sp->mons_getting_exp_from_item++;
 //                }
 //            }
 //        }
@@ -545,6 +1050,7 @@ struct EXP_CALCULATOR
     /* 0x30 */ u32 work[8];
 }; // size = 0x50
 
+
 // forgot i could do this so fucking nice
 void Task_DistributeExp_Extend(void *arg0, void *work)
 {
@@ -556,30 +1062,33 @@ void Task_DistributeExp_Extend(void *arg0, void *work)
     int exp_client_no;
     int item;
     int eqp;
-    u32 mons_getting_exp_from_item = 0;
-    u32 mons_getting_exp = 0;
     u32 totalexp = 0;
 
     client_no = (expcalc->sp->fainting_client) >> 1 & 1;
     exp_client_no = 0;
 
-    // count how many pokémon are getting experience
-    for (int i = 0; i < BattleWorkPokePartyGet(expcalc->bw, 0)->PokeCount; i++)
+    // count how many pokémon are getting experience - only count for the first pokemon, don't update until the next time we gain after
+    if (expcalc->work[6] == 0)
     {
-        pp = BattleWorkPokemonParamGet(expcalc->bw, exp_client_no, i);
-        if ((GetMonData(pp, ID_PARA_monsno, NULL)) && (GetMonData(pp, ID_PARA_hp, NULL)))
+        expcalc->sp->mons_getting_exp = 0;
+        expcalc->sp->mons_getting_exp_from_item = 0;
+        for (int i = 0; i < BattleWorkPokePartyGet(expcalc->bw, 0)->PokeCount; i++)
         {
-            if (expcalc->sp->obtained_exp_right_flag[(expcalc->sp->fainting_client >> 1) & 1] & No2Bit(i))
+            pp = BattleWorkPokemonParamGet(expcalc->bw, exp_client_no, i);
+            if ((GetMonData(pp, MON_DATA_SPECIES, NULL)) && (GetMonData(pp, MON_DATA_HP, NULL)))
             {
-                mons_getting_exp++;
-            }
+                if (expcalc->sp->obtained_exp_right_flag[(expcalc->sp->fainting_client >> 1) & 1] & No2Bit(i))
+                {
+                    expcalc->sp->mons_getting_exp++;
+                }
 
-            item = GetMonData(pp, ID_PARA_item, NULL);
-            eqp = BattleItemDataGet(expcalc->sp, item, 1);
+                item = GetMonData(pp, MON_DATA_HELD_ITEM, NULL);
+                eqp = BattleItemDataGet(expcalc->sp, item, 1);
 
-            if (eqp == HOLD_EFFECT_EXP_SHARE)
-            {
-                mons_getting_exp_from_item++;
+                if (eqp == HOLD_EFFECT_EXP_SHARE)
+                {
+                    expcalc->sp->mons_getting_exp_from_item++;
+                }
             }
         }
     }
@@ -588,7 +1097,7 @@ void Task_DistributeExp_Extend(void *arg0, void *work)
     for (sel_mons_no = expcalc->work[6]; sel_mons_no < BattleWorkPokeCountGet(expcalc->bw, exp_client_no); sel_mons_no++)
     {
         pp = BattleWorkPokemonParamGet(expcalc->bw, exp_client_no, sel_mons_no);
-        item = GetMonData(pp, ID_PARA_item, NULL);
+        item = GetMonData(pp, MON_DATA_HELD_ITEM, NULL);
         eqp = GetItemData(item, ITEM_PARAM_HOLD_EFFECT, 5);
         if ((eqp == HOLD_EFFECT_EXP_SHARE) || (expcalc->sp->obtained_exp_right_flag[client_no] & No2Bit(sel_mons_no)))
         {
@@ -597,8 +1106,8 @@ void Task_DistributeExp_Extend(void *arg0, void *work)
     }
 
     // actually calculate the experience
-    u32 Lp = GetMonData(pp, ID_PARA_level, NULL); // this should contain the level of the person getting experience
-    u32 level = expcalc->sp->battlemon[expcalc->sp->fainting_client].level + 1; // need to calculate exp individually for each mon it seems
+    u32 Lp = GetMonData(pp, MON_DATA_LEVEL, NULL); // this should contain the level of the person getting experience
+    u32 level = expcalc->sp->battlemon[expcalc->sp->fainting_client].level; // need to calculate exp individually for each mon it seems
 
     totalexp = GetSpeciesBaseExp(expcalc->sp->battlemon[expcalc->sp->fainting_client].species, expcalc->sp->battlemon[expcalc->sp->fainting_client].form_no); // base experience
     totalexp = (totalexp * level) / 5;
@@ -610,14 +1119,14 @@ void Task_DistributeExp_Extend(void *arg0, void *work)
     totalexp /= bottom;
     totalexp = totalexp * sqrt(2*level + 10); // square root tacked on
 
-    if (mons_getting_exp_from_item)
+    if (expcalc->sp->mons_getting_exp_from_item)
     {
-        expcalc->sp->obtained_exp = (totalexp / 2) / mons_getting_exp;
+        expcalc->sp->obtained_exp = (totalexp / 2) / expcalc->sp->mons_getting_exp;
         if (expcalc->sp->obtained_exp == 0)
         {
             expcalc->sp->obtained_exp = 1;
         }
-        expcalc->sp->exp_share_obtained_exp = (totalexp / 2) / mons_getting_exp_from_item;
+        expcalc->sp->exp_share_obtained_exp = (totalexp / 2) / expcalc->sp->mons_getting_exp_from_item;
         if (expcalc->sp->exp_share_obtained_exp == 0)
         {
             expcalc->sp->exp_share_obtained_exp = 1;
@@ -625,56 +1134,72 @@ void Task_DistributeExp_Extend(void *arg0, void *work)
     }
     else
     {
-        expcalc->sp->obtained_exp = totalexp / mons_getting_exp;
+        expcalc->sp->obtained_exp = totalexp / expcalc->sp->mons_getting_exp;
         if (expcalc->sp->obtained_exp == 0)
         {
             expcalc->sp->obtained_exp = 1;
         }
         expcalc->sp->exp_share_obtained_exp = 0;
     }
+
+#ifdef DEBUG_PRINT_EXPERIENCE_VALUES
+    u8 buf[128];
+    sprintf(buf, "[Task_DistributeExp_Extend] Scaled Rate - experience = %d, Lp = %d", expcalc->sp->obtained_exp, Lp);
+    debugsyscall(buf);
+    sprintf(buf, ", level = %d, totalexp = %d, ", level, totalexp);
+    debugsyscall(buf);
+    sprintf(buf, "top = %d, bottom = %d\n", top, bottom);
+    debugsyscall(buf);
+#endif
+    
 #else // EXPERIENCE_FORMULA_GEN < 5 || EXPERIENCE_FORMULA_GEN == 6 // flat exp rate needs to be calculated
     {
         int i;
-        int total_exp;
-        int mons_getting_exp = 0;
-        int mons_getting_exp_from_item = 0;
         u16 item;
         u32 totalexp;
         int eqp;
         struct PartyPokemon *pp;
         struct BattleStruct *sp = expcalc->sp;
         void *bw = expcalc->bw;
+        int exp_client_no = 0;
 
-        for (i = 0; i < BattleWorkPokePartyGet(bw, 0)->PokeCount; i++)
+        // count how many pokémon are getting experience - only count for the first pokemon, don't update until the next time we gain after
+        if (expcalc->work[6] == 0)
         {
-            pp = BattleWorkPokemonParamGet(bw, 0, i);
-            if ((GetMonData(pp, ID_PARA_monsno, NULL)) && (GetMonData(pp, ID_PARA_hp, NULL)))
+            expcalc->sp->mons_getting_exp = 0;
+            expcalc->sp->mons_getting_exp_from_item = 0;
+            for (int i = 0; i < BattleWorkPokePartyGet(expcalc->bw, 0)->PokeCount; i++)
             {
-                if (sp->obtained_exp_right_flag[(sp->fainting_client >> 1) & 1] & No2Bit(i))
+                pp = BattleWorkPokemonParamGet(expcalc->bw, exp_client_no, i);
+                if ((GetMonData(pp, MON_DATA_SPECIES, NULL)) && (GetMonData(pp, MON_DATA_HP, NULL)))
                 {
-                    mons_getting_exp++;
-                }
+                    if (expcalc->sp->obtained_exp_right_flag[(expcalc->sp->fainting_client >> 1) & 1] & No2Bit(i))
+                    {
+                        expcalc->sp->mons_getting_exp++;
+                    }
 
-                item = GetMonData(pp, ID_PARA_item, NULL);
-                eqp = BattleItemDataGet(sp, item, 1);
+                    item = GetMonData(pp, MON_DATA_HELD_ITEM, NULL);
+                    eqp = BattleItemDataGet(expcalc->sp, item, 1);
 
-                if (eqp == HOLD_EFFECT_EXP_SHARE)
-                {
-                    mons_getting_exp_from_item++;
+                    if (eqp == HOLD_EFFECT_EXP_SHARE)
+                    {
+                        expcalc->sp->mons_getting_exp_from_item++;
+                    }
                 }
             }
         }
+
         // multiply by 255/390 (map audino to 255) to not get massively inflated experience rates
         totalexp = 255 * GetSpeciesBaseExp(sp->battlemon[sp->fainting_client].species, sp->battlemon[sp->fainting_client].form_no) / 390;//PokePersonalParaGet(sp->battlemon[sp->fainting_client].species, PERSONAL_EXP_YIELD);
         totalexp = (totalexp * sp->battlemon[sp->fainting_client].level) / 7;
-        if (mons_getting_exp_from_item)
+        if (expcalc->sp->mons_getting_exp_from_item)
         {
-            sp->obtained_exp = (totalexp / 2) / mons_getting_exp;
+            sp->obtained_exp = (totalexp / 2) / expcalc->sp->mons_getting_exp;
             if (sp->obtained_exp == 0)
             {
                 sp->obtained_exp = 1;
             }
-            sp->exp_share_obtained_exp = (totalexp / 2) / mons_getting_exp_from_item;
+            sp->exp_share_obtained_exp = (totalexp / 2) / expcalc->sp->mons_getting_exp_from_item;
             if (sp->exp_share_obtained_exp == 0)
             {
                 sp->exp_share_obtained_exp = 1;
@@ -682,7 +1207,7 @@ void Task_DistributeExp_Extend(void *arg0, void *work)
         }
         else
         {
-            sp->obtained_exp = totalexp / mons_getting_exp;
+            sp->obtained_exp = totalexp / expcalc->sp->mons_getting_exp;
             if (sp->obtained_exp == 0)
             {
                 sp->obtained_exp = 1;
@@ -690,6 +1215,12 @@ void Task_DistributeExp_Extend(void *arg0, void *work)
             sp->exp_share_obtained_exp = 0;
         }
     }
+
+#ifdef DEBUG_PRINT_EXPERIENCE_VALUES
+    u8 buf[128];
+    sprintf(buf, "[Task_DistributeExp_Extend] Flat Rate - experience = %d", expcalc->sp->obtained_exp);
+#endif
+
 #endif
 
     Task_DistributeExp(arg0, work);
@@ -940,19 +1471,44 @@ BOOL btl_scr_cmd_33_statbuffchange(void *bw, struct BattleStruct *sp)
         {
             if (sp->attack_client != sp->state_client)
             {
-                if (sp->scw[IsClientEnemy(bw,sp->state_client)].mist_count)
+                if (sp->scw[IsClientEnemy(bw, sp->state_client)].mistCount)
                 {
                     sp->mp.msg_id = BATTLE_MSG_PROTECTED_BY_MIST;
                     sp->mp.msg_tag = TAG_NICK;
                     sp->mp.msg_para[0] = TagNickParaMake(sp,sp->state_client);
                     flag = 1;
                 }
+                else if ((MoldBreakerAbilityCheck(sp, sp->attack_client, sp->state_client, ABILITY_FLOWER_VEIL) == TRUE
+                       || MoldBreakerAbilityCheck(sp, sp->attack_client, BATTLER_ALLY(sp->state_client), ABILITY_FLOWER_VEIL) == TRUE) // any enemy has flower veil (accounting for mold breaker, otherwise would just CheckSideAbility)
+                      && (sp->battlemon[sp->state_client].type1 == TYPE_GRASS || sp->battlemon[sp->state_client].type2 == TYPE_GRASS)) // and target has grass type
+                {
+                    // specifically for flower veil, we know that one of the Pokémon have flower veil.  we need to change the client that it prints the ability of to the flower veil client
+                    u32 flower_veil_client;
+                    
+                    flower_veil_client = (GetBattlerAbility(sp, sp->state_client) == ABILITY_FLOWER_VEIL) ? sp->state_client : BATTLER_ALLY(sp->state_client);
+                    
+                    if (sp->addeffect_type == ADD_EFFECT_ABILITY)
+                    {
+                        sp->mp.msg_id = BATTLE_MSG_ABILITY_SUPPRESSES_STAT_LOSS;
+                        sp->mp.msg_tag = TAG_NICK_ABILITY_NICK_ABILITY;
+                        sp->mp.msg_para[0] = TagNickParaMake(sp, flower_veil_client);
+                        sp->mp.msg_para[1] = sp->battlemon[flower_veil_client].ability;
+                        sp->mp.msg_para[2] = TagNickParaMake(sp, sp->attack_client);
+                        sp->mp.msg_para[3] = sp->battlemon[sp->attack_client].ability;
+                    }
+                    else
+                    {
+                        sp->mp.msg_id = BATTLE_MSG_PREVENTS_STAT_LOSS;
+                        sp->mp.msg_tag = TAG_NICK_ABILITY;
+                        sp->mp.msg_para[0] = TagNickParaMake(sp, flower_veil_client);
+                        sp->mp.msg_para[1] = sp->battlemon[flower_veil_client].ability;
+                    }
+                    flag = 1;
+                }
                 else if ((MoldBreakerAbilityCheck(sp, sp->attack_client, sp->state_client, ABILITY_CLEAR_BODY) == TRUE)
                       || (MoldBreakerAbilityCheck(sp, sp->attack_client, sp->state_client, ABILITY_WHITE_SMOKE) == TRUE)
-                      || (GetBattlerAbility(sp, sp->state_client) == ABILITY_FULL_METAL_BODY)   // Full Metal Body cannot be ignored
-                      || ((MoldBreakerAbilityCheck(sp, sp->attack_client, sp->state_client, ABILITY_FLOWER_VEIL) == TRUE) &&
-                            (sp->battlemon[sp->attack_client].type1 == TYPE_GRASS || sp->battlemon[sp->attack_client].type2 == TYPE_GRASS)))
-                    {
+                      || (GetBattlerAbility(sp, sp->state_client) == ABILITY_FULL_METAL_BODY))   // Full Metal Body cannot be ignored
+                {
                     if (sp->addeffect_type == ADD_EFFECT_ABILITY)
                     {
                         sp->mp.msg_id = BATTLE_MSG_ABILITY_SUPPRESSES_STAT_LOSS;
@@ -1204,10 +1760,10 @@ BOOL btl_scr_cmd_7c_beat_up_damage_calc(void *bw, struct BattleStruct *sp)
         mon = Battle_GetClientPartyMon(bw, sp->attack_client, sp->beat_up_count); 
 
         while(sp->beat_up_count != sp->sel_mons_no[sp->attack_client] &&
-                (GetMonData(mon, ID_PARA_hp, 0) == 0 || 
-                GetMonData(mon, ID_PARA_monsno_egg, 0) == 0|| 
-                GetMonData(mon, ID_PARA_monsno_egg, 0) == 494 || 
-                GetMonData(mon, ID_PARA_condition, 0) != 0))
+                (GetMonData(mon, MON_DATA_HP, 0) == 0 || 
+                GetMonData(mon, MON_DATA_SPECIES_OR_EGG, 0) == 0|| 
+                GetMonData(mon, MON_DATA_SPECIES_OR_EGG, 0) == 494 || 
+                GetMonData(mon, MON_DATA_STATUS, 0) != 0))
                 {
 
             sp->beat_up_count++;
@@ -1217,8 +1773,8 @@ BOOL btl_scr_cmd_7c_beat_up_damage_calc(void *bw, struct BattleStruct *sp)
     }   
 
     mon = Battle_GetClientPartyMon(bw, sp->attack_client, sp->beat_up_count);
-    species = GetMonData(mon, ID_PARA_monsno, 0);
-    form = GetMonData(mon, ID_PARA_form_no, 0);
+    species = GetMonData(mon, MON_DATA_SPECIES, 0);
+    form = GetMonData(mon, MON_DATA_FORM, 0);
 
     newBaseDamage = PokeFormNoPersonalParaGet(species, form, PERSONAL_BASE_ATTACK);
     newBaseDamage /= 10;
@@ -1234,10 +1790,10 @@ BOOL btl_scr_cmd_7c_beat_up_damage_calc(void *bw, struct BattleStruct *sp)
         mon = Battle_GetClientPartyMon(bw, sp->attack_client, sp->beat_up_count);
 
         while(sp->beat_up_count != sp->sel_mons_no[sp->attack_client] &&
-                (GetMonData(mon, ID_PARA_hp, 0) == 0 || 
-                GetMonData(mon, ID_PARA_monsno_egg, 0) == 0 || 
-                GetMonData(mon, ID_PARA_monsno_egg, 0) == 494 || 
-                GetMonData(mon, ID_PARA_condition, 0) != 0))
+                (GetMonData(mon, MON_DATA_HP, 0) == 0 || 
+                GetMonData(mon, MON_DATA_SPECIES_OR_EGG, 0) == 0 || 
+                GetMonData(mon, MON_DATA_SPECIES_OR_EGG, 0) == 494 || 
+                GetMonData(mon, MON_DATA_STATUS, 0) != 0))
                 {
 
             sp->beat_up_count++;
@@ -1329,7 +1885,7 @@ BOOL btl_scr_cmd_d0_checkshouldleavewith1hp(void *bw, struct BattleStruct *sp)
     IncrementBattleScriptPtr(sp, 1);
     side = read_battle_script_param(sp);
 
-    client_no = SideClientNoGet(bw, sp, side);
+    client_no = GrabClientFromBattleScriptParam(bw, sp, side);
     holdeffect = HeldItemHoldEffectGet(sp,client_no);
     atk = HeldItemAtkGet(sp, client_no, ATK_CHECK_NORMAL);
 
@@ -1370,12 +1926,12 @@ BOOL btl_scr_cmd_d1_trynaturalcure(void *bw, struct BattleStruct *sp)
     side = read_battle_script_param(sp);
     address = read_battle_script_param(sp);
 
-    client_no = SideClientNoGet(bw, sp, side);
+    client_no = GrabClientFromBattleScriptParam(bw, sp, side);
     if ((sp->battlemon[client_no].hp) && (sp->sel_mons_no[client_no] != 6))
     {
         pp = BattleWorkPokemonParamGet(bw, client_no, sp->sel_mons_no[client_no]);
-        ability = GetMonData(pp, ID_PARA_speabino, NULL);
-        condition = GetMonData(pp, ID_PARA_condition, NULL);
+        ability = GetMonData(pp, MON_DATA_ABILITY, NULL);
+        condition = GetMonData(pp, MON_DATA_STATUS, NULL);
 
         // handle meloetta pirouette form changing back to normal when switched out
         if ((sp->battlemon[client_no].species == SPECIES_MELOETTA)
@@ -1384,7 +1940,7 @@ BOOL btl_scr_cmd_d1_trynaturalcure(void *bw, struct BattleStruct *sp)
             u32 form_no = 0;
             sp->battlemon[client_no].form_no = form_no;
             BattleFormChange(sp->client_work, sp->battlemon[sp->client_work].form_no, bw, sp, 1);
-            SetMonData(pp, ID_PARA_form_no, (u8 *)&form_no);
+            SetMonData(pp, MON_DATA_FORM, (u8 *)&form_no);
         }
 
         // natural cure is checked for here but handled by SwitchAbilityStatusRecoverCheck/the battle scripts this command is used in
@@ -1397,7 +1953,7 @@ BOOL btl_scr_cmd_d1_trynaturalcure(void *bw, struct BattleStruct *sp)
         // handle regenerator--mon restores 1/3 hp on switch
         if (ability == ABILITY_REGENERATOR) // switching mon ability is regenerator--not affected by gastro acid or etc
         {
-            int hp = GetMonData(pp, ID_PARA_hp, NULL), hpmax = GetMonData(pp, ID_PARA_hpmax, NULL);
+            int hp = GetMonData(pp, MON_DATA_HP, NULL), hpmax = GetMonData(pp, MON_DATA_MAXHP, NULL);
 
             int hpdelta = hpmax / 3;
 
@@ -1406,7 +1962,7 @@ BOOL btl_scr_cmd_d1_trynaturalcure(void *bw, struct BattleStruct *sp)
             else
                 hp += hpdelta;
 
-            SetMonData(pp, ID_PARA_hp, (u8 *)&hp);
+            SetMonData(pp, MON_DATA_HP, (u8 *)&hp);
         }
     }
     else
@@ -1465,6 +2021,32 @@ BOOL btl_scr_cmd_E3_isuserlowerlevel(void *bw, struct BattleStruct *sp)
 
     if (sp->battlemon[sp->attack_client].level < sp->battlemon[sp->defence_client].level)
         IncrementBattleScriptPtr(sp, address);
+    return FALSE;
+}
+
+BOOL btl_scr_cmd_E4_settailwind(void *bw, struct BattleStruct *sp)
+{
+    IncrementBattleScriptPtr(sp, 1);
+    u32 client_no = read_battle_script_param(sp);
+
+    client_no = GrabClientFromBattleScriptParam(bw, sp, client_no);
+
+    sp->tailwindCount[IsClientEnemy(bw, client_no)] = 4;
+
+    return FALSE;
+}
+
+BOOL btl_scr_cmd_E5_iftailwindactive(void *bw, struct BattleStruct *sp)
+{
+    IncrementBattleScriptPtr(sp, 1);
+    u32 client_no = read_battle_script_param(sp);
+    u32 address = read_battle_script_param(sp);
+
+    client_no = GrabClientFromBattleScriptParam(bw, sp, client_no);
+
+    if (sp->tailwindCount[IsClientEnemy(bw, client_no)])
+        IncrementBattleScriptPtr(sp, address);
+
     return FALSE;
 }
 
@@ -1646,11 +2228,11 @@ u32 CalculateBallShakes(void *bw, struct BattleStruct *sp)
     //case ITEM_PARK_BALL:
     //
     //    break;
-	case ITEM_DREAM_BALL:
+    case ITEM_DREAM_BALL:
         if (sp->battlemon[sp->defence_client].condition & (STATUS_FLAG_ASLEEP))
         captureRate *= 4;
         break;
-	//case ITEM_BEAST_BALL:
+    //case ITEM_BEAST_BALL:
     //
     //    break;
     }
@@ -1714,7 +2296,7 @@ u32 CalculateBallShakes(void *bw, struct BattleStruct *sp)
         if(sp->item_work == ITEM_FRIEND_BALL && i == caughtMons) // if amount of succeeded captures is the same as necessary for the type of capture
         {
             u32 friendship = 200;
-            SetMonData(Battle_GetClientPartyMon(bw,sp->defence_client,0), ID_PARA_friend, &friendship);
+            SetMonData(Battle_GetClientPartyMon(bw,sp->defence_client,0), MON_DATA_FRIENDSHIP, &friendship);
         }
 
         if (criticalCapture) // succeeded the one chance it had
@@ -1731,13 +2313,18 @@ u32 CalculateBallShakes(void *bw, struct BattleStruct *sp)
 #endif
     }
 
-    if(sp->item_work == ITEM_FRIEND_BALL && (i & 0x7F) >= 4)  // 0x80 signifies critical capture, which is already caught above.  this code still necessary for the case that IMPLEMENT_CRITICAL_CAPTURE isn't defined
+    if (sp->item_work == ITEM_FRIEND_BALL && (i & 0x7F) >= 4)  // 0x80 signifies critical capture, which is already caught above.  this code still necessary for the case that IMPLEMENT_CRITICAL_CAPTURE isn't defined
     {
         u32 friendship = 200;
-        SetMonData(Battle_GetClientPartyMon(bw,sp->defence_client,0), ID_PARA_friend, &friendship);
+        SetMonData(Battle_GetClientPartyMon(bw,sp->defence_client,0), MON_DATA_FRIENDSHIP, &friendship);
     }
 
+
+#ifdef GUARANTEE_CAPTURES
+    return 4;
+#else
     return i;
+#endif
 }
 
 

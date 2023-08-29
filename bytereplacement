@@ -1,4 +1,5 @@
 #include "include/config.h"
+#include "include/constants/moves.h"
 
 # damage calc hook setup
 # push {r5-r6}
@@ -169,3 +170,17 @@ arm9 02054474 88
 # cap total fury cutter damage increases to 3 total turns
 # SBA_RESET_FURY_CUTTER handles resetting outside of using fury cutter
 0012 02241F2E 03
+
+# expand dex digits from 3 to 4
+# summary screen
+arm9 0208CDE8 04
+# pc screen
+0014 021F51E6 04
+# dex various
+0018 021E6C44 04
+0018 021EE796 04
+0018 021EEC74 04
+0018 021F8D50 04
+
+# expand metronome movepool
+0012 022408F8 NUM_OF_MOVES

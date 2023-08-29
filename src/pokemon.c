@@ -146,371 +146,371 @@ static const u16 sSpeciesToOWGfx[] =
     [SPECIES_MAGMAR             ] =  171,
     [SPECIES_PINSIR             ] =  172,
     [SPECIES_TAUROS             ] =  173,
-    [SPECIES_MAGIKARP           ] =  174,
-    [SPECIES_GYARADOS           ] =  175,
-    [SPECIES_LAPRAS             ] =  176,
-    [SPECIES_DITTO              ] =  177,
-    [SPECIES_EEVEE              ] =  178,
-    [SPECIES_VAPOREON           ] =  179,
-    [SPECIES_JOLTEON            ] =  180,
-    [SPECIES_FLAREON            ] =  181,
-    [SPECIES_PORYGON            ] =  182,
-    [SPECIES_OMANYTE            ] =  183,
-    [SPECIES_OMASTAR            ] =  184,
-    [SPECIES_KABUTO             ] =  185,
-    [SPECIES_KABUTOPS           ] =  186,
-    [SPECIES_AERODACTYL         ] =  187,
-    [SPECIES_SNORLAX            ] =  188,
-    [SPECIES_ARTICUNO           ] =  189,
-    [SPECIES_ZAPDOS             ] =  191,
-    [SPECIES_MOLTRES            ] =  193,
-    [SPECIES_DRATINI            ] =  195,
-    [SPECIES_DRAGONAIR          ] =  196,
-    [SPECIES_DRAGONITE          ] =  197,
-    [SPECIES_MEWTWO             ] =  198,
-    [SPECIES_MEW                ] =  199,
-    [SPECIES_CHIKORITA          ] =  200,
-    [SPECIES_BAYLEEF            ] =  201,
-    [SPECIES_MEGANIUM           ] =  202,
-    [SPECIES_CYNDAQUIL          ] =  204,
-    [SPECIES_QUILAVA            ] =  205,
-    [SPECIES_TYPHLOSION         ] =  206,
-    [SPECIES_TOTODILE           ] =  208,
-    [SPECIES_CROCONAW           ] =  209,
-    [SPECIES_FERALIGATR         ] =  210,
-    [SPECIES_SENTRET            ] =  211,
-    [SPECIES_FURRET             ] =  212,
-    [SPECIES_HOOTHOOT           ] =  213,
-    [SPECIES_NOCTOWL            ] =  214,
-    [SPECIES_LEDYBA             ] =  215,
-    [SPECIES_LEDIAN             ] =  216,
-    [SPECIES_SPINARAK           ] =  217,
-    [SPECIES_ARIADOS            ] =  218,
-    [SPECIES_CROBAT             ] =  219,
-    [SPECIES_CHINCHOU           ] =  220,
-    [SPECIES_LANTURN            ] =  221,
-    [SPECIES_PICHU              ] =  222,
-    [SPECIES_CLEFFA             ] =  224,
-    [SPECIES_IGGLYBUFF          ] =  225,
-    [SPECIES_TOGEPI             ] =  226,
-    [SPECIES_TOGETIC            ] =  227,
-    [SPECIES_NATU               ] =  228,
-    [SPECIES_XATU               ] =  229,
-    [SPECIES_MAREEP             ] =  230,
-    [SPECIES_FLAAFFY            ] =  231,
-    [SPECIES_AMPHAROS           ] =  232,
-    [SPECIES_BELLOSSOM          ] =  233,
-    [SPECIES_MARILL             ] =  234,
-    [SPECIES_AZUMARILL          ] =  235,
-    [SPECIES_SUDOWOODO          ] =  236,
-    [SPECIES_POLITOED           ] =  237,
-    [SPECIES_HOPPIP             ] =  238,
-    [SPECIES_SKIPLOOM           ] =  239,
-    [SPECIES_JUMPLUFF           ] =  240,
-    [SPECIES_AIPOM              ] =  241,
-    [SPECIES_SUNKERN            ] =  242,
-    [SPECIES_SUNFLORA           ] =  243,
-    [SPECIES_YANMA              ] =  244,
-    [SPECIES_WOOPER             ] =  245,
-    [SPECIES_QUAGSIRE           ] =  246,
-    [SPECIES_ESPEON             ] =  247,
-    [SPECIES_UMBREON            ] =  248,
-    [SPECIES_MURKROW            ] =  249,
-    [SPECIES_SLOWKING           ] =  250,
-    [SPECIES_MISDREAVUS         ] =  252,
-    [SPECIES_UNOWN              ] =  253,
-    [SPECIES_WOBBUFFET          ] =  281,
-    [SPECIES_GIRAFARIG          ] =  283,
-    [SPECIES_PINECO             ] =  284,
-    [SPECIES_FORRETRESS         ] =  285,
-    [SPECIES_DUNSPARCE          ] =  286,
-    [SPECIES_GLIGAR             ] =  287,
-    [SPECIES_STEELIX            ] =  288,
-    [SPECIES_SNUBBULL           ] =  290,
-    [SPECIES_GRANBULL           ] =  291,
-    [SPECIES_QWILFISH           ] =  292,
-    [SPECIES_SCIZOR             ] =  294,
-    [SPECIES_SHUCKLE            ] =  295,
-    [SPECIES_HERACROSS          ] =  296,
-    [SPECIES_SNEASEL            ] =  298,
-    [SPECIES_TEDDIURSA          ] =  300,
-    [SPECIES_URSARING           ] =  301,
-    [SPECIES_SLUGMA             ] =  302,
-    [SPECIES_MAGCARGO           ] =  303,
-    [SPECIES_SWINUB             ] =  304,
-    [SPECIES_PILOSWINE          ] =  305,
-    [SPECIES_CORSOLA            ] =  306,
-    [SPECIES_REMORAID           ] =  308,
-    [SPECIES_OCTILLERY          ] =  309,
-    [SPECIES_DELIBIRD           ] =  310,
-    [SPECIES_MANTINE            ] =  311,
-    [SPECIES_SKARMORY           ] =  312,
-    [SPECIES_HOUNDOUR           ] =  313,
-    [SPECIES_HOUNDOOM           ] =  314,
-    [SPECIES_KINGDRA            ] =  315,
-    [SPECIES_PHANPY             ] =  316,
-    [SPECIES_DONPHAN            ] =  317,
-    [SPECIES_PORYGON2           ] =  318,
-    [SPECIES_STANTLER           ] =  319,
-    [SPECIES_SMEARGLE           ] =  320,
-    [SPECIES_TYROGUE            ] =  321,
-    [SPECIES_HITMONTOP          ] =  322,
-    [SPECIES_SMOOCHUM           ] =  323,
-    [SPECIES_ELEKID             ] =  324,
-    [SPECIES_MAGBY              ] =  325,
-    [SPECIES_MILTANK            ] =  326,
-    [SPECIES_BLISSEY            ] =  327,
-    [SPECIES_RAIKOU             ] =  328,
-    [SPECIES_ENTEI              ] =  329,
-    [SPECIES_SUICUNE            ] =  330,
-    [SPECIES_LARVITAR           ] =  331,
-    [SPECIES_PUPITAR            ] =  332,
-    [SPECIES_TYRANITAR          ] =  333,
-    [SPECIES_LUGIA              ] =  334,
-    [SPECIES_HO_OH              ] =  335,
-    [SPECIES_CELEBI             ] =  336,
-    [SPECIES_TREECKO            ] =  337,
-    [SPECIES_GROVYLE            ] =  338,
-    [SPECIES_SCEPTILE           ] =  339,
-    [SPECIES_TORCHIC            ] =  340,
-    [SPECIES_COMBUSKEN          ] =  341,
-    [SPECIES_BLAZIKEN           ] =  342,
-    [SPECIES_MUDKIP             ] =  343,
-    [SPECIES_MARSHTOMP          ] =  344,
-    [SPECIES_SWAMPERT           ] =  345,
-    [SPECIES_POOCHYENA          ] =  346,
-    [SPECIES_MIGHTYENA          ] =  347,
-    [SPECIES_ZIGZAGOON          ] =  348,
-    [SPECIES_LINOONE            ] =  350,
-    [SPECIES_WURMPLE            ] =  352,
-    [SPECIES_SILCOON            ] =  353,
-    [SPECIES_BEAUTIFLY          ] =  354,
-    [SPECIES_CASCOON            ] =  355,
-    [SPECIES_DUSTOX             ] =  356,
-    [SPECIES_LOTAD              ] =  357,
-    [SPECIES_LOMBRE             ] =  358,
-    [SPECIES_LUDICOLO           ] =  359,
-    [SPECIES_SEEDOT             ] =  360,
-    [SPECIES_NUZLEAF            ] =  361,
-    [SPECIES_SHIFTRY            ] =  362,
-    [SPECIES_TAILLOW            ] =  363,
-    [SPECIES_SWELLOW            ] =  364,
-    [SPECIES_WINGULL            ] =  365,
-    [SPECIES_PELIPPER           ] =  366,
-    [SPECIES_RALTS              ] =  367,
-    [SPECIES_KIRLIA             ] =  368,
-    [SPECIES_GARDEVOIR          ] =  369,
-    [SPECIES_SURSKIT            ] =  370,
-    [SPECIES_MASQUERAIN         ] =  371,
-    [SPECIES_SHROOMISH          ] =  372,
-    [SPECIES_BRELOOM            ] =  373,
-    [SPECIES_SLAKOTH            ] =  374,
-    [SPECIES_VIGOROTH           ] =  375,
-    [SPECIES_SLAKING            ] =  376,
-    [SPECIES_NINCADA            ] =  377,
-    [SPECIES_NINJASK            ] =  378,
-    [SPECIES_SHEDINJA           ] =  379,
-    [SPECIES_WHISMUR            ] =  380,
-    [SPECIES_LOUDRED            ] =  381,
-    [SPECIES_EXPLOUD            ] =  382,
-    [SPECIES_MAKUHITA           ] =  383,
-    [SPECIES_HARIYAMA           ] =  384,
-    [SPECIES_AZURILL            ] =  385,
-    [SPECIES_NOSEPASS           ] =  386,
-    [SPECIES_SKITTY             ] =  387,
-    [SPECIES_DELCATTY           ] =  388,
-    [SPECIES_SABLEYE            ] =  389,
-    [SPECIES_MAWILE             ] =  390,
-    [SPECIES_ARON               ] =  391,
-    [SPECIES_LAIRON             ] =  392,
-    [SPECIES_AGGRON             ] =  393,
-    [SPECIES_MEDITITE           ] =  394,
-    [SPECIES_MEDICHAM           ] =  395,
-    [SPECIES_ELECTRIKE          ] =  396,
-    [SPECIES_MANECTRIC          ] =  397,
-    [SPECIES_PLUSLE             ] =  398,
-    [SPECIES_MINUN              ] =  399,
-    [SPECIES_VOLBEAT            ] =  400,
-    [SPECIES_ILLUMISE           ] =  401,
-    [SPECIES_ROSELIA            ] =  402,
-    [SPECIES_GULPIN             ] =  403,
-    [SPECIES_SWALOT             ] =  404,
-    [SPECIES_CARVANHA           ] =  405,
-    [SPECIES_SHARPEDO           ] =  406,
-    [SPECIES_WAILMER            ] =  407,
-    [SPECIES_WAILORD            ] =  408,
-    [SPECIES_NUMEL              ] =  409,
-    [SPECIES_CAMERUPT           ] =  410,
-    [SPECIES_TORKOAL            ] =  411,
-    [SPECIES_SPOINK             ] =  412,
-    [SPECIES_GRUMPIG            ] =  413,
-    [SPECIES_SPINDA             ] =  414,
-    [SPECIES_TRAPINCH           ] =  415,
-    [SPECIES_VIBRAVA            ] =  416,
-    [SPECIES_FLYGON             ] =  417,
-    [SPECIES_CACNEA             ] =  418,
-    [SPECIES_CACTURNE           ] =  419,
-    [SPECIES_SWABLU             ] =  420,
-    [SPECIES_ALTARIA            ] =  421,
-    [SPECIES_ZANGOOSE           ] =  422,
-    [SPECIES_SEVIPER            ] =  423,
-    [SPECIES_LUNATONE           ] =  424,
-    [SPECIES_SOLROCK            ] =  425,
-    [SPECIES_BARBOACH           ] =  426,
-    [SPECIES_WHISCASH           ] =  427,
-    [SPECIES_CORPHISH           ] =  428,
-    [SPECIES_CRAWDAUNT          ] =  429,
-    [SPECIES_BALTOY             ] =  430,
-    [SPECIES_CLAYDOL            ] =  431,
-    [SPECIES_LILEEP             ] =  432,
-    [SPECIES_CRADILY            ] =  433,
-    [SPECIES_ANORITH            ] =  434,
-    [SPECIES_ARMALDO            ] =  435,
-    [SPECIES_FEEBAS             ] =  436,
-    [SPECIES_MILOTIC            ] =  437,
-    [SPECIES_CASTFORM           ] =  438,
-    [SPECIES_KECLEON            ] =  442,
-    [SPECIES_SHUPPET            ] =  443,
-    [SPECIES_BANETTE            ] =  444,
-    [SPECIES_DUSKULL            ] =  445,
-    [SPECIES_DUSCLOPS           ] =  446,
-    [SPECIES_TROPIUS            ] =  447,
-    [SPECIES_CHIMECHO           ] =  448,
-    [SPECIES_ABSOL              ] =  449,
-    [SPECIES_WYNAUT             ] =  450,
-    [SPECIES_SNORUNT            ] =  451,
-    [SPECIES_GLALIE             ] =  452,
-    [SPECIES_SPHEAL             ] =  453,
-    [SPECIES_SEALEO             ] =  454,
-    [SPECIES_WALREIN            ] =  455,
-    [SPECIES_CLAMPERL           ] =  456,
-    [SPECIES_HUNTAIL            ] =  457,
-    [SPECIES_GOREBYSS           ] =  458,
-    [SPECIES_RELICANTH          ] =  459,
-    [SPECIES_LUVDISC            ] =  460,
-    [SPECIES_BAGON              ] =  461,
-    [SPECIES_SHELGON            ] =  462,
-    [SPECIES_SALAMENCE          ] =  463,
-    [SPECIES_BELDUM             ] =  464,
-    [SPECIES_METANG             ] =  465,
-    [SPECIES_METAGROSS          ] =  466,
-    [SPECIES_REGIROCK           ] =  467,
-    [SPECIES_REGICE             ] =  468,
-    [SPECIES_REGISTEEL          ] =  469,
-    [SPECIES_LATIAS             ] =  470,
-    [SPECIES_LATIOS             ] =  471,
-    [SPECIES_KYOGRE             ] =  472,
-    [SPECIES_GROUDON            ] =  473,
-    [SPECIES_RAYQUAZA           ] =  474,
-    [SPECIES_JIRACHI            ] =  475,
-    [SPECIES_DEOXYS             ] =  476,
-    [SPECIES_TURTWIG            ] =  480,
-    [SPECIES_GROTLE             ] =  481,
-    [SPECIES_TORTERRA           ] =  482,
-    [SPECIES_CHIMCHAR           ] =  483,
-    [SPECIES_MONFERNO           ] =  484,
-    [SPECIES_INFERNAPE          ] =  485,
-    [SPECIES_PIPLUP             ] =  486,
-    [SPECIES_PRINPLUP           ] =  487,
-    [SPECIES_EMPOLEON           ] =  488,
-    [SPECIES_STARLY             ] =  489,
-    [SPECIES_STARAVIA           ] =  490,
-    [SPECIES_STARAPTOR          ] =  491,
-    [SPECIES_BIDOOF             ] =  492,
-    [SPECIES_BIBAREL            ] =  493,
-    [SPECIES_KRICKETOT          ] =  494,
-    [SPECIES_KRICKETUNE         ] =  495,
-    [SPECIES_SHINX              ] =  496,
-    [SPECIES_LUXIO              ] =  497,
-    [SPECIES_LUXRAY             ] =  498,
-    [SPECIES_BUDEW              ] =  499,
-    [SPECIES_ROSERADE           ] =  500,
-    [SPECIES_CRANIDOS           ] =  501,
-    [SPECIES_RAMPARDOS          ] =  502,
-    [SPECIES_SHIELDON           ] =  503,
-    [SPECIES_BASTIODON          ] =  504,
-    [SPECIES_BURMY              ] =  505,
-    [SPECIES_WORMADAM           ] =  508,
-    [SPECIES_MOTHIM             ] =  511,
-    [SPECIES_COMBEE             ] =  512,
-    [SPECIES_VESPIQUEN          ] =  514,
-    [SPECIES_PACHIRISU          ] =  515,
-    [SPECIES_BUIZEL             ] =  516,
-    [SPECIES_FLOATZEL           ] =  517,
-    [SPECIES_CHERUBI            ] =  518,
-    [SPECIES_CHERRIM            ] =  519,
-    [SPECIES_SHELLOS            ] =  520,
-    [SPECIES_GASTRODON          ] =  522,
-    [SPECIES_AMBIPOM            ] =  524,
-    [SPECIES_DRIFLOON           ] =  525,
-    [SPECIES_DRIFBLIM           ] =  526,
-    [SPECIES_BUNEARY            ] =  527,
-    [SPECIES_LOPUNNY            ] =  528,
-    [SPECIES_MISMAGIUS          ] =  529,
-    [SPECIES_HONCHKROW          ] =  530,
-    [SPECIES_GLAMEOW            ] =  531,
-    [SPECIES_PURUGLY            ] =  532,
-    [SPECIES_CHINGLING          ] =  533,
-    [SPECIES_STUNKY             ] =  534,
-    [SPECIES_SKUNTANK           ] =  535,
-    [SPECIES_BRONZOR            ] =  536,
-    [SPECIES_BRONZONG           ] =  537,
-    [SPECIES_BONSLY             ] =  538,
-    [SPECIES_MIME_JR            ] =  539,
-    [SPECIES_HAPPINY            ] =  540,
-    [SPECIES_CHATOT             ] =  541,
-    [SPECIES_SPIRITOMB          ] =  542,
-    [SPECIES_GIBLE              ] =  543,
-    [SPECIES_GABITE             ] =  544,
-    [SPECIES_GARCHOMP           ] =  545,
-    [SPECIES_MUNCHLAX           ] =  546,
-    [SPECIES_RIOLU              ] =  547,
-    [SPECIES_LUCARIO            ] =  548,
-    [SPECIES_HIPPOPOTAS         ] =  549,
-    [SPECIES_HIPPOWDON          ] =  551,
-    [SPECIES_SKORUPI            ] =  553,
-    [SPECIES_DRAPION            ] =  554,
-    [SPECIES_CROAGUNK           ] =  555,
-    [SPECIES_TOXICROAK          ] =  556,
-    [SPECIES_CARNIVINE          ] =  557,
-    [SPECIES_FINNEON            ] =  558,
-    [SPECIES_LUMINEON           ] =  559,
-    [SPECIES_MANTYKE            ] =  560,
-    [SPECIES_SNOVER             ] =  561,
-    [SPECIES_ABOMASNOW          ] =  562,
-    [SPECIES_WEAVILE            ] =  563,
-    [SPECIES_MAGNEZONE          ] =  564,
-    [SPECIES_LICKILICKY         ] =  565,
-    [SPECIES_RHYPERIOR          ] =  566,
-    [SPECIES_TANGROWTH          ] =  567,
-    [SPECIES_ELECTIVIRE         ] =  568,
-    [SPECIES_MAGMORTAR          ] =  569,
-    [SPECIES_TOGEKISS           ] =  570,
-    [SPECIES_YANMEGA            ] =  571,
-    [SPECIES_LEAFEON            ] =  572,
-    [SPECIES_GLACEON            ] =  573,
-    [SPECIES_GLISCOR            ] =  574,
-    [SPECIES_MAMOSWINE          ] =  575,
-    [SPECIES_PORYGON_Z          ] =  576,
-    [SPECIES_GALLADE            ] =  577,
-    [SPECIES_PROBOPASS          ] =  578,
-    [SPECIES_DUSKNOIR           ] =  579,
-    [SPECIES_FROSLASS           ] =  580,
-    [SPECIES_ROTOM              ] =  581,
-    [SPECIES_UXIE               ] =  587,
-    [SPECIES_MESPRIT            ] =  588,
-    [SPECIES_AZELF              ] =  589,
-    [SPECIES_DIALGA             ] =  590,
-    [SPECIES_PALKIA             ] =  592,
-    [SPECIES_HEATRAN            ] =  594,
-    [SPECIES_REGIGIGAS          ] =  595,
-    [SPECIES_GIRATINA           ] =  596,
-    [SPECIES_CRESSELIA          ] =  598,
-    [SPECIES_PHIONE             ] =  599,
-    [SPECIES_MANAPHY            ] =  600,
-    [SPECIES_DARKRAI            ] =  601,
-    [SPECIES_SHAYMIN            ] =  602,
-    [SPECIES_ARCEUS             ] =  604,
+    [SPECIES_MAGIKARP           ] =  177,
+    [SPECIES_GYARADOS           ] =  178,
+    [SPECIES_LAPRAS             ] =  179,
+    [SPECIES_DITTO              ] =  180,
+    [SPECIES_EEVEE              ] =  181,
+    [SPECIES_VAPOREON           ] =  182,
+    [SPECIES_JOLTEON            ] =  183,
+    [SPECIES_FLAREON            ] =  184,
+    [SPECIES_PORYGON            ] =  185,
+    [SPECIES_OMANYTE            ] =  186,
+    [SPECIES_OMASTAR            ] =  187,
+    [SPECIES_KABUTO             ] =  188,
+    [SPECIES_KABUTOPS           ] =  189,
+    [SPECIES_AERODACTYL         ] =  190,
+    [SPECIES_SNORLAX            ] =  191,
+    [SPECIES_ARTICUNO           ] =  192,
+    [SPECIES_ZAPDOS             ] =  194,
+    [SPECIES_MOLTRES            ] =  196,
+    [SPECIES_DRATINI            ] =  198,
+    [SPECIES_DRAGONAIR          ] =  199,
+    [SPECIES_DRAGONITE          ] =  200,
+    [SPECIES_MEWTWO             ] =  201,
+    [SPECIES_MEW                ] =  202,
+    [SPECIES_CHIKORITA          ] =  203,
+    [SPECIES_BAYLEEF            ] =  204,
+    [SPECIES_MEGANIUM           ] =  205,
+    [SPECIES_CYNDAQUIL          ] =  207,
+    [SPECIES_QUILAVA            ] =  208,
+    [SPECIES_TYPHLOSION         ] =  209,
+    [SPECIES_TOTODILE           ] =  211,
+    [SPECIES_CROCONAW           ] =  212,
+    [SPECIES_FERALIGATR         ] =  213,
+    [SPECIES_SENTRET            ] =  214,
+    [SPECIES_FURRET             ] =  215,
+    [SPECIES_HOOTHOOT           ] =  216,
+    [SPECIES_NOCTOWL            ] =  217,
+    [SPECIES_LEDYBA             ] =  218,
+    [SPECIES_LEDIAN             ] =  219,
+    [SPECIES_SPINARAK           ] =  220,
+    [SPECIES_ARIADOS            ] =  221,
+    [SPECIES_CROBAT             ] =  222,
+    [SPECIES_CHINCHOU           ] =  223,
+    [SPECIES_LANTURN            ] =  224,
+    [SPECIES_PICHU              ] =  225,
+    [SPECIES_CLEFFA             ] =  227,
+    [SPECIES_IGGLYBUFF          ] =  228,
+    [SPECIES_TOGEPI             ] =  229,
+    [SPECIES_TOGETIC            ] =  230,
+    [SPECIES_NATU               ] =  231,
+    [SPECIES_XATU               ] =  232,
+    [SPECIES_MAREEP             ] =  233,
+    [SPECIES_FLAAFFY            ] =  234,
+    [SPECIES_AMPHAROS           ] =  235,
+    [SPECIES_BELLOSSOM          ] =  236,
+    [SPECIES_MARILL             ] =  237,
+    [SPECIES_AZUMARILL          ] =  238,
+    [SPECIES_SUDOWOODO          ] =  239,
+    [SPECIES_POLITOED           ] =  240,
+    [SPECIES_HOPPIP             ] =  241,
+    [SPECIES_SKIPLOOM           ] =  242,
+    [SPECIES_JUMPLUFF           ] =  243,
+    [SPECIES_AIPOM              ] =  244,
+    [SPECIES_SUNKERN            ] =  245,
+    [SPECIES_SUNFLORA           ] =  246,
+    [SPECIES_YANMA              ] =  247,
+    [SPECIES_WOOPER             ] =  248,
+    [SPECIES_QUAGSIRE           ] =  250,
+    [SPECIES_ESPEON             ] =  251,
+    [SPECIES_UMBREON            ] =  252,
+    [SPECIES_MURKROW            ] =  253,
+    [SPECIES_SLOWKING           ] =  254,
+    [SPECIES_MISDREAVUS         ] =  256,
+    [SPECIES_UNOWN              ] =  257,
+    [SPECIES_WOBBUFFET          ] =  285,
+    [SPECIES_GIRAFARIG          ] =  287,
+    [SPECIES_PINECO             ] =  288,
+    [SPECIES_FORRETRESS         ] =  289,
+    [SPECIES_DUNSPARCE          ] =  290,
+    [SPECIES_GLIGAR             ] =  291,
+    [SPECIES_STEELIX            ] =  292,
+    [SPECIES_SNUBBULL           ] =  294,
+    [SPECIES_GRANBULL           ] =  295,
+    [SPECIES_QWILFISH           ] =  296,
+    [SPECIES_SCIZOR             ] =  298,
+    [SPECIES_SHUCKLE            ] =  299,
+    [SPECIES_HERACROSS          ] =  300,
+    [SPECIES_SNEASEL            ] =  302,
+    [SPECIES_TEDDIURSA          ] =  304,
+    [SPECIES_URSARING           ] =  305,
+    [SPECIES_SLUGMA             ] =  306,
+    [SPECIES_MAGCARGO           ] =  307,
+    [SPECIES_SWINUB             ] =  308,
+    [SPECIES_PILOSWINE          ] =  309,
+    [SPECIES_CORSOLA            ] =  310,
+    [SPECIES_REMORAID           ] =  312,
+    [SPECIES_OCTILLERY          ] =  313,
+    [SPECIES_DELIBIRD           ] =  314,
+    [SPECIES_MANTINE            ] =  315,
+    [SPECIES_SKARMORY           ] =  316,
+    [SPECIES_HOUNDOUR           ] =  317,
+    [SPECIES_HOUNDOOM           ] =  318,
+    [SPECIES_KINGDRA            ] =  319,
+    [SPECIES_PHANPY             ] =  320,
+    [SPECIES_DONPHAN            ] =  321,
+    [SPECIES_PORYGON2           ] =  322,
+    [SPECIES_STANTLER           ] =  323,
+    [SPECIES_SMEARGLE           ] =  324,
+    [SPECIES_TYROGUE            ] =  325,
+    [SPECIES_HITMONTOP          ] =  326,
+    [SPECIES_SMOOCHUM           ] =  327,
+    [SPECIES_ELEKID             ] =  328,
+    [SPECIES_MAGBY              ] =  329,
+    [SPECIES_MILTANK            ] =  330,
+    [SPECIES_BLISSEY            ] =  331,
+    [SPECIES_RAIKOU             ] =  332,
+    [SPECIES_ENTEI              ] =  333,
+    [SPECIES_SUICUNE            ] =  334,
+    [SPECIES_LARVITAR           ] =  335,
+    [SPECIES_PUPITAR            ] =  336,
+    [SPECIES_TYRANITAR          ] =  337,
+    [SPECIES_LUGIA              ] =  338,
+    [SPECIES_HO_OH              ] =  339,
+    [SPECIES_CELEBI             ] =  340,
+    [SPECIES_TREECKO            ] =  341,
+    [SPECIES_GROVYLE            ] =  342,
+    [SPECIES_SCEPTILE           ] =  343,
+    [SPECIES_TORCHIC            ] =  344,
+    [SPECIES_COMBUSKEN          ] =  345,
+    [SPECIES_BLAZIKEN           ] =  346,
+    [SPECIES_MUDKIP             ] =  347,
+    [SPECIES_MARSHTOMP          ] =  348,
+    [SPECIES_SWAMPERT           ] =  349,
+    [SPECIES_POOCHYENA          ] =  350,
+    [SPECIES_MIGHTYENA          ] =  351,
+    [SPECIES_ZIGZAGOON          ] =  352,
+    [SPECIES_LINOONE            ] =  354,
+    [SPECIES_WURMPLE            ] =  356,
+    [SPECIES_SILCOON            ] =  357,
+    [SPECIES_BEAUTIFLY          ] =  358,
+    [SPECIES_CASCOON            ] =  359,
+    [SPECIES_DUSTOX             ] =  360,
+    [SPECIES_LOTAD              ] =  361,
+    [SPECIES_LOMBRE             ] =  362,
+    [SPECIES_LUDICOLO           ] =  363,
+    [SPECIES_SEEDOT             ] =  364,
+    [SPECIES_NUZLEAF            ] =  365,
+    [SPECIES_SHIFTRY            ] =  366,
+    [SPECIES_TAILLOW            ] =  367,
+    [SPECIES_SWELLOW            ] =  368,
+    [SPECIES_WINGULL            ] =  369,
+    [SPECIES_PELIPPER           ] =  370,
+    [SPECIES_RALTS              ] =  371,
+    [SPECIES_KIRLIA             ] =  372,
+    [SPECIES_GARDEVOIR          ] =  373,
+    [SPECIES_SURSKIT            ] =  374,
+    [SPECIES_MASQUERAIN         ] =  375,
+    [SPECIES_SHROOMISH          ] =  376,
+    [SPECIES_BRELOOM            ] =  377,
+    [SPECIES_SLAKOTH            ] =  378,
+    [SPECIES_VIGOROTH           ] =  379,
+    [SPECIES_SLAKING            ] =  380,
+    [SPECIES_NINCADA            ] =  381,
+    [SPECIES_NINJASK            ] =  382,
+    [SPECIES_SHEDINJA           ] =  383,
+    [SPECIES_WHISMUR            ] =  384,
+    [SPECIES_LOUDRED            ] =  385,
+    [SPECIES_EXPLOUD            ] =  386,
+    [SPECIES_MAKUHITA           ] =  387,
+    [SPECIES_HARIYAMA           ] =  388,
+    [SPECIES_AZURILL            ] =  389,
+    [SPECIES_NOSEPASS           ] =  390,
+    [SPECIES_SKITTY             ] =  391,
+    [SPECIES_DELCATTY           ] =  392,
+    [SPECIES_SABLEYE            ] =  393,
+    [SPECIES_MAWILE             ] =  394,
+    [SPECIES_ARON               ] =  395,
+    [SPECIES_LAIRON             ] =  396,
+    [SPECIES_AGGRON             ] =  397,
+    [SPECIES_MEDITITE           ] =  398,
+    [SPECIES_MEDICHAM           ] =  399,
+    [SPECIES_ELECTRIKE          ] =  400,
+    [SPECIES_MANECTRIC          ] =  401,
+    [SPECIES_PLUSLE             ] =  402,
+    [SPECIES_MINUN              ] =  403,
+    [SPECIES_VOLBEAT            ] =  404,
+    [SPECIES_ILLUMISE           ] =  405,
+    [SPECIES_ROSELIA            ] =  406,
+    [SPECIES_GULPIN             ] =  407,
+    [SPECIES_SWALOT             ] =  408,
+    [SPECIES_CARVANHA           ] =  409,
+    [SPECIES_SHARPEDO           ] =  410,
+    [SPECIES_WAILMER            ] =  411,
+    [SPECIES_WAILORD            ] =  412,
+    [SPECIES_NUMEL              ] =  413,
+    [SPECIES_CAMERUPT           ] =  414,
+    [SPECIES_TORKOAL            ] =  415,
+    [SPECIES_SPOINK             ] =  416,
+    [SPECIES_GRUMPIG            ] =  417,
+    [SPECIES_SPINDA             ] =  418,
+    [SPECIES_TRAPINCH           ] =  419,
+    [SPECIES_VIBRAVA            ] =  420,
+    [SPECIES_FLYGON             ] =  421,
+    [SPECIES_CACNEA             ] =  422,
+    [SPECIES_CACTURNE           ] =  423,
+    [SPECIES_SWABLU             ] =  424,
+    [SPECIES_ALTARIA            ] =  425,
+    [SPECIES_ZANGOOSE           ] =  426,
+    [SPECIES_SEVIPER            ] =  427,
+    [SPECIES_LUNATONE           ] =  428,
+    [SPECIES_SOLROCK            ] =  429,
+    [SPECIES_BARBOACH           ] =  430,
+    [SPECIES_WHISCASH           ] =  431,
+    [SPECIES_CORPHISH           ] =  432,
+    [SPECIES_CRAWDAUNT          ] =  433,
+    [SPECIES_BALTOY             ] =  434,
+    [SPECIES_CLAYDOL            ] =  435,
+    [SPECIES_LILEEP             ] =  436,
+    [SPECIES_CRADILY            ] =  437,
+    [SPECIES_ANORITH            ] =  438,
+    [SPECIES_ARMALDO            ] =  439,
+    [SPECIES_FEEBAS             ] =  440,
+    [SPECIES_MILOTIC            ] =  441,
+    [SPECIES_CASTFORM           ] =  442,
+    [SPECIES_KECLEON            ] =  446,
+    [SPECIES_SHUPPET            ] =  447,
+    [SPECIES_BANETTE            ] =  448,
+    [SPECIES_DUSKULL            ] =  449,
+    [SPECIES_DUSCLOPS           ] =  450,
+    [SPECIES_TROPIUS            ] =  451,
+    [SPECIES_CHIMECHO           ] =  452,
+    [SPECIES_ABSOL              ] =  453,
+    [SPECIES_WYNAUT             ] =  454,
+    [SPECIES_SNORUNT            ] =  455,
+    [SPECIES_GLALIE             ] =  456,
+    [SPECIES_SPHEAL             ] =  457,
+    [SPECIES_SEALEO             ] =  458,
+    [SPECIES_WALREIN            ] =  459,
+    [SPECIES_CLAMPERL           ] =  460,
+    [SPECIES_HUNTAIL            ] =  461,
+    [SPECIES_GOREBYSS           ] =  462,
+    [SPECIES_RELICANTH          ] =  463,
+    [SPECIES_LUVDISC            ] =  464,
+    [SPECIES_BAGON              ] =  465,
+    [SPECIES_SHELGON            ] =  466,
+    [SPECIES_SALAMENCE          ] =  467,
+    [SPECIES_BELDUM             ] =  468,
+    [SPECIES_METANG             ] =  469,
+    [SPECIES_METAGROSS          ] =  470,
+    [SPECIES_REGIROCK           ] =  471,
+    [SPECIES_REGICE             ] =  472,
+    [SPECIES_REGISTEEL          ] =  473,
+    [SPECIES_LATIAS             ] =  474,
+    [SPECIES_LATIOS             ] =  475,
+    [SPECIES_KYOGRE             ] =  476,
+    [SPECIES_GROUDON            ] =  477,
+    [SPECIES_RAYQUAZA           ] =  478,
+    [SPECIES_JIRACHI            ] =  479,
+    [SPECIES_DEOXYS             ] =  480,
+    [SPECIES_TURTWIG            ] =  484,
+    [SPECIES_GROTLE             ] =  485,
+    [SPECIES_TORTERRA           ] =  486,
+    [SPECIES_CHIMCHAR           ] =  487,
+    [SPECIES_MONFERNO           ] =  488,
+    [SPECIES_INFERNAPE          ] =  489,
+    [SPECIES_PIPLUP             ] =  490,
+    [SPECIES_PRINPLUP           ] =  491,
+    [SPECIES_EMPOLEON           ] =  492,
+    [SPECIES_STARLY             ] =  493,
+    [SPECIES_STARAVIA           ] =  494,
+    [SPECIES_STARAPTOR          ] =  495,
+    [SPECIES_BIDOOF             ] =  496,
+    [SPECIES_BIBAREL            ] =  497,
+    [SPECIES_KRICKETOT          ] =  498,
+    [SPECIES_KRICKETUNE         ] =  499,
+    [SPECIES_SHINX              ] =  500,
+    [SPECIES_LUXIO              ] =  501,
+    [SPECIES_LUXRAY             ] =  502,
+    [SPECIES_BUDEW              ] =  503,
+    [SPECIES_ROSERADE           ] =  504,
+    [SPECIES_CRANIDOS           ] =  505,
+    [SPECIES_RAMPARDOS          ] =  506,
+    [SPECIES_SHIELDON           ] =  507,
+    [SPECIES_BASTIODON          ] =  508,
+    [SPECIES_BURMY              ] =  509,
+    [SPECIES_WORMADAM           ] =  512,
+    [SPECIES_MOTHIM             ] =  515,
+    [SPECIES_COMBEE             ] =  516,
+    [SPECIES_VESPIQUEN          ] =  518,
+    [SPECIES_PACHIRISU          ] =  519,
+    [SPECIES_BUIZEL             ] =  520,
+    [SPECIES_FLOATZEL           ] =  521,
+    [SPECIES_CHERUBI            ] =  522,
+    [SPECIES_CHERRIM            ] =  523,
+    [SPECIES_SHELLOS            ] =  524,
+    [SPECIES_GASTRODON          ] =  526,
+    [SPECIES_AMBIPOM            ] =  528,
+    [SPECIES_DRIFLOON           ] =  529,
+    [SPECIES_DRIFBLIM           ] =  530,
+    [SPECIES_BUNEARY            ] =  531,
+    [SPECIES_LOPUNNY            ] =  532,
+    [SPECIES_MISMAGIUS          ] =  533,
+    [SPECIES_HONCHKROW          ] =  534,
+    [SPECIES_GLAMEOW            ] =  535,
+    [SPECIES_PURUGLY            ] =  536,
+    [SPECIES_CHINGLING          ] =  537,
+    [SPECIES_STUNKY             ] =  538,
+    [SPECIES_SKUNTANK           ] =  539,
+    [SPECIES_BRONZOR            ] =  540,
+    [SPECIES_BRONZONG           ] =  541,
+    [SPECIES_BONSLY             ] =  542,
+    [SPECIES_MIME_JR            ] =  543,
+    [SPECIES_HAPPINY            ] =  544,
+    [SPECIES_CHATOT             ] =  545,
+    [SPECIES_SPIRITOMB          ] =  546,
+    [SPECIES_GIBLE              ] =  547,
+    [SPECIES_GABITE             ] =  548,
+    [SPECIES_GARCHOMP           ] =  549,
+    [SPECIES_MUNCHLAX           ] =  550,
+    [SPECIES_RIOLU              ] =  551,
+    [SPECIES_LUCARIO            ] =  552,
+    [SPECIES_HIPPOPOTAS         ] =  553,
+    [SPECIES_HIPPOWDON          ] =  555,
+    [SPECIES_SKORUPI            ] =  557,
+    [SPECIES_DRAPION            ] =  558,
+    [SPECIES_CROAGUNK           ] =  559,
+    [SPECIES_TOXICROAK          ] =  560,
+    [SPECIES_CARNIVINE          ] =  561,
+    [SPECIES_FINNEON            ] =  562,
+    [SPECIES_LUMINEON           ] =  563,
+    [SPECIES_MANTYKE            ] =  564,
+    [SPECIES_SNOVER             ] =  565,
+    [SPECIES_ABOMASNOW          ] =  566,
+    [SPECIES_WEAVILE            ] =  567,
+    [SPECIES_MAGNEZONE          ] =  568,
+    [SPECIES_LICKILICKY         ] =  569,
+    [SPECIES_RHYPERIOR          ] =  570,
+    [SPECIES_TANGROWTH          ] =  571,
+    [SPECIES_ELECTIVIRE         ] =  572,
+    [SPECIES_MAGMORTAR          ] =  573,
+    [SPECIES_TOGEKISS           ] =  574,
+    [SPECIES_YANMEGA            ] =  575,
+    [SPECIES_LEAFEON            ] =  576,
+    [SPECIES_GLACEON            ] =  577,
+    [SPECIES_GLISCOR            ] =  578,
+    [SPECIES_MAMOSWINE          ] =  579,
+    [SPECIES_PORYGON_Z          ] =  580,
+    [SPECIES_GALLADE            ] =  581,
+    [SPECIES_PROBOPASS          ] =  582,
+    [SPECIES_DUSKNOIR           ] =  583,
+    [SPECIES_FROSLASS           ] =  584,
+    [SPECIES_ROTOM              ] =  585,
+    [SPECIES_UXIE               ] =  591,
+    [SPECIES_MESPRIT            ] =  592,
+    [SPECIES_AZELF              ] =  593,
+    [SPECIES_DIALGA             ] =  594,
+    [SPECIES_PALKIA             ] =  596,
+    [SPECIES_HEATRAN            ] =  598,
+    [SPECIES_REGIGIGAS          ] =  599,
+    [SPECIES_GIRATINA           ] =  600,
+    [SPECIES_CRESSELIA          ] =  602,
+    [SPECIES_PHIONE             ] =  603,
+    [SPECIES_MANAPHY            ] =  604,
+    [SPECIES_DARKRAI            ] =  605,
+    [SPECIES_SHAYMIN            ] =  606,
+    [SPECIES_ARCEUS             ] =  608,
     [SPECIES_EGG                ] =    0,
     [SPECIES_BAD_EGG            ] =    0,
     [SPECIES_DEOXYS_ATTACK      ] =    0,
@@ -561,418 +561,532 @@ static const u16 sSpeciesToOWGfx[] =
     [SPECIES_541                ] =    0,
     [SPECIES_542                ] =    0,
     [SPECIES_543                ] =    0,
-    [SPECIES_VICTINI            ] =  622,
-    [SPECIES_SNIVY              ] =  623,
-    [SPECIES_SERVINE            ] =  624,
-    [SPECIES_SERPERIOR          ] =  625,
-    [SPECIES_TEPIG              ] =  626,
-    [SPECIES_PIGNITE            ] =  627,
-    [SPECIES_EMBOAR             ] =  628,
-    [SPECIES_OSHAWOTT           ] =  629,
-    [SPECIES_DEWOTT             ] =  630,
-    [SPECIES_SAMUROTT           ] =  631,
-    [SPECIES_PATRAT             ] =  633,
-    [SPECIES_WATCHOG            ] =  634,
-    [SPECIES_LILLIPUP           ] =  635,
-    [SPECIES_HERDIER            ] =  636,
-    [SPECIES_STOUTLAND          ] =  637,
-    [SPECIES_PURRLOIN           ] =  638,
-    [SPECIES_LIEPARD            ] =  639,
-    [SPECIES_PANSAGE            ] =  640,
-    [SPECIES_SIMISAGE           ] =  641,
-    [SPECIES_PANSEAR            ] =  642,
-    [SPECIES_SIMISEAR           ] =  643,
-    [SPECIES_PANPOUR            ] =  644,
-    [SPECIES_SIMIPOUR           ] =  645,
-    [SPECIES_MUNNA              ] =  646,
-    [SPECIES_MUSHARNA           ] =  647,
-    [SPECIES_PIDOVE             ] =  648,
-    [SPECIES_TRANQUILL          ] =  649,
-    [SPECIES_UNFEZANT           ] =  650,
-    [SPECIES_BLITZLE            ] =  652,
-    [SPECIES_ZEBSTRIKA          ] =  653,
-    [SPECIES_ROGGENROLA         ] =  654,
-    [SPECIES_BOLDORE            ] =  655,
-    [SPECIES_GIGALITH           ] =  656,
-    [SPECIES_WOOBAT             ] =  657,
-    [SPECIES_SWOOBAT            ] =  658,
-    [SPECIES_DRILBUR            ] =  659,
-    [SPECIES_EXCADRILL          ] =  660,
-    [SPECIES_AUDINO             ] =  661,
-    [SPECIES_TIMBURR            ] =  662,
-    [SPECIES_GURDURR            ] =  663,
-    [SPECIES_CONKELDURR         ] =  664,
-    [SPECIES_TYMPOLE            ] =  665,
-    [SPECIES_PALPITOAD          ] =  666,
-    [SPECIES_SEISMITOAD         ] =  667,
-    [SPECIES_THROH              ] =  668,
-    [SPECIES_SAWK               ] =  669,
-    [SPECIES_SEWADDLE           ] =  670,
-    [SPECIES_SWADLOON           ] =  671,
-    [SPECIES_LEAVANNY           ] =  672,
-    [SPECIES_VENIPEDE           ] =  673,
-    [SPECIES_WHIRLIPEDE         ] =  674,
-    [SPECIES_SCOLIPEDE          ] =  675,
-    [SPECIES_COTTONEE           ] =  676,
-    [SPECIES_WHIMSICOTT         ] =  677,
-    [SPECIES_PETILIL            ] =  678,
-    [SPECIES_LILLIGANT          ] =  679,
-    [SPECIES_BASCULIN           ] =  681,
-    [SPECIES_SANDILE            ] =  684,
-    [SPECIES_KROKOROK           ] =  685,
-    [SPECIES_KROOKODILE         ] =  686,
-    [SPECIES_DARUMAKA           ] =  687,
-    [SPECIES_DARMANITAN         ] =  689,
-    [SPECIES_MARACTUS           ] =  693,
-    [SPECIES_DWEBBLE            ] =  694,
-    [SPECIES_CRUSTLE            ] =  695,
-    [SPECIES_SCRAGGY            ] =  696,
-    [SPECIES_SCRAFTY            ] =  697,
-    [SPECIES_SIGILYPH           ] =  698,
-    [SPECIES_YAMASK             ] =  699,
-    [SPECIES_COFAGRIGUS         ] =  701,
-    [SPECIES_TIRTOUGA           ] =  702,
-    [SPECIES_CARRACOSTA         ] =  703,
-    [SPECIES_ARCHEN             ] =  704,
-    [SPECIES_ARCHEOPS           ] =  705,
-    [SPECIES_TRUBBISH           ] =  706,
-    [SPECIES_GARBODOR           ] =  707,
-    [SPECIES_ZORUA              ] =  708,
-    [SPECIES_ZOROARK            ] =  710,
-    [SPECIES_MINCCINO           ] =  712,
-    [SPECIES_CINCCINO           ] =  713,
-    [SPECIES_GOTHITA            ] =  714,
-    [SPECIES_GOTHORITA          ] =  715,
-    [SPECIES_GOTHITELLE         ] =  716,
-    [SPECIES_SOLOSIS            ] =  717,
-    [SPECIES_DUOSION            ] =  718,
-    [SPECIES_REUNICLUS          ] =  719,
-    [SPECIES_DUCKLETT           ] =  720,
-    [SPECIES_SWANNA             ] =  721,
-    [SPECIES_VANILLITE          ] =  722,
-    [SPECIES_VANILLISH          ] =  723,
-    [SPECIES_VANILLUXE          ] =  724,
-    [SPECIES_DEERLING           ] =  725,
-    [SPECIES_SAWSBUCK           ] =  729,
-    [SPECIES_EMOLGA             ] =  733,
-    [SPECIES_KARRABLAST         ] =  734,
-    [SPECIES_ESCAVALIER         ] =  735,
-    [SPECIES_FOONGUS            ] =  736,
-    [SPECIES_AMOONGUSS          ] =  737,
-    [SPECIES_FRILLISH           ] =  738,
-    [SPECIES_JELLICENT          ] =  740,
-    [SPECIES_ALOMOMOLA          ] =  742,
-    [SPECIES_JOLTIK             ] =  743,
-    [SPECIES_GALVANTULA         ] =  744,
-    [SPECIES_FERROSEED          ] =  745,
-    [SPECIES_FERROTHORN         ] =  746,
-    [SPECIES_KLINK              ] =  747,
-    [SPECIES_KLANG              ] =  748,
-    [SPECIES_KLINKLANG          ] =  749,
-    [SPECIES_TYNAMO             ] =  750,
-    [SPECIES_EELEKTRIK          ] =  751,
-    [SPECIES_EELEKTROSS         ] =  752,
-    [SPECIES_ELGYEM             ] =  753,
-    [SPECIES_BEHEEYEM           ] =  754,
-    [SPECIES_LITWICK            ] =  755,
-    [SPECIES_LAMPENT            ] =  756,
-    [SPECIES_CHANDELURE         ] =  757,
-    [SPECIES_AXEW               ] =  758,
-    [SPECIES_FRAXURE            ] =  759,
-    [SPECIES_HAXORUS            ] =  760,
-    [SPECIES_CUBCHOO            ] =  761,
-    [SPECIES_BEARTIC            ] =  762,
-    [SPECIES_CRYOGONAL          ] =  763,
-    [SPECIES_SHELMET            ] =  764,
-    [SPECIES_ACCELGOR           ] =  765,
-    [SPECIES_STUNFISK           ] =  766,
-    [SPECIES_MIENFOO            ] =  768,
-    [SPECIES_MIENSHAO           ] =  769,
-    [SPECIES_DRUDDIGON          ] =  770,
-    [SPECIES_GOLETT             ] =  771,
-    [SPECIES_GOLURK             ] =  772,
-    [SPECIES_PAWNIARD           ] =  773,
-    [SPECIES_BISHARP            ] =  774,
-    [SPECIES_BOUFFALANT         ] =  775,
-    [SPECIES_RUFFLET            ] =  776,
-    [SPECIES_BRAVIARY           ] =  777,
-    [SPECIES_VULLABY            ] =  779,
-    [SPECIES_MANDIBUZZ          ] =  780,
-    [SPECIES_HEATMOR            ] =  781,
-    [SPECIES_DURANT             ] =  782,
-    [SPECIES_DEINO              ] =  783,
-    [SPECIES_ZWEILOUS           ] =  784,
-    [SPECIES_HYDREIGON          ] =  785,
-    [SPECIES_LARVESTA           ] =  786,
-    [SPECIES_VOLCARONA          ] =  787,
-    [SPECIES_COBALION           ] =  788,
-    [SPECIES_TERRAKION          ] =  789,
-    [SPECIES_VIRIZION           ] =  790,
-    [SPECIES_TORNADUS           ] =  791,
-    [SPECIES_THUNDURUS          ] =  793,
-    [SPECIES_RESHIRAM           ] =  795,
-    [SPECIES_ZEKROM             ] =  796,
-    [SPECIES_LANDORUS           ] =  797,
-    [SPECIES_KYUREM             ] =  799,
-    [SPECIES_KELDEO             ] =  802,
-    [SPECIES_MELOETTA           ] =  804,
-    [SPECIES_GENESECT           ] =  806,
-    [SPECIES_CHESPIN            ] =  807,
-    [SPECIES_QUILLADIN          ] =  808,
-    [SPECIES_CHESNAUGHT         ] =  809,
-    [SPECIES_FENNEKIN           ] =  810,
-    [SPECIES_BRAIXEN            ] =  811,
-    [SPECIES_DELPHOX            ] =  812,
-    [SPECIES_FROAKIE            ] =  813,
-    [SPECIES_FROGADIER          ] =  814,
-    [SPECIES_GRENINJA           ] =  815,
-    [SPECIES_BUNNELBY           ] =  816,
-    [SPECIES_DIGGERSBY          ] =  817,
-    [SPECIES_FLETCHLING         ] =  818,
-    [SPECIES_FLETCHINDER        ] =  819,
-    [SPECIES_TALONFLAME         ] =  820,
-    [SPECIES_SCATTERBUG         ] =  821,
-    [SPECIES_SPEWPA             ] =  822,
-    [SPECIES_VIVILLON           ] =  823,
-    [SPECIES_LITLEO             ] =  843,
-    [SPECIES_PYROAR             ] =  844,
-    [SPECIES_FLABEBE            ] =  846,
-    [SPECIES_FLOETTE            ] =  851,
-    [SPECIES_FLORGES            ] =  857,
-    [SPECIES_SKIDDO             ] =  862,
-    [SPECIES_GOGOAT             ] =  863,
-    [SPECIES_PANCHAM            ] =  864,
-    [SPECIES_PANGORO            ] =  865,
-    [SPECIES_FURFROU            ] =  866,
-    [SPECIES_ESPURR             ] =  876,
-    [SPECIES_MEOWSTIC           ] =  877,
-    [SPECIES_HONEDGE            ] =  879,
-    [SPECIES_DOUBLADE           ] =  880,
-    [SPECIES_AEGISLASH          ] =  881,
-    [SPECIES_SPRITZEE           ] =  882,
-    [SPECIES_AROMATISSE         ] =  883,
-    [SPECIES_SWIRLIX            ] =  884,
-    [SPECIES_SLURPUFF           ] =  885,
-    [SPECIES_INKAY              ] =  886,
-    [SPECIES_MALAMAR            ] =  887,
-    [SPECIES_BINACLE            ] =  888,
-    [SPECIES_BARBARACLE         ] =  889,
-    [SPECIES_SKRELP             ] =  890,
-    [SPECIES_DRAGALGE           ] =  891,
-    [SPECIES_CLAUNCHER          ] =  892,
-    [SPECIES_CLAWITZER          ] =  893,
-    [SPECIES_HELIOPTILE         ] =  894,
-    [SPECIES_HELIOLISK          ] =  895,
-    [SPECIES_TYRUNT             ] =  896,
-    [SPECIES_TYRANTRUM          ] =  897,
-    [SPECIES_AMAURA             ] =  898,
-    [SPECIES_AURORUS            ] =  899,
-    [SPECIES_SYLVEON            ] =  900,
-    [SPECIES_HAWLUCHA           ] =  901,
-    [SPECIES_DEDENNE            ] =  902,
-    [SPECIES_CARBINK            ] =  903,
-    [SPECIES_GOOMY              ] =  904,
-    [SPECIES_SLIGGOO            ] =  905,
-    [SPECIES_GOODRA             ] =  907,
-    [SPECIES_KLEFKI             ] =  909,
-    [SPECIES_PHANTUMP           ] =  910,
-    [SPECIES_TREVENANT          ] =  911,
-    [SPECIES_PUMPKABOO          ] =  912,
-    [SPECIES_GOURGEIST          ] =  916,
-    [SPECIES_BERGMITE           ] =  920,
-    [SPECIES_AVALUGG            ] =  921,
-    [SPECIES_NOIBAT             ] =  923,
-    [SPECIES_NOIVERN            ] =  924,
-    [SPECIES_XERNEAS            ] =  925,
-    [SPECIES_YVELTAL            ] =  926,
-    [SPECIES_ZYGARDE            ] =  927,
-    [SPECIES_DIANCIE            ] =  933,
-    [SPECIES_HOOPA              ] =  934,
-    [SPECIES_VOLCANION          ] =  936,
-    [SPECIES_ROWLET             ] =  937,
-    [SPECIES_DARTRIX            ] =  938,
-    [SPECIES_DECIDUEYE          ] =  939,
-    [SPECIES_LITTEN             ] =  941,
-    [SPECIES_TORRACAT           ] =  942,
-    [SPECIES_INCINEROAR         ] =  943,
-    [SPECIES_POPPLIO            ] =  944,
-    [SPECIES_BRIONNE            ] =  945,
-    [SPECIES_PRIMARINA          ] =  946,
-    [SPECIES_PIKIPEK            ] =  947,
-    [SPECIES_TRUMBEAK           ] =  948,
-    [SPECIES_TOUCANNON          ] =  949,
-    [SPECIES_YUNGOOS            ] =  950,
-    [SPECIES_GUMSHOOS           ] =  951,
-    [SPECIES_GRUBBIN            ] =  952,
-    [SPECIES_CHARJABUG          ] =  953,
-    [SPECIES_VIKAVOLT           ] =  954,
-    [SPECIES_CRABRAWLER         ] =  955,
-    [SPECIES_CRABOMINABLE       ] =  956,
-    [SPECIES_ORICORIO           ] =  957,
-    [SPECIES_CUTIEFLY           ] =  961,
-    [SPECIES_RIBOMBEE           ] =  962,
-    [SPECIES_ROCKRUFF           ] =  963,
-    [SPECIES_LYCANROC           ] =  965,
-    [SPECIES_WISHIWASHI         ] =  968,
-    [SPECIES_MAREANIE           ] =  969,
-    [SPECIES_TOXAPEX            ] =  970,
-    [SPECIES_MUDBRAY            ] =  971,
-    [SPECIES_MUDSDALE           ] =  972,
-    [SPECIES_DEWPIDER           ] =  973,
-    [SPECIES_ARAQUANID          ] =  974,
-    [SPECIES_FOMANTIS           ] =  975,
-    [SPECIES_LURANTIS           ] =  976,
-    [SPECIES_MORELULL           ] =  977,
-    [SPECIES_SHIINOTIC          ] =  978,
-    [SPECIES_SALANDIT           ] =  979,
-    [SPECIES_SALAZZLE           ] =  980,
-    [SPECIES_STUFFUL            ] =  981,
-    [SPECIES_BEWEAR             ] =  982,
-    [SPECIES_BOUNSWEET          ] =  983,
-    [SPECIES_STEENEE            ] =  984,
-    [SPECIES_TSAREENA           ] =  985,
-    [SPECIES_COMFEY             ] =  986,
-    [SPECIES_ORANGURU           ] =  987,
-    [SPECIES_PASSIMIAN          ] =  988,
-    [SPECIES_WIMPOD             ] =  989,
-    [SPECIES_GOLISOPOD          ] =  990,
-    [SPECIES_SANDYGAST          ] =  991,
-    [SPECIES_PALOSSAND          ] =  992,
-    [SPECIES_PYUKUMUKU          ] =  993,
-    [SPECIES_TYPE_NULL          ] =  994,
-    [SPECIES_SILVALLY           ] =  995,
-    [SPECIES_MINIOR             ] = 1013,
-    [SPECIES_KOMALA             ] = 1020,
-    [SPECIES_TURTONATOR         ] = 1021,
-    [SPECIES_TOGEDEMARU         ] = 1022,
-    [SPECIES_MIMIKYU            ] = 1023,
-    [SPECIES_BRUXISH            ] = 1024,
-    [SPECIES_DRAMPA             ] = 1025,
-    [SPECIES_DHELMISE           ] = 1026,
-    [SPECIES_JANGMO_O           ] = 1027,
-    [SPECIES_HAKAMO_O           ] = 1028,
-    [SPECIES_KOMMO_O            ] = 1029,
-    [SPECIES_TAPU_KOKO          ] = 1030,
-    [SPECIES_TAPU_LELE          ] = 1031,
-    [SPECIES_TAPU_BULU          ] = 1032,
-    [SPECIES_TAPU_FINI          ] = 1033,
-    [SPECIES_COSMOG             ] = 1034,
-    [SPECIES_COSMOEM            ] = 1035,
-    [SPECIES_SOLGALEO           ] = 1036,
-    [SPECIES_LUNALA             ] = 1037,
-    [SPECIES_NIHILEGO           ] = 1038,
-    [SPECIES_BUZZWOLE           ] = 1039,
-    [SPECIES_PHEROMOSA          ] = 1040,
-    [SPECIES_XURKITREE          ] = 1041,
-    [SPECIES_CELESTEELA         ] = 1042,
-    [SPECIES_KARTANA            ] = 1043,
-    [SPECIES_GUZZLORD           ] = 1044,
-    [SPECIES_NECROZMA           ] = 1045,
-    [SPECIES_MAGEARNA           ] = 1048,
-    [SPECIES_MARSHADOW          ] = 1050,
-    [SPECIES_POIPOLE            ] = 1051,
-    [SPECIES_NAGANADEL          ] = 1052,
-    [SPECIES_STAKATAKA          ] = 1053,
-    [SPECIES_BLACEPHALON        ] = 1054,
-    [SPECIES_ZERAORA            ] = 1055,
-    [SPECIES_MELTAN             ] = 1056,
-    [SPECIES_MELMETAL           ] = 1057,
-    [SPECIES_GROOKEY            ] = 1058,
-    [SPECIES_THWACKEY           ] = 1059,
-    [SPECIES_RILLABOOM          ] = 1060,
-    [SPECIES_SCORBUNNY          ] = 1061,
-    [SPECIES_RABOOT             ] = 1062,
-    [SPECIES_CINDERACE          ] = 1063,
-    [SPECIES_SOBBLE             ] = 1064,
-    [SPECIES_DRIZZILE           ] = 1065,
-    [SPECIES_INTELEON           ] = 1066,
-    [SPECIES_SKWOVET            ] = 1067,
-    [SPECIES_GREEDENT           ] = 1068,
-    [SPECIES_ROOKIDEE           ] = 1069,
-    [SPECIES_CORVISQUIRE        ] = 1070,
-    [SPECIES_CORVIKNIGHT        ] = 1071,
-    [SPECIES_BLIPBUG            ] = 1072,
-    [SPECIES_DOTTLER            ] = 1073,
-    [SPECIES_ORBEETLE           ] = 1074,
-    [SPECIES_NICKIT             ] = 1075,
-    [SPECIES_THIEVUL            ] = 1076,
-    [SPECIES_GOSSIFLEUR         ] = 1077,
-    [SPECIES_ELDEGOSS           ] = 1078,
-    [SPECIES_WOOLOO             ] = 1079,
-    [SPECIES_DUBWOOL            ] = 1080,
-    [SPECIES_CHEWTLE            ] = 1081,
-    [SPECIES_DREDNAW            ] = 1082,
-    [SPECIES_YAMPER             ] = 1083,
-    [SPECIES_BOLTUND            ] = 1084,
-    [SPECIES_ROLYCOLY           ] = 1085,
-    [SPECIES_CARKOL             ] = 1086,
-    [SPECIES_COALOSSAL          ] = 1087,
-    [SPECIES_APPLIN             ] = 1088,
-    [SPECIES_FLAPPLE            ] = 1089,
-    [SPECIES_APPLETUN           ] = 1090,
-    [SPECIES_SILICOBRA          ] = 1091,
-    [SPECIES_SANDACONDA         ] = 1092,
-    [SPECIES_CRAMORANT          ] = 1093,
-    [SPECIES_ARROKUDA           ] = 1094,
-    [SPECIES_BARRASKEWDA        ] = 1095,
-    [SPECIES_TOXEL              ] = 1096,
-    [SPECIES_TOXTRICITY         ] = 1097,
-    [SPECIES_SIZZLIPEDE         ] = 1099,
-    [SPECIES_CENTISKORCH        ] = 1100,
-    [SPECIES_CLOBBOPUS          ] = 1101,
-    [SPECIES_GRAPPLOCT          ] = 1102,
-    [SPECIES_SINISTEA           ] = 1103,
-    [SPECIES_POLTEAGEIST        ] = 1105,
-    [SPECIES_HATENNA            ] = 1107,
-    [SPECIES_HATTREM            ] = 1108,
-    [SPECIES_HATTERENE          ] = 1109,
-    [SPECIES_IMPIDIMP           ] = 1110,
-    [SPECIES_MORGREM            ] = 1111,
-    [SPECIES_GRIMMSNARL         ] = 1112,
-    [SPECIES_OBSTAGOON          ] = 1113,
-    [SPECIES_PERRSERKER         ] = 1114,
-    [SPECIES_CURSOLA            ] = 1115,
-    [SPECIES_SIRFETCHD          ] = 1116,
-    [SPECIES_MR_RIME            ] = 1117,
-    [SPECIES_RUNERIGUS          ] = 1118,
-    [SPECIES_MILCERY            ] = 1119,
-    [SPECIES_ALCREMIE           ] = 1120,
-    [SPECIES_FALINKS            ] = 1127,
-    [SPECIES_PINCURCHIN         ] = 1128,
-    [SPECIES_SNOM               ] = 1129,
-    [SPECIES_FROSMOTH           ] = 1130,
-    [SPECIES_STONJOURNER        ] = 1131,
-    [SPECIES_EISCUE             ] = 1132,
-    [SPECIES_INDEEDEE           ] = 1133,
-    [SPECIES_MORPEKO            ] = 1135,
-    [SPECIES_CUFANT             ] = 1136,
-    [SPECIES_COPPERAJAH         ] = 1137,
-    [SPECIES_DRACOZOLT          ] = 1138,
-    [SPECIES_ARCTOZOLT          ] = 1139,
-    [SPECIES_DRACOVISH          ] = 1140,
-    [SPECIES_ARCTOVISH          ] = 1141,
-    [SPECIES_DURALUDON          ] = 1142,
-    [SPECIES_DREEPY             ] = 1143,
-    [SPECIES_DRAKLOAK           ] = 1144,
-    [SPECIES_DRAGAPULT          ] = 1145,
-    [SPECIES_ZACIAN             ] = 1146,
-    [SPECIES_ZAMAZENTA          ] = 1147,
-    [SPECIES_ETERNATUS          ] = 1148,
-    [SPECIES_KUBFU              ] = 1149,
-    [SPECIES_URSHIFU            ] = 1150,
-    [SPECIES_ZARUDE             ] = 1152,
-    [SPECIES_REGIELEKI          ] = 1154,
-    [SPECIES_REGIDRAGO          ] = 1155,
-    [SPECIES_GLASTRIER          ] = 1156,
-    [SPECIES_SPECTRIER          ] = 1157,
-    [SPECIES_CALYREX            ] = 1158,
-    [SPECIES_WYRDEER            ] = 1161,
-    [SPECIES_KLEAVOR            ] = 1162,
-    [SPECIES_URSALUNA           ] = 1163,
-    [SPECIES_BASCULEGION        ] = 1164,
-    [SPECIES_SNEASLER           ] = 1166,
-    [SPECIES_OVERQWIL           ] = 1167,
-    [SPECIES_ENAMORUS           ] = 1168,
+    [SPECIES_VICTINI            ] =  626,
+    [SPECIES_SNIVY              ] =  627,
+    [SPECIES_SERVINE            ] =  628,
+    [SPECIES_SERPERIOR          ] =  629,
+    [SPECIES_TEPIG              ] =  630,
+    [SPECIES_PIGNITE            ] =  631,
+    [SPECIES_EMBOAR             ] =  632,
+    [SPECIES_OSHAWOTT           ] =  633,
+    [SPECIES_DEWOTT             ] =  634,
+    [SPECIES_SAMUROTT           ] =  635,
+    [SPECIES_PATRAT             ] =  637,
+    [SPECIES_WATCHOG            ] =  638,
+    [SPECIES_LILLIPUP           ] =  639,
+    [SPECIES_HERDIER            ] =  640,
+    [SPECIES_STOUTLAND          ] =  641,
+    [SPECIES_PURRLOIN           ] =  642,
+    [SPECIES_LIEPARD            ] =  643,
+    [SPECIES_PANSAGE            ] =  644,
+    [SPECIES_SIMISAGE           ] =  645,
+    [SPECIES_PANSEAR            ] =  646,
+    [SPECIES_SIMISEAR           ] =  647,
+    [SPECIES_PANPOUR            ] =  648,
+    [SPECIES_SIMIPOUR           ] =  649,
+    [SPECIES_MUNNA              ] =  650,
+    [SPECIES_MUSHARNA           ] =  651,
+    [SPECIES_PIDOVE             ] =  652,
+    [SPECIES_TRANQUILL          ] =  653,
+    [SPECIES_UNFEZANT           ] =  654,
+    [SPECIES_BLITZLE            ] =  656,
+    [SPECIES_ZEBSTRIKA          ] =  657,
+    [SPECIES_ROGGENROLA         ] =  658,
+    [SPECIES_BOLDORE            ] =  659,
+    [SPECIES_GIGALITH           ] =  660,
+    [SPECIES_WOOBAT             ] =  661,
+    [SPECIES_SWOOBAT            ] =  662,
+    [SPECIES_DRILBUR            ] =  663,
+    [SPECIES_EXCADRILL          ] =  664,
+    [SPECIES_AUDINO             ] =  665,
+    [SPECIES_TIMBURR            ] =  666,
+    [SPECIES_GURDURR            ] =  667,
+    [SPECIES_CONKELDURR         ] =  668,
+    [SPECIES_TYMPOLE            ] =  669,
+    [SPECIES_PALPITOAD          ] =  670,
+    [SPECIES_SEISMITOAD         ] =  671,
+    [SPECIES_THROH              ] =  672,
+    [SPECIES_SAWK               ] =  673,
+    [SPECIES_SEWADDLE           ] =  674,
+    [SPECIES_SWADLOON           ] =  675,
+    [SPECIES_LEAVANNY           ] =  676,
+    [SPECIES_VENIPEDE           ] =  677,
+    [SPECIES_WHIRLIPEDE         ] =  678,
+    [SPECIES_SCOLIPEDE          ] =  679,
+    [SPECIES_COTTONEE           ] =  680,
+    [SPECIES_WHIMSICOTT         ] =  681,
+    [SPECIES_PETILIL            ] =  682,
+    [SPECIES_LILLIGANT          ] =  683,
+    [SPECIES_BASCULIN           ] =  685,
+    [SPECIES_SANDILE            ] =  688,
+    [SPECIES_KROKOROK           ] =  689,
+    [SPECIES_KROOKODILE         ] =  690,
+    [SPECIES_DARUMAKA           ] =  691,
+    [SPECIES_DARMANITAN         ] =  693,
+    [SPECIES_MARACTUS           ] =  697,
+    [SPECIES_DWEBBLE            ] =  698,
+    [SPECIES_CRUSTLE            ] =  699,
+    [SPECIES_SCRAGGY            ] =  700,
+    [SPECIES_SCRAFTY            ] =  701,
+    [SPECIES_SIGILYPH           ] =  702,
+    [SPECIES_YAMASK             ] =  703,
+    [SPECIES_COFAGRIGUS         ] =  705,
+    [SPECIES_TIRTOUGA           ] =  706,
+    [SPECIES_CARRACOSTA         ] =  707,
+    [SPECIES_ARCHEN             ] =  708,
+    [SPECIES_ARCHEOPS           ] =  709,
+    [SPECIES_TRUBBISH           ] =  710,
+    [SPECIES_GARBODOR           ] =  711,
+    [SPECIES_ZORUA              ] =  712,
+    [SPECIES_ZOROARK            ] =  714,
+    [SPECIES_MINCCINO           ] =  716,
+    [SPECIES_CINCCINO           ] =  717,
+    [SPECIES_GOTHITA            ] =  718,
+    [SPECIES_GOTHORITA          ] =  719,
+    [SPECIES_GOTHITELLE         ] =  720,
+    [SPECIES_SOLOSIS            ] =  721,
+    [SPECIES_DUOSION            ] =  722,
+    [SPECIES_REUNICLUS          ] =  723,
+    [SPECIES_DUCKLETT           ] =  724,
+    [SPECIES_SWANNA             ] =  725,
+    [SPECIES_VANILLITE          ] =  726,
+    [SPECIES_VANILLISH          ] =  727,
+    [SPECIES_VANILLUXE          ] =  728,
+    [SPECIES_DEERLING           ] =  729,
+    [SPECIES_SAWSBUCK           ] =  733,
+    [SPECIES_EMOLGA             ] =  737,
+    [SPECIES_KARRABLAST         ] =  738,
+    [SPECIES_ESCAVALIER         ] =  739,
+    [SPECIES_FOONGUS            ] =  740,
+    [SPECIES_AMOONGUSS          ] =  741,
+    [SPECIES_FRILLISH           ] =  742,
+    [SPECIES_JELLICENT          ] =  744,
+    [SPECIES_ALOMOMOLA          ] =  746,
+    [SPECIES_JOLTIK             ] =  747,
+    [SPECIES_GALVANTULA         ] =  748,
+    [SPECIES_FERROSEED          ] =  749,
+    [SPECIES_FERROTHORN         ] =  750,
+    [SPECIES_KLINK              ] =  751,
+    [SPECIES_KLANG              ] =  752,
+    [SPECIES_KLINKLANG          ] =  753,
+    [SPECIES_TYNAMO             ] =  754,
+    [SPECIES_EELEKTRIK          ] =  755,
+    [SPECIES_EELEKTROSS         ] =  756,
+    [SPECIES_ELGYEM             ] =  757,
+    [SPECIES_BEHEEYEM           ] =  758,
+    [SPECIES_LITWICK            ] =  759,
+    [SPECIES_LAMPENT            ] =  760,
+    [SPECIES_CHANDELURE         ] =  761,
+    [SPECIES_AXEW               ] =  762,
+    [SPECIES_FRAXURE            ] =  763,
+    [SPECIES_HAXORUS            ] =  764,
+    [SPECIES_CUBCHOO            ] =  765,
+    [SPECIES_BEARTIC            ] =  766,
+    [SPECIES_CRYOGONAL          ] =  767,
+    [SPECIES_SHELMET            ] =  768,
+    [SPECIES_ACCELGOR           ] =  769,
+    [SPECIES_STUNFISK           ] =  770,
+    [SPECIES_MIENFOO            ] =  772,
+    [SPECIES_MIENSHAO           ] =  773,
+    [SPECIES_DRUDDIGON          ] =  774,
+    [SPECIES_GOLETT             ] =  775,
+    [SPECIES_GOLURK             ] =  776,
+    [SPECIES_PAWNIARD           ] =  777,
+    [SPECIES_BISHARP            ] =  778,
+    [SPECIES_BOUFFALANT         ] =  779,
+    [SPECIES_RUFFLET            ] =  780,
+    [SPECIES_BRAVIARY           ] =  781,
+    [SPECIES_VULLABY            ] =  783,
+    [SPECIES_MANDIBUZZ          ] =  784,
+    [SPECIES_HEATMOR            ] =  785,
+    [SPECIES_DURANT             ] =  786,
+    [SPECIES_DEINO              ] =  787,
+    [SPECIES_ZWEILOUS           ] =  788,
+    [SPECIES_HYDREIGON          ] =  789,
+    [SPECIES_LARVESTA           ] =  790,
+    [SPECIES_VOLCARONA          ] =  791,
+    [SPECIES_COBALION           ] =  792,
+    [SPECIES_TERRAKION          ] =  793,
+    [SPECIES_VIRIZION           ] =  794,
+    [SPECIES_TORNADUS           ] =  795,
+    [SPECIES_THUNDURUS          ] =  797,
+    [SPECIES_RESHIRAM           ] =  799,
+    [SPECIES_ZEKROM             ] =  800,
+    [SPECIES_LANDORUS           ] =  801,
+    [SPECIES_KYUREM             ] =  803,
+    [SPECIES_KELDEO             ] =  806,
+    [SPECIES_MELOETTA           ] =  808,
+    [SPECIES_GENESECT           ] =  810,
+    [SPECIES_CHESPIN            ] =  811,
+    [SPECIES_QUILLADIN          ] =  812,
+    [SPECIES_CHESNAUGHT         ] =  813,
+    [SPECIES_FENNEKIN           ] =  814,
+    [SPECIES_BRAIXEN            ] =  815,
+    [SPECIES_DELPHOX            ] =  816,
+    [SPECIES_FROAKIE            ] =  817,
+    [SPECIES_FROGADIER          ] =  818,
+    [SPECIES_GRENINJA           ] =  819,
+    [SPECIES_BUNNELBY           ] =  820,
+    [SPECIES_DIGGERSBY          ] =  821,
+    [SPECIES_FLETCHLING         ] =  822,
+    [SPECIES_FLETCHINDER        ] =  823,
+    [SPECIES_TALONFLAME         ] =  824,
+    [SPECIES_SCATTERBUG         ] =  825,
+    [SPECIES_SPEWPA             ] =  826,
+    [SPECIES_VIVILLON           ] =  827,
+    [SPECIES_LITLEO             ] =  847,
+    [SPECIES_PYROAR             ] =  848,
+    [SPECIES_FLABEBE            ] =  850,
+    [SPECIES_FLOETTE            ] =  855,
+    [SPECIES_FLORGES            ] =  861,
+    [SPECIES_SKIDDO             ] =  866,
+    [SPECIES_GOGOAT             ] =  867,
+    [SPECIES_PANCHAM            ] =  868,
+    [SPECIES_PANGORO            ] =  869,
+    [SPECIES_FURFROU            ] =  870,
+    [SPECIES_ESPURR             ] =  880,
+    [SPECIES_MEOWSTIC           ] =  881,
+    [SPECIES_HONEDGE            ] =  883,
+    [SPECIES_DOUBLADE           ] =  884,
+    [SPECIES_AEGISLASH          ] =  885,
+    [SPECIES_SPRITZEE           ] =  886,
+    [SPECIES_AROMATISSE         ] =  887,
+    [SPECIES_SWIRLIX            ] =  888,
+    [SPECIES_SLURPUFF           ] =  889,
+    [SPECIES_INKAY              ] =  890,
+    [SPECIES_MALAMAR            ] =  891,
+    [SPECIES_BINACLE            ] =  892,
+    [SPECIES_BARBARACLE         ] =  893,
+    [SPECIES_SKRELP             ] =  894,
+    [SPECIES_DRAGALGE           ] =  895,
+    [SPECIES_CLAUNCHER          ] =  896,
+    [SPECIES_CLAWITZER          ] =  897,
+    [SPECIES_HELIOPTILE         ] =  898,
+    [SPECIES_HELIOLISK          ] =  899,
+    [SPECIES_TYRUNT             ] =  900,
+    [SPECIES_TYRANTRUM          ] =  901,
+    [SPECIES_AMAURA             ] =  902,
+    [SPECIES_AURORUS            ] =  903,
+    [SPECIES_SYLVEON            ] =  904,
+    [SPECIES_HAWLUCHA           ] =  905,
+    [SPECIES_DEDENNE            ] =  906,
+    [SPECIES_CARBINK            ] =  907,
+    [SPECIES_GOOMY              ] =  908,
+    [SPECIES_SLIGGOO            ] =  909,
+    [SPECIES_GOODRA             ] =  911,
+    [SPECIES_KLEFKI             ] =  913,
+    [SPECIES_PHANTUMP           ] =  914,
+    [SPECIES_TREVENANT          ] =  915,
+    [SPECIES_PUMPKABOO          ] =  916,
+    [SPECIES_GOURGEIST          ] =  920,
+    [SPECIES_BERGMITE           ] =  924,
+    [SPECIES_AVALUGG            ] =  925,
+    [SPECIES_NOIBAT             ] =  927,
+    [SPECIES_NOIVERN            ] =  928,
+    [SPECIES_XERNEAS            ] =  929,
+    [SPECIES_YVELTAL            ] =  930,
+    [SPECIES_ZYGARDE            ] =  931,
+    [SPECIES_DIANCIE            ] =  937,
+    [SPECIES_HOOPA              ] =  938,
+    [SPECIES_VOLCANION          ] =  940,
+    [SPECIES_ROWLET             ] =  941,
+    [SPECIES_DARTRIX            ] =  942,
+    [SPECIES_DECIDUEYE          ] =  943,
+    [SPECIES_LITTEN             ] =  945,
+    [SPECIES_TORRACAT           ] =  946,
+    [SPECIES_INCINEROAR         ] =  947,
+    [SPECIES_POPPLIO            ] =  948,
+    [SPECIES_BRIONNE            ] =  949,
+    [SPECIES_PRIMARINA          ] =  950,
+    [SPECIES_PIKIPEK            ] =  951,
+    [SPECIES_TRUMBEAK           ] =  952,
+    [SPECIES_TOUCANNON          ] =  953,
+    [SPECIES_YUNGOOS            ] =  954,
+    [SPECIES_GUMSHOOS           ] =  955,
+    [SPECIES_GRUBBIN            ] =  956,
+    [SPECIES_CHARJABUG          ] =  957,
+    [SPECIES_VIKAVOLT           ] =  958,
+    [SPECIES_CRABRAWLER         ] =  959,
+    [SPECIES_CRABOMINABLE       ] =  960,
+    [SPECIES_ORICORIO           ] =  961,
+    [SPECIES_CUTIEFLY           ] =  965,
+    [SPECIES_RIBOMBEE           ] =  966,
+    [SPECIES_ROCKRUFF           ] =  967,
+    [SPECIES_LYCANROC           ] =  969,
+    [SPECIES_WISHIWASHI         ] =  972,
+    [SPECIES_MAREANIE           ] =  973,
+    [SPECIES_TOXAPEX            ] =  974,
+    [SPECIES_MUDBRAY            ] =  975,
+    [SPECIES_MUDSDALE           ] =  976,
+    [SPECIES_DEWPIDER           ] =  977,
+    [SPECIES_ARAQUANID          ] =  978,
+    [SPECIES_FOMANTIS           ] =  979,
+    [SPECIES_LURANTIS           ] =  980,
+    [SPECIES_MORELULL           ] =  981,
+    [SPECIES_SHIINOTIC          ] =  982,
+    [SPECIES_SALANDIT           ] =  983,
+    [SPECIES_SALAZZLE           ] =  984,
+    [SPECIES_STUFFUL            ] =  985,
+    [SPECIES_BEWEAR             ] =  986,
+    [SPECIES_BOUNSWEET          ] =  987,
+    [SPECIES_STEENEE            ] =  988,
+    [SPECIES_TSAREENA           ] =  989,
+    [SPECIES_COMFEY             ] =  990,
+    [SPECIES_ORANGURU           ] =  991,
+    [SPECIES_PASSIMIAN          ] =  992,
+    [SPECIES_WIMPOD             ] =  993,
+    [SPECIES_GOLISOPOD          ] =  994,
+    [SPECIES_SANDYGAST          ] =  995,
+    [SPECIES_PALOSSAND          ] =  996,
+    [SPECIES_PYUKUMUKU          ] =  997,
+    [SPECIES_TYPE_NULL          ] =  998,
+    [SPECIES_SILVALLY           ] =  999,
+    [SPECIES_MINIOR             ] = 1017,
+    [SPECIES_KOMALA             ] = 1024,
+    [SPECIES_TURTONATOR         ] = 1025,
+    [SPECIES_TOGEDEMARU         ] = 1026,
+    [SPECIES_MIMIKYU            ] = 1027,
+    [SPECIES_BRUXISH            ] = 1028,
+    [SPECIES_DRAMPA             ] = 1029,
+    [SPECIES_DHELMISE           ] = 1030,
+    [SPECIES_JANGMO_O           ] = 1031,
+    [SPECIES_HAKAMO_O           ] = 1032,
+    [SPECIES_KOMMO_O            ] = 1033,
+    [SPECIES_TAPU_KOKO          ] = 1034,
+    [SPECIES_TAPU_LELE          ] = 1035,
+    [SPECIES_TAPU_BULU          ] = 1036,
+    [SPECIES_TAPU_FINI          ] = 1037,
+    [SPECIES_COSMOG             ] = 1038,
+    [SPECIES_COSMOEM            ] = 1039,
+    [SPECIES_SOLGALEO           ] = 1040,
+    [SPECIES_LUNALA             ] = 1041,
+    [SPECIES_NIHILEGO           ] = 1042,
+    [SPECIES_BUZZWOLE           ] = 1043,
+    [SPECIES_PHEROMOSA          ] = 1044,
+    [SPECIES_XURKITREE          ] = 1045,
+    [SPECIES_CELESTEELA         ] = 1046,
+    [SPECIES_KARTANA            ] = 1047,
+    [SPECIES_GUZZLORD           ] = 1048,
+    [SPECIES_NECROZMA           ] = 1049,
+    [SPECIES_MAGEARNA           ] = 1052,
+    [SPECIES_MARSHADOW          ] = 1054,
+    [SPECIES_POIPOLE            ] = 1055,
+    [SPECIES_NAGANADEL          ] = 1056,
+    [SPECIES_STAKATAKA          ] = 1057,
+    [SPECIES_BLACEPHALON        ] = 1058,
+    [SPECIES_ZERAORA            ] = 1059,
+    [SPECIES_MELTAN             ] = 1060,
+    [SPECIES_MELMETAL           ] = 1061,
+    [SPECIES_GROOKEY            ] = 1062,
+    [SPECIES_THWACKEY           ] = 1063,
+    [SPECIES_RILLABOOM          ] = 1064,
+    [SPECIES_SCORBUNNY          ] = 1065,
+    [SPECIES_RABOOT             ] = 1066,
+    [SPECIES_CINDERACE          ] = 1067,
+    [SPECIES_SOBBLE             ] = 1068,
+    [SPECIES_DRIZZILE           ] = 1069,
+    [SPECIES_INTELEON           ] = 1070,
+    [SPECIES_SKWOVET            ] = 1071,
+    [SPECIES_GREEDENT           ] = 1072,
+    [SPECIES_ROOKIDEE           ] = 1073,
+    [SPECIES_CORVISQUIRE        ] = 1074,
+    [SPECIES_CORVIKNIGHT        ] = 1075,
+    [SPECIES_BLIPBUG            ] = 1076,
+    [SPECIES_DOTTLER            ] = 1077,
+    [SPECIES_ORBEETLE           ] = 1078,
+    [SPECIES_NICKIT             ] = 1079,
+    [SPECIES_THIEVUL            ] = 1080,
+    [SPECIES_GOSSIFLEUR         ] = 1081,
+    [SPECIES_ELDEGOSS           ] = 1082,
+    [SPECIES_WOOLOO             ] = 1083,
+    [SPECIES_DUBWOOL            ] = 1084,
+    [SPECIES_CHEWTLE            ] = 1085,
+    [SPECIES_DREDNAW            ] = 1086,
+    [SPECIES_YAMPER             ] = 1087,
+    [SPECIES_BOLTUND            ] = 1088,
+    [SPECIES_ROLYCOLY           ] = 1089,
+    [SPECIES_CARKOL             ] = 1090,
+    [SPECIES_COALOSSAL          ] = 1091,
+    [SPECIES_APPLIN             ] = 1092,
+    [SPECIES_FLAPPLE            ] = 1093,
+    [SPECIES_APPLETUN           ] = 1094,
+    [SPECIES_SILICOBRA          ] = 1095,
+    [SPECIES_SANDACONDA         ] = 1096,
+    [SPECIES_CRAMORANT          ] = 1097,
+    [SPECIES_ARROKUDA           ] = 1098,
+    [SPECIES_BARRASKEWDA        ] = 1099,
+    [SPECIES_TOXEL              ] = 1100,
+    [SPECIES_TOXTRICITY         ] = 1101,
+    [SPECIES_SIZZLIPEDE         ] = 1103,
+    [SPECIES_CENTISKORCH        ] = 1104,
+    [SPECIES_CLOBBOPUS          ] = 1105,
+    [SPECIES_GRAPPLOCT          ] = 1106,
+    [SPECIES_SINISTEA           ] = 1107,
+    [SPECIES_POLTEAGEIST        ] = 1109,
+    [SPECIES_HATENNA            ] = 1111,
+    [SPECIES_HATTREM            ] = 1112,
+    [SPECIES_HATTERENE          ] = 1113,
+    [SPECIES_IMPIDIMP           ] = 1114,
+    [SPECIES_MORGREM            ] = 1115,
+    [SPECIES_GRIMMSNARL         ] = 1116,
+    [SPECIES_OBSTAGOON          ] = 1117,
+    [SPECIES_PERRSERKER         ] = 1118,
+    [SPECIES_CURSOLA            ] = 1119,
+    [SPECIES_SIRFETCHD          ] = 1120,
+    [SPECIES_MR_RIME            ] = 1121,
+    [SPECIES_RUNERIGUS          ] = 1122,
+    [SPECIES_MILCERY            ] = 1123,
+    [SPECIES_ALCREMIE           ] = 1124,
+    [SPECIES_FALINKS            ] = 1131,
+    [SPECIES_PINCURCHIN         ] = 1132,
+    [SPECIES_SNOM               ] = 1133,
+    [SPECIES_FROSMOTH           ] = 1134,
+    [SPECIES_STONJOURNER        ] = 1135,
+    [SPECIES_EISCUE             ] = 1136,
+    [SPECIES_INDEEDEE           ] = 1137,
+    [SPECIES_MORPEKO            ] = 1139,
+    [SPECIES_CUFANT             ] = 1140,
+    [SPECIES_COPPERAJAH         ] = 1141,
+    [SPECIES_DRACOZOLT          ] = 1142,
+    [SPECIES_ARCTOZOLT          ] = 1143,
+    [SPECIES_DRACOVISH          ] = 1144,
+    [SPECIES_ARCTOVISH          ] = 1145,
+    [SPECIES_DURALUDON          ] = 1146,
+    [SPECIES_DREEPY             ] = 1147,
+    [SPECIES_DRAKLOAK           ] = 1148,
+    [SPECIES_DRAGAPULT          ] = 1149,
+    [SPECIES_ZACIAN             ] = 1150,
+    [SPECIES_ZAMAZENTA          ] = 1151,
+    [SPECIES_ETERNATUS          ] = 1152,
+    [SPECIES_KUBFU              ] = 1153,
+    [SPECIES_URSHIFU            ] = 1154,
+    [SPECIES_ZARUDE             ] = 1156,
+    [SPECIES_REGIELEKI          ] = 1158,
+    [SPECIES_REGIDRAGO          ] = 1159,
+    [SPECIES_GLASTRIER          ] = 1160,
+    [SPECIES_SPECTRIER          ] = 1161,
+    [SPECIES_CALYREX            ] = 1162,
+    [SPECIES_WYRDEER            ] = 1165,
+    [SPECIES_KLEAVOR            ] = 1166,
+    [SPECIES_URSALUNA           ] = 1167,
+    [SPECIES_BASCULEGION        ] = 1168,
+    [SPECIES_SNEASLER           ] = 1170,
+    [SPECIES_OVERQWIL           ] = 1171,
+    [SPECIES_ENAMORUS           ] = 1172,
+    [SPECIES_SPRIGATITO         ] = 1174,
+    [SPECIES_FLORAGATO          ] = 1175,
+    [SPECIES_MEOWSCARADA        ] = 1176,
+    [SPECIES_FUECOCO            ] = 1177,
+    [SPECIES_CROCALOR           ] = 1178,
+    [SPECIES_SKELEDIRGE         ] = 1179,
+    [SPECIES_QUAXLY             ] = 1180,
+    [SPECIES_QUAXWELL           ] = 1181,
+    [SPECIES_QUAQUAVAL          ] = 1182,
+    [SPECIES_LECHONK            ] = 1183,
+    [SPECIES_OINKOLOGNE         ] = 1184,
+    [SPECIES_TAROUNTULA         ] = 1186,
+    [SPECIES_SPIDOPS            ] = 1187,
+    [SPECIES_NYMBLE             ] = 1188,
+    [SPECIES_LOKIX              ] = 1189,
+    [SPECIES_PAWMI              ] = 1190,
+    [SPECIES_PAWMO              ] = 1191,
+    [SPECIES_PAWMOT             ] = 1192,
+    [SPECIES_TANDEMAUS          ] = 1193,
+    [SPECIES_MAUSHOLD           ] = 1194,
+    [SPECIES_FIDOUGH            ] = 1196,
+    [SPECIES_DACHSBUN           ] = 1197,
+    [SPECIES_SMOLIV             ] = 1198,
+    [SPECIES_DOLLIV             ] = 1199,
+    [SPECIES_ARBOLIVA           ] = 1200,
+    [SPECIES_SQUAWKABILLY       ] = 1201,
+    [SPECIES_NACLI              ] = 1205,
+    [SPECIES_NACLSTACK          ] = 1206,
+    [SPECIES_GARGANACL          ] = 1207,
+    [SPECIES_CHARCADET          ] = 1208,
+    [SPECIES_ARMAROUGE          ] = 1209,
+    [SPECIES_CERULEDGE          ] = 1210,
+    [SPECIES_TADBULB            ] = 1211,
+    [SPECIES_BELLIBOLT          ] = 1212,
+    [SPECIES_WATTREL            ] = 1213,
+    [SPECIES_KILOWATTREL        ] = 1214,
+    [SPECIES_MASCHIFF           ] = 1215,
+    [SPECIES_MABOSSTIFF         ] = 1216,
+    [SPECIES_SHROODLE           ] = 1217,
+    [SPECIES_GRAFAIAI           ] = 1218,
+    [SPECIES_BRAMBLIN           ] = 1219,
+    [SPECIES_BRAMBLEGHAST       ] = 1220,
+    [SPECIES_TOEDSCOOL          ] = 1221,
+    [SPECIES_TOEDSCRUEL         ] = 1222,
+    [SPECIES_KLAWF              ] = 1223,
+    [SPECIES_CAPSAKID           ] = 1224,
+    [SPECIES_SCOVILLAIN         ] = 1225,
+    [SPECIES_RELLOR             ] = 1226,
+    [SPECIES_RABSCA             ] = 1227,
+    [SPECIES_FLITTLE            ] = 1228,
+    [SPECIES_ESPATHRA           ] = 1229,
+    [SPECIES_TINKATINK          ] = 1230,
+    [SPECIES_TINKATUFF          ] = 1231,
+    [SPECIES_TINKATON           ] = 1232,
+    [SPECIES_WIGLETT            ] = 1233,
+    [SPECIES_WUGTRIO            ] = 1234,
+    [SPECIES_BOMBIRDIER         ] = 1235,
+    [SPECIES_FINIZEN            ] = 1236,
+    [SPECIES_PALAFIN            ] = 1237,
+    [SPECIES_VAROOM             ] = 1238,
+    [SPECIES_REVAVROOM          ] = 1239,
+    [SPECIES_CYCLIZAR           ] = 1245,
+    [SPECIES_ORTHWORM           ] = 1246,
+    [SPECIES_GLIMMET            ] = 1247,
+    [SPECIES_GLIMMORA           ] = 1248,
+    [SPECIES_GREAVARD           ] = 1249,
+    [SPECIES_HOUNDSTONE         ] = 1250,
+    [SPECIES_FLAMIGO            ] = 1251,
+    [SPECIES_CETODDLE           ] = 1252,
+    [SPECIES_CETITAN            ] = 1253,
+    [SPECIES_VELUZA             ] = 1254,
+    [SPECIES_DONDOZO            ] = 1255,
+    [SPECIES_TATSUGIRI          ] = 1256,
+    [SPECIES_ANNIHILAPE         ] = 1259,
+    [SPECIES_CLODSIRE           ] = 1260,
+    [SPECIES_FARIGIRAF          ] = 1261,
+    [SPECIES_DUDUNSPARCE        ] = 1262,
+    [SPECIES_KINGAMBIT          ] = 1264,
+    [SPECIES_GREAT_TUSK         ] = 1265,
+    [SPECIES_SCREAM_TAIL        ] = 1266,
+    [SPECIES_BRUTE_BONNET       ] = 1267,
+    [SPECIES_FLUTTER_MANE       ] = 1268,
+    [SPECIES_SLITHER_WING       ] = 1269,
+    [SPECIES_SANDY_SHOCKS       ] = 1270,
+    [SPECIES_IRON_TREADS        ] = 1271,
+    [SPECIES_IRON_BUNDLE        ] = 1272,
+    [SPECIES_IRON_HANDS         ] = 1273,
+    [SPECIES_IRON_JUGULIS       ] = 1274,
+    [SPECIES_IRON_MOTH          ] = 1275,
+    [SPECIES_IRON_THORNS        ] = 1276,
+    [SPECIES_FRIGIBAX           ] = 1277,
+    [SPECIES_ARCTIBAX           ] = 1278,
+    [SPECIES_BAXCALIBUR         ] = 1279,
+    [SPECIES_GIMMIGHOUL         ] = 1280,
+    [SPECIES_GHOLDENGO          ] = 1282,
+    [SPECIES_WO_CHIEN           ] = 1283,
+    [SPECIES_CHIEN_PAO          ] = 1284,
+    [SPECIES_TING_LU            ] = 1285,
+    [SPECIES_CHI_YU             ] = 1286,
+    [SPECIES_ROARING_MOON       ] = 1287,
+    [SPECIES_IRON_VALIANT       ] = 1288,
+    [SPECIES_KORAIDON           ] = 1289,
+    [SPECIES_MIRAIDON           ] = 1290,
+    [SPECIES_WALKING_WAKE       ] = 1291,
+    [SPECIES_IRON_LEAVES        ] = 1292,
+    [SPECIES_DIPPLIN            ] = 1293,
+    [SPECIES_ARCHALUDON         ] = 1294,
+    [SPECIES_RAGING_BOLT        ] = 1295,
+    [SPECIES_IRON_CROWN         ] = 1296,
+    [SPECIES_OGERPON            ] = 1297,
+    [SPECIES_OKIDOGI            ] = 1298,
+    [SPECIES_MUNKIDORI          ] = 1299,
+    [SPECIES_FEZANDIPITI        ] = 1300,
+    [SPECIES_TERAPAGOS          ] = 1301,
 };
 
 
@@ -1416,6 +1530,12 @@ const struct FormData PokeFormDataTbl[]=
     {
         .species = SPECIES_SLOWPOKE,
         .form_no = 1,
+        .need_rev = 0,
+        .file = SPECIES_SLOWPOKE_GALARIAN,
+    },
+    { // slowpoke is really fun because slowbro has two forms so we have this duplicate entry here to map it properly during the evolution sequence
+        .species = SPECIES_SLOWPOKE,
+        .form_no = 2,
         .need_rev = 0,
         .file = SPECIES_SLOWPOKE_GALARIAN,
     },
@@ -2146,13 +2266,13 @@ const struct FormData PokeFormDataTbl[]=
     {
         .species = SPECIES_SHELLOS,
         .form_no = 1,
-        .need_rev = 1,
+        .need_rev = 0,
         .file = SPECIES_SHELLOS_EAST_SEA,
     },
     {
         .species = SPECIES_GASTRODON,
         .form_no = 1,
-        .need_rev = 1,
+        .need_rev = 0,
         .file = SPECIES_GASTRODON_EAST_SEA,
     },
     {
@@ -2859,12 +2979,12 @@ void __attribute__((long_call)) SetBoxMonAbility(void *boxmon) // actually takes
 
 #ifdef DEBUG_HIDDEN_ABILITIES
     has_hidden_ability = *(u8 *)(0x023E0000);
-    BoxMonDataSet(boxmon, ID_PARA_dummy_p2_1, (u8 *)&has_hidden_ability);
+    BoxMonDataSet(boxmon, MON_DATA_RESERVED_113, (u8 *)&has_hidden_ability);
 #endif // DEBUG_HIDDEN_ABILITIES
 
-    mons_no = GetBoxMonData(boxmon, ID_PARA_monsno, NULL);
-    pid = GetBoxMonData(boxmon, ID_PARA_personal_rnd, NULL);
-    form = GetBoxMonData(boxmon, ID_PARA_form_no, NULL);
+    mons_no = GetBoxMonData(boxmon, MON_DATA_SPECIES, NULL);
+    pid = GetBoxMonData(boxmon, MON_DATA_PERSONALITY, NULL);
+    form = GetBoxMonData(boxmon, MON_DATA_FORM, NULL);
 
     if (CheckScriptFlag(HIDDEN_ABILITIES_FLAG) == 1)
     {
@@ -2875,7 +2995,7 @@ void __attribute__((long_call)) SetBoxMonAbility(void *boxmon) // actually takes
     }
     else
     {
-        has_hidden_ability = GetBoxMonData(boxmon, ID_PARA_dummy_p2_1, NULL) & DUMMY_P2_1_HIDDEN_ABILITY_MASK; // dummy_p2_1 & hidden ability mask
+        has_hidden_ability = GetBoxMonData(boxmon, MON_DATA_RESERVED_113, NULL) & DUMMY_P2_1_HIDDEN_ABILITY_MASK; // dummy_p2_1 & hidden ability mask
     }
 
     hiddenability = GetMonHiddenAbility(mons_no, form);
@@ -2886,22 +3006,22 @@ void __attribute__((long_call)) SetBoxMonAbility(void *boxmon) // actually takes
 
     if (has_hidden_ability && hiddenability != 0)
     {
-        BoxMonDataSet(boxmon, ID_PARA_speabino, (u8 *)&hiddenability);
+        BoxMonDataSet(boxmon, MON_DATA_ABILITY, (u8 *)&hiddenability);
     }
     else if (ability2 != 0)
     {
         if (pid & 1)
         {
-            BoxMonDataSet(boxmon, ID_PARA_speabino, (u8 *)&ability2);
+            BoxMonDataSet(boxmon, MON_DATA_ABILITY, (u8 *)&ability2);
         }
         else
         {
-            BoxMonDataSet(boxmon, ID_PARA_speabino, (u8 *)&ability1);
+            BoxMonDataSet(boxmon, MON_DATA_ABILITY, (u8 *)&ability1);
         }
     }
     else
     {
-        BoxMonDataSet(boxmon, ID_PARA_speabino, (u8 *)&ability1);
+        BoxMonDataSet(boxmon, MON_DATA_ABILITY, (u8 *)&ability1);
     }
 
     BoxMonSetFastModeOff(boxmon, fastMode);
@@ -2951,9 +3071,9 @@ u32 __attribute__((long_call)) GetGenesectForme(u16 item)
 // add genesect handling to this function that changes form in the party silently.  i think it's only supposed to handle arceus, but it works for the party
 void __attribute__((long_call)) ArceusBoxPokemonFormeChange(struct BoxPokemon *bp)
 {
-    u32 species = GetMonData(bp, ID_PARA_monsno, NULL);
-    u32 ability = GetMonData(bp, ID_PARA_speabino, NULL);
-    u32 item = GetMonData(bp, ID_PARA_item, NULL);
+    u32 species = GetMonData(bp, MON_DATA_SPECIES, NULL);
+    u32 ability = GetMonData(bp, MON_DATA_ABILITY, NULL);
+    u32 item = GetMonData(bp, MON_DATA_HELD_ITEM, NULL);
     u32 form = 0;
     
     if (species == SPECIES_ARCEUS
@@ -2961,37 +3081,37 @@ void __attribute__((long_call)) ArceusBoxPokemonFormeChange(struct BoxPokemon *b
     {
         u32 held_effect = GetItemData(item, ITEM_PARAM_HOLD_EFFECT, 0); // heap id 0 gang
         form = GetArceusType(held_effect);
-        SetMonData(bp, ID_PARA_form_no, &form);
+        SetMonData(bp, MON_DATA_FORM, &form);
     }
 
     if (species == SPECIES_GENESECT)
     {
         form = GetGenesectForme(item);
-        SetMonData(bp, ID_PARA_form_no, &form);
+        SetMonData(bp, MON_DATA_FORM, &form);
     }
 }
 
 // overlay 14 is responsible for pc
 u32 __attribute__((long_call)) HandleBoxPokemonFormeChanges(struct BoxPokemon* bp)
 {
-    u32 species = GetBoxMonData(bp, ID_PARA_monsno, NULL);
+    u32 species = GetBoxMonData(bp, MON_DATA_SPECIES, NULL);
     
     if (species == SPECIES_ARCEUS || species == SPECIES_GENESECT)
     {
-        u32 form_no = GetBoxMonData(bp, ID_PARA_form_no, NULL);
+        u32 form_no = GetBoxMonData(bp, MON_DATA_FORM, NULL);
         
         ArceusBoxPokemonFormeChange(bp);
         
-        if (GetBoxMonData(bp, ID_PARA_form_no, NULL) != form_no)
+        if (GetBoxMonData(bp, MON_DATA_FORM, NULL) != form_no)
             return 1;
     }
     else if (species == SPECIES_GIRATINA)
     {
-        u32 form_no = GetBoxMonData(bp, ID_PARA_form_no, NULL);
+        u32 form_no = GetBoxMonData(bp, MON_DATA_FORM, NULL);
         
         GiratinaBoxPokemonFormChange(bp);
         
-        if (GetBoxMonData(bp, ID_PARA_form_no, NULL) != form_no)
+        if (GetBoxMonData(bp, MON_DATA_FORM, NULL) != form_no)
             return 1;
     }
     
@@ -3000,7 +3120,7 @@ u32 __attribute__((long_call)) HandleBoxPokemonFormeChanges(struct BoxPokemon* b
 
 u32 __attribute__((long_call)) CanUseRevealGlass(struct PartyPokemon *pp)
 {
-    u32 species = GetMonData(pp, ID_PARA_monsno, NULL);
+    u32 species = GetMonData(pp, MON_DATA_SPECIES, NULL);
     
     if (species == SPECIES_TORNADUS || species == SPECIES_THUNDURUS || species == SPECIES_LANDORUS)
     {
@@ -3015,8 +3135,8 @@ u32 __attribute__((long_call)) CanUseRevealGlass(struct PartyPokemon *pp)
 
 u32 __attribute__((long_call)) CanUseDNASplicersGrabSplicerPos(struct PartyPokemon *pp, struct Party *party)
 {
-    u32 species = GetMonData(pp, ID_PARA_monsno, NULL);
-    u32 form_no = GetMonData(pp, ID_PARA_form_no, NULL);
+    u32 species = GetMonData(pp, MON_DATA_SPECIES, NULL);
+    u32 form_no = GetMonData(pp, MON_DATA_FORM, NULL);
     
     if (species != SPECIES_KYUREM) // return invalid party slot if species isn't kyurem
     {
@@ -3026,7 +3146,7 @@ u32 __attribute__((long_call)) CanUseDNASplicersGrabSplicerPos(struct PartyPokem
     for (u32 i = 0; i < ((form_no != 0) ? 6 : party->count); i++) // check all 6 party slots if looking to revert
     {
         struct PartyPokemon *currentmon = PokeParty_GetMemberPointer(party, i);
-        u32 species2 = GetMonData(currentmon, ID_PARA_monsno, NULL);
+        u32 species2 = GetMonData(currentmon, MON_DATA_SPECIES, NULL);
         
         if (species2 == 0 && form_no != 0) // looking for empty slot to dump reshiram to from save
         {
@@ -3057,7 +3177,7 @@ u32 __attribute__((long_call)) UseItemFormeChangeCheck(struct PLIST_WORK *wk, vo
     if (wk->dat->item == ITEM_REVEAL_GLASS
      && CanUseRevealGlass(pp) == 1)
     {
-        if (GetMonData(pp, ID_PARA_form_no, NULL) == 1)
+        if (GetMonData(pp, MON_DATA_FORM, NULL) == 1)
             wk->dat->after_mons = 0; // change to incarnate forme
         else
             wk->dat->after_mons = 1; // change to therian forme
@@ -3078,9 +3198,9 @@ u32 __attribute__((long_call)) UseItemFormeChangeCheck(struct PLIST_WORK *wk, vo
         void *saveData = SaveBlock2_get();
         struct SAVE_MISC_DATA *saveMiscData = Sav2_Misc_get(saveData);
         
-        if (GetMonData(pp, ID_PARA_form_no, NULL) != 0 && saveMiscData->isMonStored[STORED_MONS_DNA_SPLICERS]) // revert forme and put reshiram back in party
+        if (GetMonData(pp, MON_DATA_FORM, NULL) != 0 && saveMiscData->isMonStored[STORED_MONS_DNA_SPLICERS]) // revert forme and put reshiram back in party
         {
-            u32 currForm = GetMonData(pp, ID_PARA_form_no, NULL);
+            u32 currForm = GetMonData(pp, MON_DATA_FORM, NULL);
 
             // grab reshiram from save
             // add reshiram to party--can't just use PokeParty_Add because icons freak out when you tell them to animate something that isn't there
@@ -3148,9 +3268,9 @@ u32 __attribute__((long_call)) PokeListProc_End_Extend(void *proc, int *seq) // 
 
 void __attribute__((long_call)) ChangePartyPokemonToForm(struct PartyPokemon *pp, u32 form)
 {
-    if (form != GetMonData(pp, ID_PARA_form_no, NULL))
+    if (form != GetMonData(pp, MON_DATA_FORM, NULL))
     {
-        SetMonData(pp, ID_PARA_form_no, &form);
+        SetMonData(pp, MON_DATA_FORM, &form);
         RecalcPartyPokemonStats(pp);
         ResetPartyPokemonAbility(pp);
     }
@@ -3160,13 +3280,13 @@ void __attribute__((long_call)) SwapPartyPokemonMove(struct PartyPokemon *pp, u3
 {
     for (u32 i = 0; i < 4; i++)
     {
-        if (GetMonData(pp, ID_PARA_waza1+i, NULL) == oldMove)
+        if (GetMonData(pp, MON_DATA_MOVE1+i, NULL) == oldMove)
         {
-            SetMonData(pp, ID_PARA_waza1+i, &newMove);
-            u32 maxPP = GetMonData(pp, ID_PARA_pp_max1+i, NULL);
-            if (GetMonData(pp, ID_PARA_pp1+i, NULL) > maxPP)
+            SetMonData(pp, MON_DATA_MOVE1+i, &newMove);
+            u32 maxPP = GetMonData(pp, MON_DATA_MOVE1MAXPP+i, NULL);
+            if (GetMonData(pp, MON_DATA_MOVE1PP+i, NULL) > maxPP)
             {
-                SetMonData(pp, ID_PARA_pp1+i, &maxPP);
+                SetMonData(pp, MON_DATA_MOVE1PP+i, &maxPP);
             }
             break;
         }
@@ -3175,7 +3295,7 @@ void __attribute__((long_call)) SwapPartyPokemonMove(struct PartyPokemon *pp, u3
 
 void __attribute__((long_call)) ChangePartyPokemonToFormSwapMove(struct PartyPokemon *pp, u32 form, u32 oldMove, u32 newMove)
 {
-    if (form != GetMonData(pp, ID_PARA_form_no, NULL))
+    if (form != GetMonData(pp, MON_DATA_FORM, NULL))
     {
         ChangePartyPokemonToForm(pp, form);
         SwapPartyPokemonMove(pp, oldMove, newMove);
@@ -3192,7 +3312,7 @@ u32 __attribute__((long_call)) GrabCurrentSeason(void)
 
 void __attribute__((long_call)) UpdatePassiveForms(struct PartyPokemon *pp)
 {
-    u32 species = GetMonData(pp, ID_PARA_monsno, NULL);
+    u32 species = GetMonData(pp, MON_DATA_SPECIES, NULL);
     u32 form = 0;
     BOOL shouldUpdate = TRUE;
     
@@ -3206,8 +3326,10 @@ void __attribute__((long_call)) UpdatePassiveForms(struct PartyPokemon *pp)
         case SPECIES_JELLICENT:
         case SPECIES_MEOWSTIC:
         case SPECIES_INDEEDEE:
-        case SPECIES_BASCULEGION:
             form = gf_rand() & 1; // 1/2 male
+            break;
+        case SPECIES_BASCULEGION:
+            form = (gf_rand() & 1) ? 3 : 0; // 1/2 male
             break;
         case SPECIES_PYROAR:
             form = (gf_rand() % 8 != 0); // 1/8 male
@@ -3217,7 +3339,7 @@ void __attribute__((long_call)) UpdatePassiveForms(struct PartyPokemon *pp)
     }
 
     if (shouldUpdate) {
-        SetMonData(pp, ID_PARA_form_no, &form);
+        SetMonData(pp, MON_DATA_FORM, &form);
     }
 }
 
@@ -3228,11 +3350,11 @@ BOOL __attribute__((long_call)) Party_UpdateDeerlingSeasonForm(struct Party *par
     for (int i = 0; i < party->count; i++)
     {
         struct PartyPokemon *pp = PokeParty_GetMemberPointer(party, i);
-        u32 species = GetMonData(pp, ID_PARA_monsno, NULL);
+        u32 species = GetMonData(pp, MON_DATA_SPECIES, NULL);
         u32 newForm = GrabCurrentSeason();
-        if (newForm != GetMonData(pp, ID_PARA_form_no, NULL) && (species == SPECIES_DEERLING || species == SPECIES_SAWSBUCK))
+        if (newForm != GetMonData(pp, MON_DATA_FORM, NULL) && (species == SPECIES_DEERLING || species == SPECIES_SAWSBUCK))
         {
-            SetMonData(pp, ID_PARA_form_no, &newForm);
+            SetMonData(pp, MON_DATA_FORM, &newForm);
             ret = TRUE;
         }
     }
@@ -3290,7 +3412,7 @@ u8 __attribute__((long_call)) LoadEggMoves(struct PartyPokemon *pokemon, u16 *de
     n = 0;
     offset = 0;
 
-    species = PokeOtherFormMonsNoGet(GetMonData(pokemon, ID_PARA_monsno, NULL), GetMonData(pokemon, ID_PARA_form_no, NULL));
+    species = PokeOtherFormMonsNoGet(GetMonData(pokemon, MON_DATA_SPECIES, NULL), GetMonData(pokemon, MON_DATA_FORM, NULL));
     for (i = 0; i < NUM_EGG_MOVES_TOTAL; i++) {
         if (species + 20000 == kowaza_list[i]) {
             offset = i + 1;
@@ -3314,16 +3436,16 @@ u32 __attribute__((long_call)) CheckIfMonsAreEqual(struct PartyPokemon *pokemon1
     if ((int *)pokemon1 == (int *)pokemon2)
         return TRUE;
 
-    if (GetMonData(pokemon1, ID_PARA_monsno, NULL) == GetMonData(pokemon2, ID_PARA_monsno, NULL)
-     && GetMonData(pokemon1, ID_PARA_personal_rnd, NULL) == GetMonData(pokemon2, ID_PARA_personal_rnd, NULL)
-     && GetMonData(pokemon1, ID_PARA_id_no, NULL) == GetMonData(pokemon2, ID_PARA_id_no, NULL))
+    if (GetMonData(pokemon1, MON_DATA_SPECIES, NULL) == GetMonData(pokemon2, MON_DATA_SPECIES, NULL)
+     && GetMonData(pokemon1, MON_DATA_PERSONALITY, NULL) == GetMonData(pokemon2, MON_DATA_PERSONALITY, NULL)
+     && GetMonData(pokemon1, MON_DATA_OTID, NULL) == GetMonData(pokemon2, MON_DATA_OTID, NULL))
     {
-        for (int i = ID_PARA_condition; i <= ID_PARA_spedef; i++) // all the raw stats
+        for (int i = MON_DATA_STATUS; i <= MON_DATA_SPECIAL_DEFENSE; i++) // all the raw stats
         {
             if (GetMonData(pokemon1, i, NULL) != GetMonData(pokemon2, i, NULL))
                 return FALSE;
         }
-        for (int i = ID_PARA_waza1; i <= ID_PARA_spedef_rnd; i++) // moves, pp, iv's
+        for (int i = MON_DATA_MOVE1; i <= MON_DATA_SPDEF_IV; i++) // moves, pp, iv's
         {
             if (GetMonData(pokemon1, i, NULL) != GetMonData(pokemon2, i, NULL))
                 return FALSE;
@@ -3350,13 +3472,13 @@ u32 __attribute__((long_call)) CheckIfMonsAreEqual(struct PartyPokemon *pokemon1
         target = evoTable[i].target & 0x7FF; \
         form = evoTable[i].target >> 11; \
         if (form != 0) { \
-            SetMonData(ppFromParty, ID_PARA_form_no, &form); \
+            SetMonData(ppFromParty, MON_DATA_FORM, &form); \
         } \
     } \
     else { \
         target = evoTable[i].target & 0x7FF; \
         form = evoTable[i].target >> 11; \
-        SetMonData(pokemon, ID_PARA_form_no, &form); \
+        SetMonData(pokemon, MON_DATA_FORM, &form); \
     } \
 }
 
@@ -3373,15 +3495,15 @@ u16 __attribute__((long_call)) GetMonEvolution(struct Party *party, struct Party
     u16 pid_hi = 0;
     struct Evolution *evoTable;
     int method_local;
-    u32 form = GetMonData(pokemon, ID_PARA_form_no, NULL);
+    u32 form = GetMonData(pokemon, MON_DATA_FORM, NULL);
     u32 lowkey = 0;
     
     struct PartyPokemon *ppFromParty = NULL;
 
-    species = GetMonData(pokemon, ID_PARA_monsno, NULL);
-    heldItem = GetMonData(pokemon, ID_PARA_item, NULL);
-    pid = GetMonData(pokemon, ID_PARA_personal_rnd, NULL);
-    beauty = GetMonData(pokemon, ID_PARA_beautiful, NULL);
+    species = GetMonData(pokemon, MON_DATA_SPECIES, NULL);
+    heldItem = GetMonData(pokemon, MON_DATA_HELD_ITEM, NULL);
+    pid = GetMonData(pokemon, MON_DATA_PERSONALITY, NULL);
+    beauty = GetMonData(pokemon, MON_DATA_BEAUTY, NULL);
     pid_hi = (u16)((pid & 0xFFFF0000) >> 16);
     holdEffect = GetItemData(heldItem, ITEM_PARAM_HOLD_EFFECT, 0);
 
@@ -3405,8 +3527,8 @@ u16 __attribute__((long_call)) GetMonEvolution(struct Party *party, struct Party
 
     switch (context) {
     case EVOCTX_LEVELUP:
-        level = (u8)GetMonData(pokemon, ID_PARA_level, NULL);
-        friendship = (u16)GetMonData(pokemon, ID_PARA_friend, NULL);
+        level = (u8)GetMonData(pokemon, MON_DATA_LEVEL, NULL);
+        friendship = (u16)GetMonData(pokemon, MON_DATA_FRIENDSHIP, NULL);
         for (i = 0; i < MAX_EVOS_PER_POKE; i++) {
             switch (evoTable[i].method) {
             case EVO_NONE:
@@ -3442,19 +3564,19 @@ u16 __attribute__((long_call)) GetMonEvolution(struct Party *party, struct Party
             case EVO_STONE:
                 break;
             case EVO_LEVEL_ATK_GT_DEF:
-                if (evoTable[i].param <= level && GetMonData(pokemon, ID_PARA_pow, NULL) > GetMonData(pokemon, ID_PARA_def, NULL)) {
+                if (evoTable[i].param <= level && GetMonData(pokemon, MON_DATA_ATTACK, NULL) > GetMonData(pokemon, MON_DATA_DEFENSE, NULL)) {
                     GET_TARGET_AND_SET_FORM;
                     *method_ret = EVO_LEVEL_ATK_GT_DEF;
                 }
                 break;
             case EVO_LEVEL_ATK_EQ_DEF:
-                if (evoTable[i].param <= level && GetMonData(pokemon, ID_PARA_pow, NULL) == GetMonData(pokemon, ID_PARA_def, NULL)) {
+                if (evoTable[i].param <= level && GetMonData(pokemon, MON_DATA_ATTACK, NULL) == GetMonData(pokemon, MON_DATA_DEFENSE, NULL)) {
                     GET_TARGET_AND_SET_FORM;
                     *method_ret = EVO_LEVEL_ATK_EQ_DEF;
                 }
                 break;
             case EVO_LEVEL_ATK_LT_DEF:
-                if (evoTable[i].param <= level && GetMonData(pokemon, ID_PARA_pow, NULL) < GetMonData(pokemon, ID_PARA_def, NULL)) {
+                if (evoTable[i].param <= level && GetMonData(pokemon, MON_DATA_ATTACK, NULL) < GetMonData(pokemon, MON_DATA_DEFENSE, NULL)) {
                     GET_TARGET_AND_SET_FORM;
                     *method_ret = EVO_LEVEL_ATK_LT_DEF;
                 }
@@ -3515,13 +3637,13 @@ u16 __attribute__((long_call)) GetMonEvolution(struct Party *party, struct Party
                 }
                 break;
             case EVO_LEVEL_MALE:
-                if (GetMonData(pokemon, ID_PARA_sex, NULL) == POKEMON_GENDER_MALE && evoTable[i].param <= level) {
+                if (GetMonData(pokemon, MON_DATA_GENDER, NULL) == POKEMON_GENDER_MALE && evoTable[i].param <= level) {
                     GET_TARGET_AND_SET_FORM;
                     *method_ret = EVO_LEVEL_MALE;
                 }
                 break;
             case EVO_LEVEL_FEMALE:
-                if (GetMonData(pokemon, ID_PARA_sex, NULL) == POKEMON_GENDER_FEMALE && evoTable[i].param <= level) {
+                if (GetMonData(pokemon, MON_DATA_GENDER, NULL) == POKEMON_GENDER_FEMALE && evoTable[i].param <= level) {
                     GET_TARGET_AND_SET_FORM;
                     *method_ret = EVO_LEVEL_FEMALE;
                 }
@@ -3604,7 +3726,7 @@ u16 __attribute__((long_call)) GetMonEvolution(struct Party *party, struct Party
                     
                     for (k = 0; k < 4; k++)
                     {
-                        if (GetMoveData(GetMonData(pokemon, ID_PARA_waza1+k, NULL), MOVE_DATA_TYPE) == evoTable[i].param)
+                        if (GetMoveData(GetMonData(pokemon, MON_DATA_MOVE1+k, NULL), MOVE_DATA_TYPE) == evoTable[i].param)
                         {
                             GET_TARGET_AND_SET_FORM;
                             *method_ret = EVO_HAS_MOVE_TYPE;
@@ -3619,7 +3741,7 @@ u16 __attribute__((long_call)) GetMonEvolution(struct Party *party, struct Party
                     for (int k = 0; k < 6; k++)
                     {
                         if (!CheckIfMonsAreEqual(pokemon, PokeParty_GetMemberPointer(party, k)) // make sure that pancham doesn't satisfy its own requirement
-                         && (GetMonData(PokeParty_GetMemberPointer(party, k), ID_PARA_type1, NULL) == TYPE_DARK || GetMonData(PokeParty_GetMemberPointer(party, k), ID_PARA_type2, NULL) == TYPE_DARK)) // if either type is dark then set evolution
+                         && (GetMonData(PokeParty_GetMemberPointer(party, k), MON_DATA_TYPE_1, NULL) == TYPE_DARK || GetMonData(PokeParty_GetMemberPointer(party, k), MON_DATA_TYPE_2, NULL) == TYPE_DARK)) // if either type is dark then set evolution
                         {
                             GET_TARGET_AND_SET_FORM;
                             *method_ret = EVO_LEVEL_DARK_TYPE_MON_IN_PARTY;
@@ -3633,7 +3755,7 @@ u16 __attribute__((long_call)) GetMonEvolution(struct Party *party, struct Party
             case EVO_LEVEL_NATURE_AMPED:
                 if (evoTable[i].param <= level)
                 {
-                    u32 nature = GetMonData(pokemon, ID_PARA_personal_rnd, NULL) % 25;
+                    u32 nature = GetMonData(pokemon, MON_DATA_PERSONALITY, NULL) % 25;
                     switch (nature)
                     {
                     case NATURE_ADAMANT:
@@ -3666,7 +3788,7 @@ u16 __attribute__((long_call)) GetMonEvolution(struct Party *party, struct Party
                 }
                 break;
             case EVO_AMOUNT_OF_CRITICAL_HITS: // needs to hit an amount of critical hits in a battle in one go.  need to log critical hits somewhere else
-                if (GetMonData(pokemon, ID_PARA_dummy_p2_1, NULL) & DUMMY_P2_1_HAS_HIT_NECESSARY_CRITICAL_HITS)
+                if (GetMonData(pokemon, MON_DATA_RESERVED_113, NULL) & DUMMY_P2_1_HAS_HIT_NECESSARY_CRITICAL_HITS)
                 {
                     GET_TARGET_AND_SET_FORM;
                     *method_ret = EVO_AMOUNT_OF_CRITICAL_HITS;
@@ -3674,7 +3796,7 @@ u16 __attribute__((long_call)) GetMonEvolution(struct Party *party, struct Party
                 break;
             case EVO_HURT_IN_BATTLE_AMOUNT:
                 {
-                    u32 hp = GetMonData(pokemon, ID_PARA_hp, NULL), maxhp = GetMonData(pokemon, ID_PARA_hpmax, NULL);
+                    u32 hp = GetMonData(pokemon, MON_DATA_HP, NULL), maxhp = GetMonData(pokemon, MON_DATA_MAXHP, NULL);
                     
                     if (hp && (maxhp - hp) >= evoTable[i].param) // if the mon has evoTable[i].param hp less than its max
                     {
@@ -3722,12 +3844,12 @@ u16 __attribute__((long_call)) GetMonEvolution(struct Party *party, struct Party
                 *method_ret = 0;
                 break;
             }
-            if (evoTable[i].method == EVO_STONE_MALE && GetMonData(pokemon, ID_PARA_sex, NULL) == POKEMON_GENDER_MALE && usedItem == evoTable[i].param) {
+            if (evoTable[i].method == EVO_STONE_MALE && GetMonData(pokemon, MON_DATA_GENDER, NULL) == POKEMON_GENDER_MALE && usedItem == evoTable[i].param) {
                 GET_TARGET_AND_SET_FORM;
                 *method_ret = 0;
                 break;
             }
-            if (evoTable[i].method == EVO_STONE_FEMALE && GetMonData(pokemon, ID_PARA_sex, NULL) == POKEMON_GENDER_FEMALE && usedItem == evoTable[i].param) {
+            if (evoTable[i].method == EVO_STONE_FEMALE && GetMonData(pokemon, MON_DATA_GENDER, NULL) == POKEMON_GENDER_FEMALE && usedItem == evoTable[i].param) {
                 GET_TARGET_AND_SET_FORM;
                 *method_ret = 0;
                 break;
@@ -3766,9 +3888,9 @@ u32 __attribute__((long_call)) GetBoxMonSex(struct BoxPokemon *bp)
     u32 species, pid, flag, form;
     
     flag = BoxMonSetFastModeOn(bp);
-    species = GetBoxMonData(bp, ID_PARA_monsno, NULL);
-    pid = GetBoxMonData(bp, ID_PARA_personal_rnd, NULL);
-    form = GetBoxMonData(bp, ID_PARA_form_no, NULL);
+    species = GetBoxMonData(bp, MON_DATA_SPECIES, NULL);
+    pid = GetBoxMonData(bp, MON_DATA_PERSONALITY, NULL);
+    form = GetBoxMonData(bp, MON_DATA_FORM, NULL);
     BoxMonSetFastModeOff(bp, flag);
     
     return GrabSexFromSpeciesAndForm(species, pid, form);
@@ -3778,7 +3900,7 @@ u32 __attribute__((long_call)) GetBoxMonSex(struct BoxPokemon *bp)
 u16 __attribute__((long_call)) get_mon_ow_tag(u16 species, u32 form, u32 isFemale)
 {
     u32 adjustment = 0, ret = 0;
-    if (species > SPECIES_LICKILICKY) // split between 0x1AC and 0x1E4
+    if (species > SPECIES_SNOVER) // split between 0x1AC and 0x1E4
     {
         adjustment = 0x1E4;
     }
@@ -3825,8 +3947,8 @@ BOOL __attribute__((long_call)) GiveMon(int heapId, void *saveData, int species,
     PokeParaSet(pokemon, species, level, 32, FALSE, 0, 0, 0); // CreateMon
     sub_020720FC(pokemon, profile, ITEM_POKE_BALL, ball, encounterType, heapId);
     sp1C = heldItem;
-    SetMonData(pokemon, ID_PARA_item, &sp1C);
-    SetMonData(pokemon, ID_PARA_form_no, &forme);
+    SetMonData(pokemon, MON_DATA_HELD_ITEM, &sp1C);
+    SetMonData(pokemon, MON_DATA_FORM, &forme);
 
     if (forme != 0) // reinitialize moves for different learnsets
     {
@@ -3843,7 +3965,7 @@ BOOL __attribute__((long_call)) GiveMon(int heapId, void *saveData, int species,
     }
 
     if (ability != 0) {
-        SetMonData(pokemon, ID_PARA_speabino, &ability);
+        SetMonData(pokemon, MON_DATA_ABILITY, &ability);
     } else {
         ResetPartyPokemonAbility(pokemon); // with the flag set, the hidden ability should be set
     }
@@ -3871,7 +3993,7 @@ BOOL __attribute__((long_call)) AddWildPartyPokemon(int inTarget, EncounterInfo 
         range = 1;
     }
     
-    species = GetMonData(encounterPartyPokemon, ID_PARA_monsno, NULL);
+    species = GetMonData(encounterPartyPokemon, MON_DATA_SPECIES, NULL);
     
     if (space_for_setmondata != 0)
     {
@@ -3901,7 +4023,7 @@ BOOL __attribute__((long_call)) AddWildPartyPokemon(int inTarget, EncounterInfo 
 
     if (change_form)
     {
-        SetMonData(encounterPartyPokemon, ID_PARA_form_no, (u8 *)&form_no);
+        SetMonData(encounterPartyPokemon, MON_DATA_FORM, (u8 *)&form_no);
         RecalcPartyPokemonStats(encounterPartyPokemon);
         ResetPartyPokemonAbility(encounterPartyPokemon);
         InitBoxMonMoveset(&encounterPartyPokemon->box);
@@ -3926,7 +4048,7 @@ void __attribute__((long_call)) CreateBoxMonData(struct BoxPokemon *boxmon, int 
     if(!rndflag){
         rnd = (gf_rand() | (gf_rand() << 16));
     }
-    BoxMonDataSet(boxmon,ID_PARA_personal_rnd,(u8 *)&rnd);
+    BoxMonDataSet(boxmon,MON_DATA_PERSONALITY,(u8 *)&rnd);
 
     if(idflag==ID_NO_SHINY){
         do{
@@ -3942,66 +4064,66 @@ void __attribute__((long_call)) CreateBoxMonData(struct BoxPokemon *boxmon, int 
     // we need the form to be set correctly in either case
     if (space_for_setmondata != 0)
     {
-        BoxMonDataSet(boxmon, ID_PARA_form_no, (u8 *)&space_for_setmondata);
+        BoxMonDataSet(boxmon, MON_DATA_FORM, (u8 *)&space_for_setmondata);
     }
 
-    BoxMonDataSet(boxmon,ID_PARA_id_no,(u8 *)&id);
-    BoxMonDataSet(boxmon,ID_PARA_country_code,(u8 *)&language);
-    BoxMonDataSet(boxmon,ID_PARA_monsno,(u8 *)&species);
-    BoxMonDataSet(boxmon,ID_PARA_default_name,NULL);
+    BoxMonDataSet(boxmon,MON_DATA_OTID,(u8 *)&id);
+    BoxMonDataSet(boxmon,MON_DATA_GAME_LANGUAGE,(u8 *)&language);
+    BoxMonDataSet(boxmon,MON_DATA_SPECIES,(u8 *)&species);
+    BoxMonDataSet(boxmon,MON_DATA_SPECIES_NAME,NULL);
 
     i=PokeLevelExpGet(species,level);
-    BoxMonDataSet(boxmon,ID_PARA_exp,(u8 *)&i);
+    BoxMonDataSet(boxmon,MON_DATA_EXPERIENCE,(u8 *)&i);
 
     i=PokePersonalParaGet(species,PERSONAL_BASE_FRIENDSHIP);
-    BoxMonDataSet(boxmon,ID_PARA_friend,(u8 *)&i);
+    BoxMonDataSet(boxmon,MON_DATA_FRIENDSHIP,(u8 *)&i);
 
-    BoxMonDataSet(boxmon,ID_PARA_get_level,(u8 *)&level);
-    BoxMonDataSet(boxmon,ID_PARA_get_cassette,(u8 *)&title);
+    BoxMonDataSet(boxmon,MON_DATA_MET_LEVEL,(u8 *)&level);
+    BoxMonDataSet(boxmon,MON_DATA_GAME_VERSION,(u8 *)&title);
     i=ITEM_POKE_BALL;
-    BoxMonDataSet(boxmon,ID_PARA_get_ball,(u8 *)&i);
+    BoxMonDataSet(boxmon,MON_DATA_POKEBALL,(u8 *)&i);
 
     if(pow <= MAX_IVS){
-        BoxMonDataSet(boxmon,ID_PARA_hp_rnd,(u8 *)&pow);
-        BoxMonDataSet(boxmon,ID_PARA_pow_rnd,(u8 *)&pow);
-        BoxMonDataSet(boxmon,ID_PARA_def_rnd,(u8 *)&pow);
-        BoxMonDataSet(boxmon,ID_PARA_agi_rnd,(u8 *)&pow);
-        BoxMonDataSet(boxmon,ID_PARA_spepow_rnd,(u8 *)&pow);
-        BoxMonDataSet(boxmon,ID_PARA_spedef_rnd,(u8 *)&pow);
+        BoxMonDataSet(boxmon,MON_DATA_HP_IV,(u8 *)&pow);
+        BoxMonDataSet(boxmon,MON_DATA_ATK_IV,(u8 *)&pow);
+        BoxMonDataSet(boxmon,MON_DATA_DEF_IV,(u8 *)&pow);
+        BoxMonDataSet(boxmon,MON_DATA_SPEED_IV,(u8 *)&pow);
+        BoxMonDataSet(boxmon,MON_DATA_SPATK_IV,(u8 *)&pow);
+        BoxMonDataSet(boxmon,MON_DATA_SPDEF_IV,(u8 *)&pow);
     }
     else{ // why the fuck is it done like this
         i=gf_rand();
         j=(i&(0x001f<< 0))>> 0;
-        BoxMonDataSet(boxmon,ID_PARA_hp_rnd,(u8 *)&j);
+        BoxMonDataSet(boxmon,MON_DATA_HP_IV,(u8 *)&j);
         j=(i&(0x001f<< 5))>> 5;
-        BoxMonDataSet(boxmon,ID_PARA_pow_rnd,(u8 *)&j);
+        BoxMonDataSet(boxmon,MON_DATA_ATK_IV,(u8 *)&j);
         j=(i&(0x001f<<10))>>10;
-        BoxMonDataSet(boxmon,ID_PARA_def_rnd,(u8 *)&j);
+        BoxMonDataSet(boxmon,MON_DATA_DEF_IV,(u8 *)&j);
         i=gf_rand();
         j=(i&(0x001f<< 0))>> 0;
-        BoxMonDataSet(boxmon,ID_PARA_agi_rnd,(u8 *)&j);
+        BoxMonDataSet(boxmon,MON_DATA_SPEED_IV,(u8 *)&j);
         j=(i&(0x001f<< 5))>> 5;
-        BoxMonDataSet(boxmon,ID_PARA_spepow_rnd,(u8 *)&j);
+        BoxMonDataSet(boxmon,MON_DATA_SPATK_IV,(u8 *)&j);
         j=(i&(0x001f<<10))>>10;
-        BoxMonDataSet(boxmon,ID_PARA_spedef_rnd,(u8 *)&j);
+        BoxMonDataSet(boxmon,MON_DATA_SPDEF_IV,(u8 *)&j);
     }
 
     i = PokePersonalParaGet(species,PERSONAL_ABILITY_1);
     j = PokePersonalParaGet(species,PERSONAL_ABILITY_2);
     if(j!=0){
         if(rnd&1){
-            BoxMonDataSet(boxmon,ID_PARA_speabino,(u8 *)&j);
+            BoxMonDataSet(boxmon,MON_DATA_ABILITY,(u8 *)&j);
         }
         else{
-            BoxMonDataSet(boxmon,ID_PARA_speabino,(u8 *)&i);
+            BoxMonDataSet(boxmon,MON_DATA_ABILITY,(u8 *)&i);
         }
     }
     else{
-        BoxMonDataSet(boxmon,ID_PARA_speabino,(u8 *)&i);
+        BoxMonDataSet(boxmon,MON_DATA_ABILITY,(u8 *)&i);
     }
 
     i=GetBoxMonGender(boxmon);
-    BoxMonDataSet(boxmon,ID_PARA_sex,(u8 *)&i);
+    BoxMonDataSet(boxmon,MON_DATA_GENDER,(u8 *)&i);
     FillInBoxMonLearnset(boxmon);
     BoxMonSetFastModeOff(boxmon,flag);
 }
@@ -4012,12 +4134,12 @@ bool8 __attribute__((long_call)) RevertFormChange(struct PartyPokemon *pp, u16 s
     int work = 0;
 
     // use this chance to make bad poisoning normal poison at the end of battle
-    work = GetMonData(pp, ID_PARA_condition, NULL);
+    work = GetMonData(pp, MON_DATA_STATUS, NULL);
     if (work & STATUS_FLAG_BADLY_POISONED)
     {
         work &= ~(STATUS_FLAG_BADLY_POISONED);
         work |= STATUS_FLAG_POISONED;
-        SetMonData(pp, ID_PARA_condition, &work);
+        SetMonData(pp, MON_DATA_STATUS, &work);
     }
 
     for (i = 0; i < NELEMS(PokeFormDataTbl); i++)
@@ -4035,7 +4157,7 @@ bool8 __attribute__((long_call)) RevertFormChange(struct PartyPokemon *pp, u16 s
             else if (species == SPECIES_ZYGARDE)
                 work = form_no-2;
 
-            SetMonData(pp, ID_PARA_form_no, &work);
+            SetMonData(pp, MON_DATA_FORM, &work);
             return TRUE;
         }
     }
@@ -4323,7 +4445,7 @@ void MakeTrainerPokemonParty(struct BATTLE_PARAM *bp, int num, int heapID)
         rnd = (rnd << 8) + rnd_tmp;
         pow = pow * 31 / 255;
         PokeParaSet(mons[i], species, level, pow, 1, rnd, 2, 0);
-        SetMonData(mons[i], ID_PARA_form_no, &form_no);
+        SetMonData(mons[i], MON_DATA_FORM, &form_no);
 
         //set default abilities
         species = PokeOtherFormMonsNoGet(species, form_no);
@@ -4333,15 +4455,15 @@ void MakeTrainerPokemonParty(struct BATTLE_PARAM *bp, int num, int heapID)
         {
             if (abilityslot & 1)
             {
-                SetMonData(mons[i], ID_PARA_speabino, (u8 *)&ab1);
+                SetMonData(mons[i], MON_DATA_ABILITY, (u8 *)&ab1);
             }
             else{
-                SetMonData(mons[i], ID_PARA_speabino, (u8 *)&ab2);
+                SetMonData(mons[i], MON_DATA_ABILITY, (u8 *)&ab2);
             }
         }
         else
         {
-            SetMonData(mons[i], ID_PARA_speabino, (u8 *)&ab1);
+            SetMonData(mons[i], MON_DATA_ABILITY, (u8 *)&ab1);
         }
         
         // if abilityslot is 2 force hidden ability with the bit set.  this specifically to cover darmanitan with zen mode switching between forms and such.
@@ -4349,12 +4471,12 @@ void MakeTrainerPokemonParty(struct BATTLE_PARAM *bp, int num, int heapID)
         {
             u16 hiddenability = GetMonHiddenAbility(species, form_no);
             SET_MON_HIDDEN_ABILITY_BIT(mons[i])
-            SetMonData(mons[i], ID_PARA_speabino, (u8 *)&hiddenability);
+            SetMonData(mons[i], MON_DATA_ABILITY, (u8 *)&hiddenability);
         }
 
         if (bp->trainer_data[num].data_type & TRAINER_DATA_TYPE_ITEMS)
         {
-            SetMonData(mons[i], ID_PARA_item, &item);
+            SetMonData(mons[i], MON_DATA_HELD_ITEM, &item);
         }
         if (bp->trainer_data[num].data_type & TRAINER_DATA_TYPE_MOVES)
         {
@@ -4366,40 +4488,40 @@ void MakeTrainerPokemonParty(struct BATTLE_PARAM *bp, int num, int heapID)
         TrainerCBSet(ballseal, mons[i], heapID);
         if (bp->trainer_data[num].data_type & TRAINER_DATA_TYPE_ABILITY)
         {
-            SetMonData(mons[i], ID_PARA_speabino, &ability);
+            SetMonData(mons[i], MON_DATA_ABILITY, &ability);
         }
         if (bp->trainer_data[num].data_type & TRAINER_DATA_TYPE_BALL)
         {
-            SetMonData(mons[i], ID_PARA_get_ball, &ball);
+            SetMonData(mons[i], MON_DATA_POKEBALL, &ball);
         }
         if (bp->trainer_data[num].data_type & TRAINER_DATA_TYPE_IV_EV_SET)
         {
             for(j = 0; j < 6; j++)
             {
-                SetMonData(mons[i],ID_PARA_hp_rnd + j, &ivnums[j]);
+                SetMonData(mons[i],MON_DATA_HP_IV + j, &ivnums[j]);
             }
 
             for(j = 0; j < 6; j++)
             {
-                SetMonData(mons[i],ID_PARA_hp_exp + j, &evnums[j]);
+                SetMonData(mons[i],MON_DATA_HP_EV + j, &evnums[j]);
             }
         }
         if (bp->trainer_data[num].data_type & TRAINER_DATA_TYPE_NATURE_SET)
         {
-            u32 pid = GetMonData(mons[i], ID_PARA_personal_rnd, NULL);
+            u32 pid = GetMonData(mons[i], MON_DATA_PERSONALITY, NULL);
             u8 currentNature = pid % 25;
             pid = pid + nature - currentNature;
-            SetMonData(mons[i], ID_PARA_personal_rnd, &pid);
+            SetMonData(mons[i], MON_DATA_PERSONALITY, &pid);
         }
         if (bp->trainer_data[num].data_type & TRAINER_DATA_TYPE_SHINY_LOCK)
         {
-            u32 pid = GetMonData(mons[i], ID_PARA_personal_rnd, NULL);
+            u32 pid = GetMonData(mons[i], MON_DATA_PERSONALITY, NULL);
             if (shinylock != 0)
             {
                 do{
                     id = (gf_rand() | (gf_rand() << 16));
                 } while((((id & 0xffff0000) >> 16) ^ (id & 0xffff) ^ ((pid & 0xffff0000) >> 16) ^ (pid & 0xffff)) >= 8);
-                SetMonData(mons[i], ID_PARA_id_no, &id);
+                SetMonData(mons[i], MON_DATA_OTID, &id);
             }
         }
 
@@ -4409,53 +4531,53 @@ void MakeTrainerPokemonParty(struct BATTLE_PARAM *bp, int num, int heapID)
         {
             if (additionalflags & TRAINER_DATA_EXTRA_TYPE_STATUS)
             {
-                SetMonData(mons[i],ID_PARA_condition, &status);
+                SetMonData(mons[i],MON_DATA_STATUS, &status);
             }
             if (additionalflags & TRAINER_DATA_EXTRA_TYPE_HP)
             {
-                SetMonData(mons[i],ID_PARA_hpmax, &hp);
-                SetMonData(mons[i],ID_PARA_hp, &hp);
+                SetMonData(mons[i],MON_DATA_MAXHP, &hp);
+                SetMonData(mons[i],MON_DATA_HP, &hp);
             }
             if (additionalflags & TRAINER_DATA_EXTRA_TYPE_ATK)
             {
-                SetMonData(mons[i],ID_PARA_pow, &atk);
+                SetMonData(mons[i],MON_DATA_ATTACK, &atk);
             }
             if (additionalflags & TRAINER_DATA_EXTRA_TYPE_DEF)
             {
-                SetMonData(mons[i],ID_PARA_def, &def);
+                SetMonData(mons[i],MON_DATA_DEFENSE, &def);
             }
             if (additionalflags & TRAINER_DATA_EXTRA_TYPE_SPEED)
             {
-                SetMonData(mons[i],ID_PARA_agi, &speed);
+                SetMonData(mons[i],MON_DATA_SPEED, &speed);
             }
             if (additionalflags & TRAINER_DATA_EXTRA_TYPE_SP_ATK)
             {
-                SetMonData(mons[i],ID_PARA_spepow, &spatk);
+                SetMonData(mons[i],MON_DATA_SPECIAL_ATTACK, &spatk);
             }
             if (additionalflags & TRAINER_DATA_EXTRA_TYPE_SP_DEF)
             {
-                SetMonData(mons[i],ID_PARA_spedef, &spdef);
+                SetMonData(mons[i],MON_DATA_SPECIAL_DEFENSE, &spdef);
             }
             if (additionalflags & TRAINER_DATA_EXTRA_TYPE_TYPES)
             {
                 for(j = 0; j < 2; j++)
                 {
-                    SetMonData(mons[i],ID_PARA_type1+j, &types[j]);
+                    SetMonData(mons[i],MON_DATA_TYPE_1+j, &types[j]);
                 }
             }
             if (additionalflags & TRAINER_DATA_EXTRA_TYPE_PP_COUNTS)
             {
                 for(j = 0; j < 4; j++)
                 {
-                    SetMonData(mons[i],ID_PARA_pp_count1+j, &ppcounts[j]);
+                    SetMonData(mons[i],MON_DATA_MOVE1PPUP+j, &ppcounts[j]);
                 }
             }
             if (additionalflags & TRAINER_DATA_EXTRA_TYPE_NICKNAME)
             {
                 u32 one = 1;
                 
-                SetMonData(mons[i],ID_PARA_nickname_flag, &one);
-                SetMonData(mons[i],ID_PARA_nickname, nickname);
+                SetMonData(mons[i],MON_DATA_HAS_NICKNAME, &one);
+                SetMonData(mons[i],MON_DATA_NICKNAME, nickname);
             }
         }
         TrainerMonHandleFrustration(mons[i]);
@@ -4489,7 +4611,7 @@ void __attribute__((long_call)) ClearMonMoves(struct PartyPokemon *pokemon)
     int null = 0;
     for (int i = 0; i < 4; i++)
     {
-        SetMonData(pokemon, ID_PARA_waza1+i, &null);
+        SetMonData(pokemon, MON_DATA_MOVE1+i, &null);
     }
 }
 
@@ -4516,7 +4638,7 @@ BOOL ScrCmd_GiveEgg(SCRIPTCONTEXT *ctx)
 
         SetEggStats(pokemon, species, 1, profile, 3, val);
 
-        SetMonData(pokemon, ID_PARA_form_no, &form); // add form capability
+        SetMonData(pokemon, MON_DATA_FORM, &form); // add form capability
 
         ClearMonMoves(pokemon);
         InitBoxMonMoveset(&pokemon->box);
@@ -4558,13 +4680,13 @@ BOOL ScrCmd_GiveTogepiEgg(SCRIPTCONTEXT *ctx) {
 
     SetEggStats(togepi, SPECIES_TOGEPI, 1, profile, 3, sub_02017FE4(1, 13));
 
-    //SetMonData(togepi, ID_PARA_form_no, &form); // add form capability
+    //SetMonData(togepi, MON_DATA_FORM, &form); // add form capability
 
     //ClearMonMoves(pokemon);
     //InitBoxMonMoveset(&pokemon->box);
 
     for (i = 0; i < 4; i++) {
-        if (!GetMonData(togepi, ID_PARA_waza1 + i, 0)) {
+        if (!GetMonData(togepi, MON_DATA_MOVE1 + i, 0)) {
             break;
         }
     }
@@ -4574,10 +4696,10 @@ BOOL ScrCmd_GiveTogepiEgg(SCRIPTCONTEXT *ctx) {
     }
 
     moveData = MOVE_EXTRASENSORY; // add extrasensory to the togepi
-    SetMonData(togepi, ID_PARA_waza1 + i, &moveData);
+    SetMonData(togepi, MON_DATA_MOVE1 + i, &moveData);
 
-    pp = GetMonData(togepi, ID_PARA_pp_max1 + i, 0);
-    SetMonData(togepi, ID_PARA_pp1 + i, &pp);
+    pp = GetMonData(togepi, MON_DATA_MOVE1MAXPP + i, 0);
+    SetMonData(togepi, MON_DATA_MOVE1PP + i, &pp);
 
     if (CheckScriptFlag(HIDDEN_ABILITIES_FLAG) == 1) // add HA capability
     {
@@ -4591,7 +4713,7 @@ BOOL ScrCmd_GiveTogepiEgg(SCRIPTCONTEXT *ctx) {
 
     sys_FreeMemoryEz(togepi);
 
-    SaveMisc_SetTogepiPersonalityGender(Sav2_Misc_get(fsys->savedata), GetMonData(togepi, ID_PARA_personal_rnd, 0), GetMonData(togepi, ID_PARA_sex, 0));
+    SaveMisc_SetTogepiPersonalityGender(Sav2_Misc_get(fsys->savedata), GetMonData(togepi, MON_DATA_PERSONALITY, 0), GetMonData(togepi, MON_DATA_GENDER, 0));
 
     return FALSE;
 }
@@ -4606,16 +4728,16 @@ void sub_0206D328(struct PartyPokemon *pokemon, u32 heapId)
     u8 pokeball = 4; // poke ball
     u8 metLevel = 0;
     
-    u16 dummy_p2_1 = GetBoxMonData(pokemon, ID_PARA_dummy_p2_1, NULL); // hidden ability field
+    u16 dummy_p2_1 = GetBoxMonData(pokemon, MON_DATA_RESERVED_113, NULL); // hidden ability field
     
     sub_0206D038(pokemon, heapId); // carries over egg values to a clean mon
-    SetMonData(pokemon, ID_PARA_tamago_flag, &isEgg);
-    GetSpeciesNameIntoArray(GetMonData(pokemon, ID_PARA_monsno, NULL), 0, nickname);
-    SetMonData(pokemon, ID_PARA_nickname, nickname);
-    SetMonData(pokemon, ID_PARA_nickname_flag, &hasNickname);
-    SetMonData(pokemon, ID_PARA_get_ball, &pokeball);
-    SetMonData(pokemon, ID_PARA_get_level, &metLevel);
-    SetMonData(pokemon, ID_PARA_dummy_p2_1, &dummy_p2_1);
+    SetMonData(pokemon, MON_DATA_IS_EGG, &isEgg);
+    GetSpeciesNameIntoArray(GetMonData(pokemon, MON_DATA_SPECIES, NULL), 0, nickname);
+    SetMonData(pokemon, MON_DATA_NICKNAME, nickname);
+    SetMonData(pokemon, MON_DATA_HAS_NICKNAME, &hasNickname);
+    SetMonData(pokemon, MON_DATA_POKEBALL, &pokeball);
+    SetMonData(pokemon, MON_DATA_MET_LEVEL, &metLevel);
+    SetMonData(pokemon, MON_DATA_RESERVED_113, &dummy_p2_1);
     RecalcPartyPokemonStats(pokemon);
 
     ResetPartyPokemonAbility(pokemon);
@@ -4650,6 +4772,11 @@ u32 storeShayminForm = 0;
 
 u32 GrabCryNumSpeciesForm(u32 species, u32 form)
 {
+    if (species > SPECIES_ARCEUS && species < SPECIES_VICTINI)
+    {
+        species = SPECIES_BULBASAUR;
+    }
+
     if (species > MAX_MON_NUM) // battles are fucking stupid and pass in species already adjusted for form.  need to revert to base species
     {
         species = GetOriginalSpeciesBasedOnAdjustedForm(species);
@@ -4831,19 +4958,19 @@ u32 IsLevelAtLevelCap(u32 level)
 #ifdef IMPLEMENT_LEVEL_CAP
 
 BOOL Pokemon_TryLevelUp(struct PartyPokemon *mon) {
-    u16 species = (u16)GetMonData(mon, ID_PARA_monsno, NULL);
-    u8 level = (u8)(GetMonData(mon, ID_PARA_level, NULL) + 1);
-    u32 exp = GetMonData(mon, ID_PARA_exp, NULL);
+    u16 species = (u16)GetMonData(mon, MON_DATA_SPECIES, NULL);
+    u8 level = (u8)(GetMonData(mon, MON_DATA_LEVEL, NULL) + 1);
+    u32 exp = GetMonData(mon, MON_DATA_EXPERIENCE, NULL);
     u32 growthrate = (u32)PokePersonalParaGet(species, PERSONAL_EXP_GROUP);
     u32 maxexp = GetExpByGrowthRateAndLevel((int)growthrate, GetLevelCap());
     if (exp > maxexp) {
         exp = maxexp;
-        SetMonData(mon, ID_PARA_exp, &exp);
+        SetMonData(mon, MON_DATA_EXPERIENCE, &exp);
     }
     if (level > GetLevelCap())
         return FALSE;
     if (exp >= GetExpByGrowthRateAndLevel((int)growthrate, level)) {
-        SetMonData(mon, ID_PARA_level, &level);
+        SetMonData(mon, MON_DATA_LEVEL, &level);
         return TRUE;
     }
     return FALSE;
