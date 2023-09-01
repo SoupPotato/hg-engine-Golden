@@ -12047,7 +12047,7 @@ levelup SPECIES_EMOLGA
 	learnset MOVE_TAIL_WHIP, 7
 	learnset MOVE_CHARGE, 10
 	learnset MOVE_SPARK, 13
-	learnset MOVE_NUZZLE,, 15
+	learnset MOVE_NUZZLE, 15
 	learnset MOVE_PURSUIT, 16
 	learnset MOVE_DOUBLE_TEAM, 19
 	learnset MOVE_SHOCK_WAVE, 22
@@ -13256,7 +13256,7 @@ levelup SPECIES_LANDORUS
 	learnset MOVE_SWORDS_DANCE, 31
 	learnset MOVE_EARTH_POWER, 36
 	learnset MOVE_ROCK_SLIDE, 41
-	learnset MOVE_EATHQUAKE, 46
+	learnset MOVE_EARTHQUAKE, 46
 	learnset MOVE_SANDSTORM, 51
 	learnset MOVE_FISSURE, 56
 	learnset MOVE_STONE_EDGE, 61
@@ -21820,7 +21820,7 @@ levelup SPECIES_LANDORUS_THERIAN
 	learnset MOVE_SWORDS_DANCE, 31
 	learnset MOVE_EARTH_POWER, 36
 	learnset MOVE_ROCK_SLIDE, 41
-	learnset MOVE_EATHQUAKE, 46
+	learnset MOVE_EARTHQUAKE, 46
 	learnset MOVE_SANDSTORM, 51
 	learnset MOVE_FISSURE, 56
 	learnset MOVE_STONE_EDGE, 61
