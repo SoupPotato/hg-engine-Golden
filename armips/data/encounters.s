@@ -13951,7 +13951,7 @@ rocksmashrate 0
 oldrodrate 0
 goodrodrate 0
 superrodrate 0
-walklevels 32, 32, 32, 32, 33, 33, 34, 34, 36, 35, 36, 35
+walklevels 46, 46, 44, 44, 46, 46, 48, 45, 48, 46, 48, 46
 
 // morning encounter slots
 pokemon SPECIES_GRAVELER
@@ -14055,7 +14055,7 @@ rocksmashrate 40
 oldrodrate 0
 goodrodrate 0
 superrodrate 0
-walklevels 32, 32, 32, 32, 33, 33, 34, 34, 36, 35, 36, 35
+walklevels 44, 44, 45, 45, 45, 45, 48, 45, 48, 46, 48, 48
 
 // morning encounter slots
 pokemon SPECIES_GRAVELER
@@ -14159,7 +14159,7 @@ rocksmashrate 0
 oldrodrate 0
 goodrodrate 0
 superrodrate 0
-walklevels 3, 3, 3, 3, 5, 5, 7, 8, 7, 8, 7, 8
+walklevels 15, 15, 15, 15, 17, 17, 19, 20, 19, 22, 19, 22
 
 // morning encounter slots
 pokemon SPECIES_WEEDLE
@@ -14263,7 +14263,7 @@ rocksmashrate 0
 oldrodrate 0
 goodrodrate 0
 superrodrate 0
-walklevels 3, 3, 3, 3, 5, 5, 5, 5, 7, 7, 7, 7
+walklevels 15, 15, 15, 15, 17, 17, 19, 19, 18, 20, 18, 20
 
 // morning encounter slots
 pokemon SPECIES_CATERPIE
@@ -14471,7 +14471,7 @@ rocksmashrate 5
 oldrodrate 25
 goodrodrate 50
 superrodrate 75
-walklevels 39, 38, 38, 38, 40, 39, 40, 37, 39, 40, 39, 40
+walklevels 51, 50, 50, 50, 52, 51, 52, 49, 51, 52, 51, 52
 
 // morning encounter slots
 pokemon SPECIES_MACHOKE
@@ -14575,7 +14575,7 @@ rocksmashrate 0
 oldrodrate 25
 goodrodrate 50
 superrodrate 75
-walklevels 42, 40, 41, 39, 41, 42, 41, 42, 41, 42, 41, 42
+walklevels 54, 52, 53, 51, 53, 54, 53, 54, 53, 54, 53, 54
 
 // morning encounter slots
 pokemon SPECIES_KADABRA
@@ -14679,7 +14679,7 @@ rocksmashrate 5
 oldrodrate 25
 goodrodrate 50
 superrodrate 75
-walklevels 46, 45, 47, 45, 45, 45, 46, 47, 47, 49, 47, 49
+walklevels 58, 57, 59, 57, 57, 57, 58, 59, 59, 61, 59, 61
 
 // morning encounter slots
 pokemon SPECIES_KADABRA
