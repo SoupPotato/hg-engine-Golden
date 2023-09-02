@@ -11675,9 +11675,9 @@ pokemon SPECIES_PIDGEY
 pokemon SPECIES_BUTTERFREE
 pokemon SPECIES_BUTTERFREE
 pokemon SPECIES_LEDIAN
+pokemon SPECIES_PIDGEOTTO
 pokemon SPECIES_LEDIAN
-pokemon SPECIES_LEDIAN
-pokemon SPECIES_LEDIAN
+pokemon SPECIES_PIDGEOTTO
 
 // day encounter slots
 pokemon SPECIES_CATERPIE
@@ -13847,7 +13847,7 @@ rocksmashrate 0
 oldrodrate 0
 goodrodrate 0
 superrodrate 0
-walklevels 15, 17, 15, 17, 19, 19, 13, 13, 19, 24, 19, 29
+walklevels 15, 17, 19, 18, 19, 21, 20, 16, 21, 29, 22, 31
 
 // morning encounter slots
 pokemon SPECIES_DIGLETT
@@ -13858,9 +13858,9 @@ pokemon SPECIES_DIGLETT
 pokemon SPECIES_DIGLETT
 pokemon SPECIES_DIGLETT
 pokemon SPECIES_DIGLETT
+pokemon SPECIES_DIGLETT
 pokemon SPECIES_DUGTRIO
-pokemon SPECIES_DUGTRIO
-pokemon SPECIES_DUGTRIO
+pokemon SPECIES_DIGLETT
 pokemon SPECIES_DUGTRIO
 
 // day encounter slots
@@ -13872,9 +13872,9 @@ pokemon SPECIES_DIGLETT
 pokemon SPECIES_DIGLETT
 pokemon SPECIES_DIGLETT
 pokemon SPECIES_DIGLETT
+pokemon SPECIES_DIGLETT
 pokemon SPECIES_DUGTRIO
-pokemon SPECIES_DUGTRIO
-pokemon SPECIES_DUGTRIO
+pokemon SPECIES_DIGLETT
 pokemon SPECIES_DUGTRIO
 
 // night encounter slots
@@ -13886,9 +13886,9 @@ pokemon SPECIES_DIGLETT
 pokemon SPECIES_DIGLETT
 pokemon SPECIES_DIGLETT
 pokemon SPECIES_DIGLETT
+pokemon SPECIES_DIGLETT
 pokemon SPECIES_DUGTRIO
-pokemon SPECIES_DUGTRIO
-pokemon SPECIES_DUGTRIO
+pokemon SPECIES_DIGLETT
 pokemon SPECIES_DUGTRIO
 
 // hoenn encounter slots
