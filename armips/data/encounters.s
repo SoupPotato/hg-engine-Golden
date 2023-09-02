@@ -6983,7 +6983,7 @@ rocksmashrate 0
 oldrodrate 25
 goodrodrate 50
 superrodrate 75
-walklevels 23, 23, 23, 23, 24, 24, 20, 20, 25, 27, 25, 27
+walklevels 23, 23, 23, 23, 24, 24, 25, 25, 28, 27, 25, 27
 
 // morning encounter slots
 pokemon SPECIES_GEODUDE
@@ -7295,7 +7295,7 @@ rocksmashrate 0
 oldrodrate 25
 goodrodrate 50
 superrodrate 75
-walklevels 23, 23, 23, 23, 25, 25, 20, 20, 25, 23, 25, 23
+walklevels 23, 23, 23, 23, 25, 25, 25, 25, 28, 23, 25, 23
 
 // morning encounter slots
 pokemon SPECIES_GEODUDE
