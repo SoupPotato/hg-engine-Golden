@@ -10623,7 +10623,7 @@ rocksmashrate 0
 oldrodrate 0
 goodrodrate 0
 superrodrate 0
-walklevels 25, 20, 20, 21, 22, 24, 21, 20, 20, 22, 22, 24
+walklevels 33, 28, 28, 39, 30, 32, 29, 28, 28, 30, 30, 32
 
 // morning encounter slots
 pokemon SPECIES_TAUROS
@@ -10727,32 +10727,32 @@ rocksmashrate 0
 oldrodrate 25
 goodrodrate 50
 superrodrate 75
-walklevels 28, 28, 28, 28, 32, 32, 30, 30, 30, 30, 30, 30
+walklevels 42, 42, 42, 44, 46, 44, 44, 44, 44, 42, 44, 42
 
 // morning encounter slots
-pokemon SPECIES_DODUO
+pokemon SPECIES_DODRIO
 pokemon SPECIES_SANDSLASH
 pokemon SPECIES_DODUO
 pokemon SPECIES_SANDSLASH
 pokemon SPECIES_PONYTA
+pokemon SPECIES_RAPIDASH
 pokemon SPECIES_PONYTA
 pokemon SPECIES_RATICATE
-pokemon SPECIES_RATICATE
-pokemon SPECIES_DODUO
+pokemon SPECIES_DODRIO
 pokemon SPECIES_ARBOK
 pokemon SPECIES_DODUO
 pokemon SPECIES_ARBOK
 
 // day encounter slots
-pokemon SPECIES_DODUO
+pokemon SPECIES_DODRIO
 pokemon SPECIES_SANDSLASH
 pokemon SPECIES_DODUO
 pokemon SPECIES_SANDSLASH
 pokemon SPECIES_PONYTA
+pokemon SPECIES_RAPIDASH
 pokemon SPECIES_PONYTA
 pokemon SPECIES_RATICATE
-pokemon SPECIES_RATICATE
-pokemon SPECIES_DODUO
+pokemon SPECIES_DODRIO
 pokemon SPECIES_ARBOK
 pokemon SPECIES_DODUO
 pokemon SPECIES_ARBOK
@@ -10763,8 +10763,8 @@ pokemon SPECIES_SANDSLASH
 pokemon SPECIES_NOCTOWL
 pokemon SPECIES_SANDSLASH
 pokemon SPECIES_PONYTA
+pokemon SPECIES_RAPIDASH
 pokemon SPECIES_PONYTA
-pokemon SPECIES_RATICATE
 pokemon SPECIES_RATICATE
 pokemon SPECIES_QUAGSIRE
 pokemon SPECIES_ARBOK
@@ -10831,35 +10831,35 @@ rocksmashrate 0
 oldrodrate 25
 goodrodrate 50
 superrodrate 75
-walklevels 28, 28, 28, 28, 30, 30, 30, 30, 32, 30, 32, 30
+walklevels 42, 42, 42, 42, 44, 44, 44, 46, 44, 44, 46, 44
 
 // morning encounter slots
-pokemon SPECIES_DODUO
+pokemon SPECIES_DODRIO
 pokemon SPECIES_ARBOK
 pokemon SPECIES_DODUO
 pokemon SPECIES_ARBOK
 pokemon SPECIES_RATICATE
 pokemon SPECIES_RATICATE
-pokemon SPECIES_DODUO
-pokemon SPECIES_DODUO
-pokemon SPECIES_PONYTA
+pokemon SPECIES_DODRIO
 pokemon SPECIES_DODRIO
 pokemon SPECIES_PONYTA
-pokemon SPECIES_DODRIO
+pokemon SPECIES_DODUO
+pokemon SPECIES_RAPIDASH
+pokemon SPECIES_DODUO
 
 // day encounter slots
-pokemon SPECIES_DODUO
+pokemon SPECIES_DODRIO
 pokemon SPECIES_ARBOK
 pokemon SPECIES_DODUO
 pokemon SPECIES_ARBOK
 pokemon SPECIES_RATICATE
 pokemon SPECIES_RATICATE
-pokemon SPECIES_DODUO
-pokemon SPECIES_DODUO
-pokemon SPECIES_PONYTA
+pokemon SPECIES_DODRIO
 pokemon SPECIES_DODRIO
 pokemon SPECIES_PONYTA
-pokemon SPECIES_DODRIO
+pokemon SPECIES_DODUO
+pokemon SPECIES_RAPIDASH
+pokemon SPECIES_DODUO
 
 // night encounter slots
 pokemon SPECIES_QUAGSIRE
@@ -10872,7 +10872,7 @@ pokemon SPECIES_NOCTOWL
 pokemon SPECIES_NOCTOWL
 pokemon SPECIES_PONYTA
 pokemon SPECIES_QUAGSIRE
-pokemon SPECIES_PONYTA
+pokemon SPECIES_RAPIDASH
 pokemon SPECIES_QUAGSIRE
 
 // hoenn encounter slots
@@ -10935,39 +10935,39 @@ rocksmashrate 0
 oldrodrate 25
 goodrodrate 50
 superrodrate 75
-walklevels 39, 40, 39, 40, 40, 40, 42, 42, 41, 43, 41, 43
+walklevels 51, 52, 51, 52, 52, 52, 54, 54, 53, 55, 53, 55
 
 // morning encounter slots
 pokemon SPECIES_TANGELA
-pokemon SPECIES_PONYTA
+pokemon SPECIES_RAPIDASH
 pokemon SPECIES_TANGELA
 pokemon SPECIES_PONYTA
 pokemon SPECIES_DONPHAN
 pokemon SPECIES_URSARING
 pokemon SPECIES_RAPIDASH
-pokemon SPECIES_RAPIDASH
+pokemon SPECIES_PONYTA
+pokemon SPECIES_DODRIO
 pokemon SPECIES_DODUO
-pokemon SPECIES_DODUO
-pokemon SPECIES_DODUO
+pokemon SPECIES_DODRIO
 pokemon SPECIES_DODUO
 
 // day encounter slots
 pokemon SPECIES_TANGELA
-pokemon SPECIES_PONYTA
+pokemon SPECIES_RAPIDASH
 pokemon SPECIES_TANGELA
 pokemon SPECIES_PONYTA
 pokemon SPECIES_DONPHAN
 pokemon SPECIES_URSARING
 pokemon SPECIES_RAPIDASH
-pokemon SPECIES_RAPIDASH
+pokemon SPECIES_PONYTA
+pokemon SPECIES_DODRIO
 pokemon SPECIES_DODUO
-pokemon SPECIES_DODUO
-pokemon SPECIES_DODUO
+pokemon SPECIES_DODRIO
 pokemon SPECIES_DODUO
 
 // night encounter slots
 pokemon SPECIES_TANGELA
-pokemon SPECIES_PONYTA
+pokemon SPECIES_RAPIDASH
 pokemon SPECIES_TANGELA
 pokemon SPECIES_PONYTA
 pokemon SPECIES_DONPHAN
@@ -10975,9 +10975,9 @@ pokemon SPECIES_URSARING
 pokemon SPECIES_POLIWHIRL
 pokemon SPECIES_POLIWHIRL
 pokemon SPECIES_RAPIDASH
+pokemon SPECIES_PONYTA
 pokemon SPECIES_RAPIDASH
-pokemon SPECIES_RAPIDASH
-pokemon SPECIES_RAPIDASH
+pokemon SPECIES_PONYTA
 
 // hoenn encounter slots
 pokemon SPECIES_WHISMUR
@@ -11039,7 +11039,7 @@ rocksmashrate 0
 oldrodrate 0
 goodrodrate 0
 superrodrate 0
-walklevels 6, 8, 6, 8, 8, 8, 12, 12, 10, 8, 10, 8
+walklevels 18, 20, 18, 20, 20, 20, 24, 24, 22, 20, 22, 20
 
 // morning encounter slots
 pokemon SPECIES_ZUBAT
@@ -11143,7 +11143,7 @@ rocksmashrate 0
 oldrodrate 0
 goodrodrate 0
 superrodrate 0
-walklevels 6, 8, 6, 8, 8, 8, 12, 12, 10, 8, 10, 8
+walklevels 18, 20, 18, 20, 20, 20, 24, 24, 22, 20, 22, 20
 
 // morning encounter slots
 pokemon SPECIES_ZUBAT
@@ -11247,7 +11247,7 @@ rocksmashrate 0
 oldrodrate 0
 goodrodrate 0
 superrodrate 0
-walklevels 10, 10, 10, 10, 12, 12, 8, 8, 14, 13, 14, 13
+walklevels 22, 22, 22, 22, 24, 24, 20, 20, 26, 25, 26, 25
 
 // morning encounter slots
 pokemon SPECIES_CUBONE
@@ -11351,7 +11351,7 @@ rocksmashrate 20
 oldrodrate 0
 goodrodrate 0
 superrodrate 0
-walklevels 12, 12, 12, 12, 16, 16, 10, 10, 14, 14, 14, 14
+walklevels 24, 24, 24, 24, 28, 28, 30, 30, 26, 26, 26, 26
 
 // morning encounter slots
 pokemon SPECIES_CUBONE
@@ -11455,7 +11455,7 @@ rocksmashrate 0
 oldrodrate 0
 goodrodrate 0
 superrodrate 0
-walklevels 32, 32, 32, 32, 33, 33, 34, 34, 34, 35, 36, 36
+walklevels 45, 45, 44, 44, 46, 46, 48, 48, 46, 46, 48, 48
 
 // morning encounter slots
 pokemon SPECIES_GRAVELER
@@ -11559,7 +11559,7 @@ rocksmashrate 0
 oldrodrate 0
 goodrodrate 0
 superrodrate 0
-walklevels 2, 2, 2, 2, 3, 3, 3, 3, 6, 4, 6, 4
+walklevels 14, 14, 14, 14, 15, 15, 15, 15, 18, 16, 18, 16
 
 // morning encounter slots
 pokemon SPECIES_PIDGEY
@@ -11663,7 +11663,7 @@ rocksmashrate 0
 oldrodrate 0
 goodrodrate 0
 superrodrate 0
-walklevels 3, 3, 3, 3, 5, 5, 7, 8, 7, 8, 7, 8
+walklevels 15, 15, 15, 15, 17, 17, 19, 20, 19, 22, 19, 22
 
 // morning encounter slots
 pokemon SPECIES_CATERPIE
@@ -11767,7 +11767,7 @@ rocksmashrate 0
 oldrodrate 0
 goodrodrate 0
 superrodrate 0
-walklevels 5, 10, 5, 10, 8, 8, 10, 10, 8, 8, 8, 8
+walklevels 17, 17, 17, 17, 18, 18, 20, 20, 18, 20, 18, 20
 
 // morning encounter slots
 pokemon SPECIES_SPEAROW
@@ -11871,7 +11871,7 @@ rocksmashrate 0
 oldrodrate 25
 goodrodrate 50
 superrodrate 75
-walklevels 5, 10, 5, 10, 8, 8, 10, 10, 8, 8, 8, 8
+walklevels 17, 17, 17, 17, 18, 18, 20, 20, 18, 20, 18, 20
 
 // morning encounter slots
 pokemon SPECIES_SPEAROW
@@ -11975,7 +11975,7 @@ rocksmashrate 0
 oldrodrate 0
 goodrodrate 0
 superrodrate 0
-walklevels 13, 13, 13, 13, 14, 14, 15, 15, 12, 12, 14, 14
+walklevels 25, 25, 25, 25, 26, 26, 27, 27, 24, 24, 26, 26
 
 // morning encounter slots
 pokemon SPECIES_PIDGEY
@@ -12079,7 +12079,7 @@ rocksmashrate 0
 oldrodrate 25
 goodrodrate 50
 superrodrate 75
-walklevels 13, 13, 13, 13, 14, 14, 15, 15, 14, 14, 15, 15
+walklevels 27, 27, 27, 27, 27, 27, 29, 29, 26, 26, 28, 28
 
 // morning encounter slots
 pokemon SPECIES_PIDGEY
@@ -12183,7 +12183,7 @@ rocksmashrate 0
 oldrodrate 0
 goodrodrate 0
 superrodrate 0
-walklevels 17, 17, 17, 17, 18, 18, 18, 18, 18, 16, 18, 16
+walklevels 29, 29, 29, 29, 30, 30, 32, 31, 34, 31, 34, 33
 
 // morning encounter slots
 pokemon SPECIES_RATTATA
@@ -12287,7 +12287,7 @@ rocksmashrate 0
 oldrodrate 0
 goodrodrate 0
 superrodrate 0
-walklevels 17, 19, 17, 19, 16, 16, 18, 18, 17, 18, 17, 18
+walklevels 29, 31, 29, 31, 27, 27, 30, 30, 29, 27, 29, 27
 
 // morning encounter slots
 pokemon SPECIES_SNUBBULL
@@ -12391,7 +12391,7 @@ rocksmashrate 0
 oldrodrate 25
 goodrodrate 50
 superrodrate 75
-walklevels 13, 15, 13, 15, 13, 13, 15, 15, 15, 15, 15, 15
+walklevels 25, 27, 25, 27, 25, 25, 27, 27, 27, 27, 27, 27
 
 // morning encounter slots
 pokemon SPECIES_MANKEY
@@ -12495,7 +12495,7 @@ rocksmashrate 0
 oldrodrate 25
 goodrodrate 50
 superrodrate 75
-walklevels 16, 17, 16, 17, 16, 16, 18, 18, 18, 15, 18, 15
+walklevels 28, 29, 28, 29, 28, 28, 30, 30, 30, 27, 30, 27
 
 // morning encounter slots
 pokemon SPECIES_SPEAROW
@@ -12599,7 +12599,7 @@ rocksmashrate 0
 oldrodrate 0
 goodrodrate 0
 superrodrate 0
-walklevels 14, 15, 14, 15, 15, 15, 16, 16, 16, 16, 16, 16
+walklevels 26, 27, 26, 27, 27, 27, 28, 28, 30, 30, 30, 30
 
 // morning encounter slots
 pokemon SPECIES_HOPPIP
@@ -12703,7 +12703,7 @@ rocksmashrate 0
 oldrodrate 25
 goodrodrate 50
 superrodrate 75
-walklevels 23, 23, 23, 23, 25, 25, 25, 25, 25, 26, 26, 25
+walklevels 35, 35, 35, 35, 35, 35, 34, 34, 36, 36, 36, 37
 
 // morning encounter slots
 pokemon SPECIES_NIDORINA
@@ -12807,7 +12807,7 @@ rocksmashrate 0
 oldrodrate 0
 goodrodrate 0
 superrodrate 0
-walklevels 26, 26, 26, 26, 28, 28, 28, 28, 30, 30, 30, 28
+walklevels 35, 35, 35, 35, 37, 37, 36, 36, 38, 38, 38, 37
 
 // morning encounter slots
 pokemon SPECIES_NIDORINA
@@ -12911,7 +12911,7 @@ rocksmashrate 0
 oldrodrate 0
 goodrodrate 0
 superrodrate 0
-walklevels 23, 23, 23, 23, 25, 25, 25, 25, 25, 26, 26, 25
+walklevels 35, 35, 35, 35, 37, 37, 34, 34, 36, 36, 36, 37
 
 // morning encounter slots
 pokemon SPECIES_NIDORINA
@@ -13015,7 +13015,7 @@ rocksmashrate 0
 oldrodrate 0
 goodrodrate 0
 superrodrate 0
-walklevels 26, 27, 26, 27, 28, 28, 29, 29, 27, 30, 27, 30
+walklevels 38, 39, 38, 39, 40, 40, 41, 41, 39, 42, 39, 42
 
 // morning encounter slots
 pokemon SPECIES_GRIMER
@@ -13119,7 +13119,7 @@ rocksmashrate 0
 oldrodrate 0
 goodrodrate 0
 superrodrate 0
-walklevels 28, 27, 28, 27, 29, 29, 30, 30, 29, 32, 29, 32
+walklevels 40, 39, 40, 39, 41, 41, 42, 42, 41, 44, 41, 44
 
 // morning encounter slots
 pokemon SPECIES_FEAROW
@@ -13223,7 +13223,7 @@ rocksmashrate 0
 oldrodrate 0
 goodrodrate 0
 superrodrate 0
-walklevels 26, 27, 26, 27, 28, 28, 29, 29, 27, 30, 27, 30
+walklevels 38, 39, 38, 39, 40, 40, 41, 41, 39, 42, 39, 42
 
 // morning encounter slots
 pokemon SPECIES_GRIMER
@@ -13327,7 +13327,7 @@ rocksmashrate 0
 oldrodrate 25
 goodrodrate 50
 superrodrate 75
-walklevels 30, 25, 30, 25, 35, 35, 20, 20, 30, 28, 30, 28
+walklevels 42, 37, 42, 37, 46, 46, 32, 32, 42, 40, 42, 40
 
 // morning encounter slots
 pokemon SPECIES_TANGELA
