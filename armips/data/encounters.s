@@ -13352,9 +13352,9 @@ pokemon SPECIES_TANGELA
 pokemon SPECIES_TANGELA
 pokemon SPECIES_RATICATE
 pokemon SPECIES_RATICATE
-pokemon SPECIES_TANGELA
 pokemon SPECIES_MR_MIME
-pokemon SPECIES_TANGELA
+pokemon SPECIES_MR_MIME
+pokemon SPECIES_MR_MIME
 pokemon SPECIES_MR_MIME
 
 // night encounter slots
