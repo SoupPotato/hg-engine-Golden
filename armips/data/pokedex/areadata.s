@@ -3783,12 +3783,16 @@ specialareas SPECIES_RAPIDASH, DEX_NIGHT
 
 routesandcities SPECIES_RAPIDASH, DEX_MORNING
     .word DEX_MT_SILVER
+    .word DEX_ROUTE_26
+    .word DEX_ROUTE_27
     .word DEX_ROUTE_28
     dexendareadata
 
 
 routesandcities SPECIES_RAPIDASH, DEX_DAY
     .word DEX_MT_SILVER
+    .word DEX_ROUTE_26
+    .word DEX_ROUTE_27
     .word DEX_ROUTE_28
     dexendareadata
 
