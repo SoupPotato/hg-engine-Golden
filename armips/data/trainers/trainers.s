@@ -4914,7 +4914,7 @@ trainerdata 156, "Yoshi"
         pokemon SPECIES_HITMONLEE
         move MOVE_DOUBLE_KICK
         move MOVE_MEDITATE
-        move MOVE_HI_JUMP_KICK
+        move MOVE_HIGH_JUMP_KICK
         move MOVE_FOCUS_ENERGY
         ballseal 0
     endparty
@@ -8776,7 +8776,7 @@ trainerdata 264, "Silver"
         level 44
         pokemon SPECIES_SNEASEL
         move MOVE_SLASH
-        move MOVE_ICY_SHARD
+        move MOVE_ICE_SHARD
         move MOVE_FEINT_ATTACK
         move MOVE_METAL_CLAW
         ballseal 0
@@ -8970,7 +8970,7 @@ trainerdata 268, "Silver"
         level 44
         pokemon SPECIES_SNEASEL
         move MOVE_SLASH
-        move MOVE_ICY_SHARD
+        move MOVE_ICE_SHARD
         move MOVE_FEINT_ATTACK
         move MOVE_METAL_CLAW
         ballseal 0
@@ -9212,7 +9212,7 @@ trainerdata 272, "Silver"
         level 44
         pokemon SPECIES_SNEASEL
         move MOVE_SLASH
-        move MOVE_ICY_SHARD
+        move MOVE_ICE_SHARD
         move MOVE_FEINT_ATTACK
         move MOVE_METAL_CLAW
         ballseal 0
