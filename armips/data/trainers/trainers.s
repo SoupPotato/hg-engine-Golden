@@ -8514,8 +8514,8 @@ trainerdata 261, "Blue"
     item ITEM_FULL_RESTORE
     item ITEM_FULL_RESTORE
     item ITEM_FULL_RESTORE
-    aiflags F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_EXPERT_ATTACKS | 0
-    battletype SINGLE_BATTLE
+    aiflags F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_EXPERT_ATTACKS | F_USE_WEATHER | 0
+    battletype2 SINGLE_BATTLE
     endentry
 
     party 261
@@ -8525,10 +8525,10 @@ trainerdata 261, "Blue"
         level 55
         pokemon SPECIES_EXEGGUTOR
         item ITEM_NONE
-        move MOVE_LEAF_STORM
-        move MOVE_PSYCHIC
-        move MOVE_HYPNOSIS
-        move MOVE_TRICK_ROOM
+        move MOVE_SOLAR_BEAM
+        move MOVE_PSYSHOCK
+        move MOVE_SYNTHESIS
+        move MOVE_SUNNY_DAY
         ballseal 0
 
         // mon 1
@@ -8564,19 +8564,19 @@ trainerdata 261, "Blue"
         move MOVE_ICE_FANG
         move MOVE_WATERFALL
         move MOVE_DRAGON_DANCE
-        move MOVE_RETURN
+        move MOVE_EARTHQUAKE
         ballseal 0
 
         // mon 4
         ivs 250
-        abilityslot 32
+        abilityslot 0
         level 56
-        pokemon SPECIES_MACHAMP
+        pokemon SPECIES_ALAKAZAM
         item ITEM_NONE
-        move MOVE_DYNAMIC_PUNCH
-        move MOVE_EARTHQUAKE
-        move MOVE_STONE_EDGE
-        move MOVE_THUNDER_PUNCH
+        move MOVE_PSYCHIC
+        move MOVE_SHADOW_BALL
+        move MOVE_FOCUS_BLAST
+        move MOVE_ENERGY_BALL
         ballseal 0
 
         // mon 5
@@ -8586,7 +8586,7 @@ trainerdata 261, "Blue"
         pokemon SPECIES_PIDGEOT
         item ITEM_SITRUS_BERRY
         move MOVE_RETURN
-        move MOVE_WHIRLWIND
+        move MOVE_HEAT_WAVE
         move MOVE_AIR_SLASH
         move MOVE_MIRROR_MOVE
         ballseal 0
@@ -25391,8 +25391,8 @@ trainerdata 727, "Blue"
     item ITEM_FULL_RESTORE
     item ITEM_FULL_RESTORE
     item ITEM_FULL_RESTORE
-    aiflags F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_EXPERT_ATTACKS | 0
-    battletype SINGLE_BATTLE
+    aiflags F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_EXPERT_ATTACKS | F_USE_WEATHER | 0
+    battletype2 SINGLE_BATTLE
     endentry
 
     party 727
@@ -25402,22 +25402,22 @@ trainerdata 727, "Blue"
         level 67
         pokemon SPECIES_EXEGGUTOR
         item ITEM_NONE
-        move MOVE_LEAF_STORM
-        move MOVE_PSYCHIC
+        move MOVE_SOLAR_BEAM
+        move MOVE_PSYSHOCK
         move MOVE_EXPLOSION
-        move MOVE_TRICK_ROOM
+        move MOVE_SUNNY_DAY
         ballseal 0
 
         // mon 1
         ivs 250
-        abilityslot 32
+        abilityslot 0
         level 69
-        pokemon SPECIES_MACHAMP
-        item ITEM_IRON_BALL
-        move MOVE_DYNAMIC_PUNCH
-        move MOVE_STONE_EDGE
-        move MOVE_FLING
-        move MOVE_ATTRACT
+        pokemon SPECIES_ALAKAZAM
+        item ITEM_NONE
+        move MOVE_PSYCHIC
+        move MOVE_SHADOW_BALL
+        move MOVE_FOCUS_BLAST
+        move MOVE_ENERGY_BALL
         ballseal 0
 
         // mon 2
