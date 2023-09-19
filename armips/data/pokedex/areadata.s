@@ -1609,17 +1609,14 @@ specialareas SPECIES_NIDORAN_F, DEX_NIGHT
 
 
 routesandcities SPECIES_NIDORAN_F, DEX_MORNING
-    .word DEX_ROUTE_36
     dexendareadata
 
 
 routesandcities SPECIES_NIDORAN_F, DEX_DAY
-    .word DEX_ROUTE_36
     dexendareadata
 
 
 routesandcities SPECIES_NIDORAN_F, DEX_NIGHT
-    .word DEX_ROUTE_36
     dexendareadata
 
 
@@ -1716,17 +1713,14 @@ specialareas SPECIES_NIDORAN_M, DEX_NIGHT
 
 
 routesandcities SPECIES_NIDORAN_M, DEX_MORNING
-    .word DEX_ROUTE_36
     dexendareadata
 
 
 routesandcities SPECIES_NIDORAN_M, DEX_DAY
-    .word DEX_ROUTE_36
     dexendareadata
 
 
 routesandcities SPECIES_NIDORAN_M, DEX_NIGHT
-    .word DEX_ROUTE_36
     dexendareadata
 
 
@@ -2624,7 +2618,6 @@ routesandcities SPECIES_PSYDUCK, DEX_DAY
 
 routesandcities SPECIES_PSYDUCK, DEX_NIGHT
     .word DEX_ROUTE_35
-    .word DEX_ROUTE_36
     .word DEX_ROUTE_6
     dexendareadata
 
@@ -3273,6 +3266,7 @@ specialareas SPECIES_BELLSPROUT, DEX_NIGHT
 routesandcities SPECIES_BELLSPROUT, DEX_MORNING
     .word DEX_ROUTE_31
     .word DEX_ROUTE_32
+    .word DEX_ROUTE_36
     .word DEX_ROUTE_44
     .word DEX_ROUTE_5
     .word DEX_ROUTE_6
@@ -3284,6 +3278,7 @@ routesandcities SPECIES_BELLSPROUT, DEX_MORNING
 routesandcities SPECIES_BELLSPROUT, DEX_DAY
     .word DEX_ROUTE_31
     .word DEX_ROUTE_32
+    .word DEX_ROUTE_36
     .word DEX_ROUTE_44
     .word DEX_ROUTE_5
     .word DEX_ROUTE_6
@@ -3295,6 +3290,7 @@ routesandcities SPECIES_BELLSPROUT, DEX_DAY
 routesandcities SPECIES_BELLSPROUT, DEX_NIGHT
     .word DEX_ROUTE_31
     .word DEX_ROUTE_32
+    .word DEX_ROUTE_36
     .word DEX_ROUTE_44
     .word DEX_ROUTE_5
     .word DEX_ROUTE_6
@@ -4367,6 +4363,7 @@ routesandcities SPECIES_GASTLY, DEX_DAY
 routesandcities SPECIES_GASTLY, DEX_NIGHT
     .word DEX_ROUTE_31
     .word DEX_ROUTE_32
+    .word DEX_ROUTE_36
     dexendareadata
 
 
@@ -9883,7 +9880,6 @@ routesandcities SPECIES_STANTLER, DEX_DAY
 
 
 routesandcities SPECIES_STANTLER, DEX_NIGHT
-    .word DEX_ROUTE_36
     .word DEX_ROUTE_37
     dexendareadata
 
