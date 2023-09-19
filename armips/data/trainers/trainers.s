@@ -8515,7 +8515,7 @@ trainerdata 261, "Blue"
     item ITEM_FULL_RESTORE
     item ITEM_FULL_RESTORE
     aiflags F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_EXPERT_ATTACKS | F_USE_WEATHER | 0
-    battletype2 SINGLE_BATTLE
+    battletype SINGLE_BATTLE
     endentry
 
     party 261
@@ -25392,7 +25392,7 @@ trainerdata 727, "Blue"
     item ITEM_FULL_RESTORE
     item ITEM_FULL_RESTORE
     aiflags F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_EXPERT_ATTACKS | F_USE_WEATHER | 0
-    battletype2 SINGLE_BATTLE
+    battletype SINGLE_BATTLE
     endentry
 
     party 727
