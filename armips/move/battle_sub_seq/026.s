@@ -14,7 +14,7 @@
 a001_026:
     abilitycheck 0x0, BATTLER_WORK, ABILITY_MAGIC_GUARD, _00A8
     changemondatabyvar VAR_OP_GET_RESULT, BATTLER_WORK, 0x30, VAR_HP_TEMP
-    damagediv VAR_HP_TEMP, 8                                              // deals 1/8th damage per turn
+    damagediv VAR_HP_TEMP, 16                                              // burn now does 1/16th the damage in gen 7
     abilitycheck 0x1, BATTLER_WORK, ABILITY_HEATPROOF, _0054               // heatproof further divides the damage done by 2
     damagediv VAR_HP_TEMP, 2
 _0054:
