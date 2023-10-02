@@ -4334,13 +4334,14 @@ levelup SPECIES_SLUGMA
 	learnset MOVE_CLEAR_SMOG, 20
 	learnset MOVE_ANCIENT_POWER, 22
 	learnset MOVE_FLAME_BURST, 27
-	learnset MOVE_ROCK_SLIDE, 29
-	learnset MOVE_LAVA_PLUME, 34
-	learnset MOVE_AMNESIA, 36
+	learnset MOVE_AMNESIA, 29
+	learnset MOVE_ROCK_SLIDE, 34
+	learnset MOVE_LAVA_PLUME, 36
 	learnset MOVE_BODY_SLAM, 41
 	learnset MOVE_RECOVER, 43
-	learnset MOVE_FLAMETHROWER, 48
-	learnset MOVE_EARTH_POWER, 50
+	learnset MOVE_POWER_GEM, 48
+	learnset MOVE_FLAMETHROWER, 50
+	learnset MOVE_EARTH_POWER, 55
 	terminatelearnset
 
 
@@ -4357,13 +4358,14 @@ levelup SPECIES_MAGCARGO
 	learnset MOVE_CLEAR_SMOG, 20
 	learnset MOVE_ANCIENT_POWER, 22
 	learnset MOVE_FLAME_BURST, 27
-	learnset MOVE_ROCK_SLIDE, 29
-	learnset MOVE_LAVA_PLUME, 34
-	learnset MOVE_AMNESIA, 36
+	learnset MOVE_AMNESIA, 29
+	learnset MOVE_ROCK_SLIDE, 34
+	learnset MOVE_LAVA_PLUME, 36
 	learnset MOVE_BODY_SLAM, 43
 	learnset MOVE_RECOVER, 47
-	learnset MOVE_FLAMETHROWER, 54
-	learnset MOVE_EARTH_POWER, 58
+	learnset MOVE_POWER_GEM, 54
+	learnset MOVE_FLAMETHROWER, 58
+	learnset MOVE_EARTH_POWER, 65
 	terminatelearnset
 
 
