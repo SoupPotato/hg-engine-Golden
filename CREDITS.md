@@ -7,6 +7,8 @@ Barro - swav2swar
 
 Bubble791 - strong basis for where this came from
 
+Chritchy - sprite translation errors bug fix
+
 Dr. Seuss, Zeak6464 - [Pokémon cries from gen 8](https://www.pokecommunity.com/showthread.php?t=432636)
 
 FroggestSpirit - [SDATTool](https://github.com/froggestspirit/SDATTool)
@@ -21,9 +23,7 @@ MaMe and maple - a lot of mega sprites touched up
 
 Mikelan98 - initial graphics compilation, BDHCAM routine
 
-ProfessorDoktorGamer - wav2swav (it's very possible this is just waveconv)
-
-Smogon Sprite Project, TraviS, LennyBitao, MyMarshlands, DarkusShadow, CarmaNekko, kiriaura, Gnomowladny, Krune, n-kin, joshr691, onigin_pixelart, Jefelin, MultiDiegoDani, Prodigal96, zerudez, leparagon, arinoelle, diegotoon20, gardow, greyenna, conyjams, kingofthe-x-roads, RayquazaFlygon, metalflygon08 on DeviantArt, and MaMe, maple, Layell, SelenaFF, Sopita Yorita, zlolxd - Pokémon Sprites
+Smogon Sprite Project, TraviS, LennyBitao, MyMarshlands, DarkusShadow, CarmaNekko, kiriaura, Gnomowladny, Krune, n-kin, JaegerLucciano23, joshr691, Jefelin, MultiDiegoDani, onigin_pixelart, Prodigal96, zerudez, leparagon, arinoelle, diegotoon20, gardow, greyenna, conyjams, kingofthe-x-roads, RayquazaFlygon, metalflygon08 on DeviantArt, and MaMe, maple, Layell, SelenaFF, Sopita Yorita, zlolxd - Pokémon Sprites
 
 WesleyFG and [The Sounds Resource](https://www.sounds-resource.com/3ds/pokemonsunmoon/) - [Pokémon cries from gens 5 through 7](https://www.pokecommunity.com/showthread.php?t=390701)
 

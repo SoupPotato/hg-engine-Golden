@@ -7,6 +7,8 @@
 .include "armips/include/monnums.s"
 .include "armips/include/movenums.s"
 
+// fix strength: originally makes user go right 2 pixels
+
 .create "build/move/move_anim/0_070", 0
 
 a010_070:
@@ -27,7 +29,7 @@ a010_070:
     resetsprite 1
     resetsprite 2
     resetsprite 3
-    callfunction 5, 4, 70, 120, 10, 5, "NaN", "NaN", "NaN", "NaN", "NaN", "NaN"
+    callfunction 5, 4, 70, 120, 8, 5, "NaN", "NaN", "NaN", "NaN", "NaN", "NaN"
     playsepan 1927, -117
     waitstate
     playsepan 1920, 117

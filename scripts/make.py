@@ -34,7 +34,10 @@ else:  # Linux, OSX, etc.
     else:
         PREFIX = 'arm-none-eabi-'
     OBJDUMP = (PREFIX + 'objdump')
-    NM = (PREFIX + 'nm')
+    if sys.platform.startswith('darwin'):
+        NM = ('nm')
+    else:
+        NM = (PREFIX + 'nm')
     AS = (PREFIX + 'as')
 
 OUTPUT = 'build/output.bin'
@@ -63,15 +66,15 @@ def GetTextSection(section=0) -> int:
         # Dump sections
         out = subprocess.check_output([OBJDUMP, '-t', LINKED_SECTIONS[section]])
         lines = out.decode().split('\n')
-    
+
         # Find text section
         text = filter(lambda x: x.strip().endswith('.text'), lines)
         section = (list(text))[0]
-    
+
         # Get the offset
         offset = int(section.split(' ')[0], 16)
         return offset
-    
+
     except:
         print("Error: The insertion process could not be completed.\n"
               + "The linker symbol file was not found. Most likely the compilation process was not completed.")
@@ -94,7 +97,7 @@ def GetSymbols() -> {str: int}:
 
             if parts[1].lower() not in {'t', 'd'}:
                 continue
-    
+
             offset = int(parts[0], 16)
             ret[parts[2]] = offset# - subtract
 
@@ -256,7 +259,17 @@ def install():
                     except ValueError:
                         newNumber = int(newNumber, 16)
 
-                    newNumber = str(hex(newNumber)).split('0x')[1]
+                    if (newNumber >= 16777216): # 32 bits
+                        #newNumber = str(hex(newNumber)).split('0x')[1]
+                        newNumber = (str(hex(newNumber & 0xFF)).split('0x')[1] + " " + str(hex(newNumber >> 8 & 0xFF)).split('0x')[1] + " " + str(hex(newNumber >> 16 & 0xFF)).split('0x')[1] + " " + str(hex(newNumber >> 24 & 0xFF)).split('0x')[1])
+                    elif (newNumber >= 65536): # 24 bits
+                        #newNumber = str(hex(newNumber)).split('0x')[1]
+                        newNumber = (str(hex(newNumber & 0xFF)).split('0x')[1] + " " + str(hex(newNumber >> 8 & 0xFF)).split('0x')[1] + " " + str(hex(newNumber >> 16 & 0xFF)).split('0x')[1])
+                    elif (newNumber >= 256): # 16 bits
+                        #newNumber = str(hex(newNumber)).split('0x')[1]
+                        newNumber = (str(hex(newNumber & 0xFF)).split('0x')[1] + " " + str(hex(newNumber >> 8 & 0xFF)).split('0x')[1])
+                    else:
+                        newNumber = str(hex(newNumber)).split('0x')[1]
                     ReplaceBytes(rom2, offset, newNumber)
                 rom2.close()
 
@@ -435,7 +448,7 @@ def offset():
                 rom.close()
 
 
-OVERLAYS_TO_DECOMPRESS = [1, 2, 6, 7, 8, 10, 12, 14, 15, 18, 63, 96, 112]
+OVERLAYS_TO_DECOMPRESS = [1, 2, 6, 7, 8, 10, 12, 14, 15, 18, 63, 68, 94, 96, 112]
 
 
 def decompress():

@@ -7,6 +7,8 @@
 .include "armips/include/monnums.s"
 .include "armips/include/movenums.s"
 
+// fix helping hand: original makes target go left 1 pixel
+
 .create "build/move/move_anim/0_270", 0
 
 a010_270:
@@ -20,7 +22,7 @@ a010_270:
     wait 14
     loop 2
     callfunction 52, 3, 2, 12, 258, "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN"
-    callfunction 36, 5, 1, 0, 1, 2, 260, "NaN", "NaN", "NaN", "NaN", "NaN"
+    callfunction 36, 5, 1, 0, 1, 1, 260, "NaN", "NaN", "NaN", "NaN", "NaN"
     wait 3
     callfunction 52, 3, 2, -12, 258, "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN"
     wait 2

@@ -1,4 +1,5 @@
 #include "include/config.h"
+#include "include/constants/moves.h"
 
 # damage calc hook setup
 # push {r5-r6}
@@ -32,6 +33,9 @@ arm9 0806DED0 60 B4 C0 46
 # CT_EncountSendOutMessageParamMake hook setup
 # 022615F0
 0012 08029D30 60 B4 C0 46
+
+# CantEscape hook setup
+0012 02252980 60 B4 C0 46
 
 # expand evolutions to 9 per mon + form evos - GetMonEvolution hook setup
 arm9 08070E34 60 B4 C0 46
@@ -151,3 +155,42 @@ arm9 02070DB4 38 B5 82 B0 05 21 00 22
 arm9 0208FEEA 64 28 05 D2 20 1C 8A F7 0C FE
 
 #endif
+
+# expand move relearner dedicated heap
+0068 08000002 12
+
+# make the poison check always fail to disable poison in the overworld
+#ifdef UPDATE_OVERWORLD_POISON
+arm9 02054474 00
+#else
+arm9 02054474 88
+#endif
+
+# fix encore to 3 turns
+0012 02240C66 03 20
+# fix disable to 4 turns
+0012 0224099A 04 20
+# cap total fury cutter damage increases to 3 total turns
+# SBA_RESET_FURY_CUTTER handles resetting outside of using fury cutter
+0012 02241F2E 03
+
+# expand dex digits from 3 to 4
+# summary screen
+arm9 0208CDE8 04
+# pc screen
+0014 021F51E6 04
+# dex various
+0018 021E6C44 04
+0018 021EE796 04
+0018 021EEC74 04
+0018 021F8D50 04
+
+# expand metronome movepool
+0012 022408F8 NUM_OF_MOVES
+
+# pass PartyPokemon to ModifyStatByNature for recalculating PartyPokemon stats
+arm9 0206E3C6 00 00 00 00
+arm9 0206E406 00 00 00 00
+arm9 0206E446 00 00 00 00
+arm9 0206E486 00 00 00 00
+arm9 0206E4C6 00 00 00 00

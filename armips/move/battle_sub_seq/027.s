@@ -3,16 +3,33 @@
 
 .include "armips/include/battlescriptcmd.s"
 .include "armips/include/abilities.s"
+.include "armips/include/constants.s"
 .include "armips/include/itemnums.s"
 .include "armips/include/monnums.s"
 .include "armips/include/movenums.s"
+
+// general freeze subscript
 
 .create "build/move/battle_sub_seq/1_027", 0
 
 a001_027:
     moldbreakerabilitycheck 0x0, BATTLER_ADDL_EFFECT, ABILITY_MAGMA_ARMOR, _0204
-    checkcloudnine _0030
+    checkcloudnine _checkFlowerVeil
     if IF_MASK, VAR_FIELD_EFFECT, 0x30, _0180
+
+_checkFlowerVeil:
+    moldbreakerabilitycheck 0x0, BATTLER_ADDL_EFFECT, ABILITY_FLOWER_VEIL, _checkGrassTypeForFlowerVeil
+    moldbreakerabilitycheck 0x0, BATTLER_ALLY | BATTLER_ADDL_EFFECT, ABILITY_FLOWER_VEIL, _checkGrassTypeForFlowerVeil
+    goto CheckIfGrounded
+_checkGrassTypeForFlowerVeil:
+    ifmonstat IF_EQUAL, BATTLER_ADDL_EFFECT, MON_DATA_TYPE_1, TYPE_GRASS, _0180
+    ifmonstat IF_EQUAL, BATTLER_ADDL_EFFECT, MON_DATA_TYPE_2, TYPE_GRASS, _0180
+CheckIfGrounded:
+    ifgrounded BATTLER_ADDL_EFFECT, CheckMistyTerrain
+    goto _0030
+CheckMistyTerrain:
+    ifterrainoverlayistype MISTY_TERRAIN, MistyTerrainFail
+
 _0030:
     if IF_NOTEQUAL, VAR_ADD_EFFECT_TYPE, 0x2, _0058
     moldbreakerabilitycheck 0x0, BATTLER_ADDL_EFFECT, ABILITY_SHIELD_DUST, _0180
@@ -70,6 +87,11 @@ _025C:
     wait 0x1E
     changevar VAR_OP_SETMASK, VAR_MOVE_STATUS, 0x80000000
 _0278:
+    endscript
+
+MistyTerrainFail:
+    if IF_EQUAL, VAR_ADD_EFFECT_TYPE, ADD_STATUS_INDIRECT, _0278
+    changevar VAR_OP_SETMASK, VAR_MOVE_STATUS, 0x40
     endscript
 
 .close

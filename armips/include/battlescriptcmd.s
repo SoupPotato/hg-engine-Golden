@@ -168,8 +168,12 @@ MON_DATA_FORM equ 98
 MON_DATA_VARIABLE equ 100
 
 
-// battler values
+// battler bitfields--grab battler in relation to specific battler
+BATTLER_ALLY             equ 0x8000
+BATTLER_ENEMY            equ 0x4000
+BATTLER_ACROSS           equ 0x2000
 
+// battler values
 BATTLER_ALL              equ 0x00
 BATTLER_ATTACKER         equ 0x01
 BATTLER_DEFENDER         equ 0x02
@@ -266,7 +270,7 @@ BATTLER_WORK             equ 0xFF
 
 TAG_NONE                        equ (0)     //nothing
 
-TAG_NONE_DIR                    equ (1)     //nothing (but judgment type?)
+TAG_NONE_DIR                    equ (1)     //nothing (but switch depending on team)
 TAG_NICK                        equ (2)     //nickname
 TAG_MOVE                        equ (3)     //move
 TAG_STAT                        equ (4)     //stat
@@ -286,7 +290,7 @@ TAG_NICK_UNK                    equ (16)    //nickname      ?
 TAG_NICK_NUM                    equ (17)    //nickname      number
 TAG_NICK_TRNAME                 equ (18)    //nickname      trainername
 TAG_NICK_BOX                    equ (19)    //nickname      boxname
-TAG_MOVE_DIR                    equ (20)    //move          (but judgment type?)
+TAG_MOVE_DIR                    equ (20)    //move (but switch depending on team)
 TAG_MOVE_NICK                   equ (21)    //move          nickname
 TAG_MOVE_MOVE                   equ (22)    //move          move
 TAG_ABILITY_NICK                equ (23)    //ability       nickname
@@ -1470,5 +1474,54 @@ MOVE_DATA_CONTEST_TYPE equ 11
 
 .macro isuserlowerlevel,address
     .word 0xE3
+    .word ((address - org()) / 4) - 1
+.endmacro
+
+.macro settailwind,battler
+    .word 0xE4, battler
+.endmacro
+
+.macro iftailwindactive,battler,address
+    .word 0xE5, battler
+    .word ((address - org()) / 4) - 1
+.endmacro
+
+.macro ifcurrentfieldistype,terrain,address
+    .word 0xE6, terrain
+    .word ((address - org()) / 4) - 1
+.endmacro
+
+.macro ifmovepowergreaterthanzero,address
+    .word 0xE7
+    .word ((address - org()) / 4) - 1
+.endmacro
+
+.macro ifgrounded,battler,address
+    .word 0xE8, battler
+    .word ((address - org()) / 4) - 1
+.endmacro
+
+.macro checkifcurrentadjustedmoveistype,type,address
+    .word 0xE9, type
+    .word ((address - org()) / 4) - 1
+.endmacro
+
+.macro ifcontactmove,address
+    .word 0xEA
+    .word ((address - org()) / 4) - 1
+.endmacro
+
+.macro ifsoundmove,address
+    .word 0xEB
+    .word ((address - org()) / 4) - 1
+.endmacro
+
+.macro updateterrainoverlay,endTerrainFlag,failAddress
+    .word 0xEC, endTerrainFlag
+    .word ((failAddress - org()) / 4) - 1
+.endmacro
+
+.macro ifterrainoverlayistype,terrainOverlayType,address
+    .word 0xED, terrainOverlayType
     .word ((address - org()) / 4) - 1
 .endmacro

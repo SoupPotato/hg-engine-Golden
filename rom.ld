@@ -1,5 +1,4 @@
 CheckSideAbility = 0x1AA64 + 0x022378C1;
-CheckDefenceAbility = 0x1AF74 + 0x022378C1;
 BattlePokemonParamGet = 0x17520 + 0x022378C1;
 BattleWorkMonDataGet = 0x20914 + 0x022378C1;
 BattleItemDataGet = 0x205B4 + 0x022378C1;
@@ -13,7 +12,7 @@ BattleWorkClientSetMaxGet = 0x2F30 + 0x022378C1;
 ST_ServerAgiCalc = 0x18388 + 0x022378C1;
 Sub_GaugeObjHeadGet = 0x2E2F8 + 0x022378C1;
 ST_ServerSelectWazaGet = 0x1AA30 + 0x022378C1;
-ST_ServerNamakeCheck = 0x1B380 + 0x022378C1;
+ST_CheckIfInTruant = 0x1B380 + 0x022378C1;
 SCIO_BlankMessage = 0x2CA30 + 0x022378C1;
 BattleWorkFightMsgGet = 0x0223A930 | 1;
 Task_DistributeExp = 0x02245898 | 1;
@@ -52,7 +51,7 @@ ArchiveDataLoad = 0x02007509;
 ArchiveDataLoadMallocOfs = 0x0200757C | 1;
 NARC_ctor = 0x02007688 | 1;
 ArchiveDataLoadOfs = 0x02007560 | 1;
-sqrt = 0x0200048A | 1;
+/*sqrt = 0x0200048A | 1;*/
 
 /*Pokemon*/
 AllocMonZeroed = 0x0206DD2C | 1;
@@ -67,22 +66,21 @@ SetMonData = 0x0206EC40 |1;
 PokeStatusPokeParamGet = 0x0208A520 | 1;
 RecalcPartyPokemonStats = 0x0206E250 | 1;
 ResetPartyPokemonAbility = 0x020722D4 |1;
-PokeFuseiFormNoCheck = 0x02070438 |1;
+SanitizeFormNumber = 0x02070438 |1;
 PokePasoParaUnknownFormGet = 0x02070DA0 |1;
 PokeFormNoPersonalParaGet = 0x0206FBC4 |1;
 GetBoxMonGender = 0x0206FF90 |1;
 PokeSexGetMonsNo = 0x0206FFC8 |1;
 BoxMonSetFastModeOn = 0x0206DDD8 |1;
 BoxMonSetFastModeOff = 0x0206DE00 |1;
-BoxMonDataSet = 0x0206ED70 |1;
+SetBoxMonData = 0x0206ED70 |1;
 FillInBoxMonLearnset = 0x020712D8 |1;
 PokePersonalParaGet = 0x0206FBE8 |1;
 BoxMonInit = 0x0206DD0C |1;
 PokeLevelExpGet = 0x0206FD00 |1;
-SodateyaWork_GetPokePasoPointer = 0x0206BDB0 |1;
-PokeParaPersonalRndChange = 0x0207235C | 1;
-PokeNatureGet = 0x0206FE2C |1;
-PokeSetMove = 0x020712D8 |1;
+Daycare_GetBoxMonI = 0x0206BDB0 |1;
+SetMonPersonality = 0x0207235C | 1;
+GetNatureFromPersonality = 0x0206FE2C |1;
 PokeParaLevelExpGet = 0x0206FCDC | 1;
 PokeLevelUpCheck = 0x02070DB4 | 1;
 MonHasMove = 0x02071754 | 1;
@@ -151,6 +149,7 @@ OAM_LoadResourcePlttWorkArc = 0x0200D644 |1;
 OAM_LoadResourceCellArc = 0x0200D6D4 | 1;
 OAM_LoadResourceCellAnmArc = 0x0200D704 |1;
 OAM_LoadResourceCharArc = 0x0200D4A4 |1;
+OAM_ObjectAnimeSeqSetCap = 0x0200DC4C | 1;
 
 OAM_ObjectAdd_S = 0x0200D734 |1;
 OAM_ObjectUpdate = 0x0200DC0C |1;
@@ -201,7 +200,7 @@ ChooseRandomTarget = 0x02253DA0 | 1;
 CountBattlerMoves = 0x02252EA8 | 1;
 AbilityStatusRecoverCheck = 0x022543A0 | 1;
 HeldItemHealCheck = 0x02254E7C | 1;
-LoadBattleSubSeqScript = 0x172DC + 0x022378C1;
+/*LoadBattleSubSeqScript = 0x172DC + 0x022378C1;*/
 HeldItemHoldEffectGet = 0x02255830 | 1;
 HeldItemAtkGet = 0x02255844 | 1;
 IsMovingAfterClient = 0x0225561C | 1;
@@ -211,14 +210,14 @@ BattleWorkBattleStatusFlagGet = 0x0223B514 | 1;
 PokeParaGiratinaFormChange = 0x02071CA0 | 1;
 SCIO_PSPtoPPCopy = 0x02263B4C | 1;
 SCIO_IncRecord = 0x02263F0C | 1;
-ST_ServerTokuseiStatusRecoverReshuffleCheck = 0x0225451C | 1;
-ST_ServerPressurePPDecCheck = 0x02258180 | 1;
-ST_ServerWazaPosGet = 0x02251C60 | 1;
-BattleWorkConfigWazaEffectOnOffCheck = 0x0223B6D4 | 1;
-SCIO_WazaEffectSet = 0x0226340C | 1;
-SCIO_WazaEffect2Set = 0x0226343C | 1;
+CheckStatusRecoverFromAbilityOnSwitch = 0x0225451C | 1;
+CheckPressureForPPDecrease = 0x02258180 | 1;
+GetBattlePokemonMovePosFromMove = 0x02251C60 | 1;
+CheckBattleAnimationsOption = 0x0223B6D4 | 1;
+SCIO_QueueMoveAnimation = 0x0226340C | 1;
+SCIO_QueueMoveAnimationConsiderAttackerDefender = 0x0226343C | 1;
 SkillSequenceGosub = 0x02245520 | 1;
-ServerKizetsuCheck = 0x0224DC74 | 1;
+CheckIfAnyoneShouldFaint = 0x0224DC74 | 1;
 Snd_BgmPlay = 0x02005D48 | 1;
 BattleWorkPinchSEFlagSet = 0x0223BD3C | 1;
 ST_ServerPokeOneSelfCheckActPP = 0x022568B0 | 1;
@@ -238,7 +237,7 @@ Battle_GetClientPartyMon = 0x0223a880 | 1;
 
 /*Battle Script Functions*/
 IncrementBattleScriptPtr = 0x02245508 | 1;
-read_battle_script_param = 0x022454E8 | 1;
+/*read_battle_script_param = 0x022454E8 | 1;*/
 TagNickParaMake = 0x022522E0 | 1;
 JumpToMoveEffectScript = 0x02245518 | 1;
 BGCallback_Waza = 0x0226748C | 1;
@@ -443,3 +442,71 @@ Summary_PrintStringGeneric = 0x0208C850 | 1;
 CopyBoxPokemonToPokemon = 0x02071780 | 1;
 
 GetExpByGrowthRateAndLevel = 0x0206FD30 | 1;
+
+ServerGetExpCheck = 0x0224DD18 | 1;
+ServerZenmetsuCheck = 0x0224D7EC | 1;
+ST_ServerDir2ClientNoGet = 0x02257E98 | 1;
+
+/* tasks */
+CreateSysTask = 0x0200E320 | 1;
+DestroySysTask = 0x0200E390 | 1;
+
+BattleWorkClientParamGet = 0x0223A7E8 | 1;
+
+BattleStructureInit = 0x02250F44 | 1;
+BattleStructureCounterInit = 0x02251038 | 1;
+ServerMoveAIInit = 0x0224E384 | 1;
+DumpMoveTableData = 0x02073300 | 1;
+
+GF_ExpHeap_FndGetTotalFreeSize = 0x0201ABEC | 1;
+
+/*Link_QueueIsEmpty = 0x0224ED48 | 1;*/
+Link_CheckTimeout = 0x0224ED9C | 1;
+
+Save_Daycare_Get = 0x020293D4 | 1;
+
+/* item use funcs */
+ItemFieldUseFunc_Generic = 0x02065150 | 1;
+ItemMenuUseFunc_HealingItem = 0x02064B54 | 1;
+ItemCheckUseFunc_Dummy = 0x02064BF4 | 1;
+ItemMenuUseFunc_Bicycle = 0x02064BFC | 1;
+ItemFieldUseFunc_Bicycle = 0x02064C30 | 1;
+ItemCheckUseFunc_Bicycle = 0x02064DA8 | 1;
+ItemMenuUseFunc_TMHM = 0x02064E18 | 1;
+ItemMenuUseFunc_Mail = 0x02064EB8 | 1;
+ItemMenuUseFunc_Berry = 0x02064F08 | 1;
+ItemCheckUseFunc_Berry = 0x02064F04 | 1;
+ItemMenuUseFunc_PalPad = 0x02064F28 | 1;
+ItemFieldUseFunc_PalPad = 0x02064F5C | 1;
+ItemMenuUseFunc_Honey = 0x02064F7C | 1;
+ItemMenuUseFunc_OldRod = 0x02064FD4 | 1;
+ItemFieldUseFunc_OldRod = 0x02065010 | 1;
+ItemCheckUseFunc_FishingRod = 0x020650E8 | 1;
+ItemMenuUseFunc_GoodRod = 0x02065030 | 1;
+ItemFieldUseFunc_GoodRod = 0x0206506C | 1;
+ItemMenuUseFunc_SuperRod = 0x0206508C | 1;
+ItemFieldUseFunc_SuperRod = 0x020650C8 | 1;
+ItemMenuUseFunc_EvoStone = 0x02065258 | 1;
+ItemMenuUseFunc_EscapeRope = 0x02065310 | 1;
+ItemCheckUseFunc_EscapeRope = 0x0206536C | 1;
+ItemMenuUseFunc_ApricornBox = 0x020653D8 | 1;
+ItemFieldUseFunc_ApricornBox = 0x02065408 | 1;
+ItemMenuUseFunc_BerryPots = 0x02065428 | 1;
+ItemFieldUseFunc_BerryPots = 0x02065458 | 1;
+ItemMenuUseFunc_UnownReport = 0x02065474 | 1;
+ItemFieldUseFunc_UnownReport = 0x020654A4 | 1;
+ItemMenuUseFunc_DowsingMchn = 0x020654C0 | 1;
+ItemFieldUseFunc_DowsingMchn = 0x020654F4 | 1;
+ItemFieldUseFunc_GbSounds = 0x02065560 | 1;
+ItemMenuUseFunc_Gracidea = 0x020655B8 | 1;
+ItemFieldUseFunc_Gracidea = 0x020655F0 | 1;
+ItemMenuUseFunc_VSRecorder = 0x02065614 | 1;
+ItemFieldUseFunc_VSRecorder = 0x02065648 | 1;
+sub_0203FAE8 = 0x0203FAE8 | 1;
+sub_0203C8F0 = 0x0203C8F0 | 1;
+RegisteredItem_CreateGoToAppTask = 0x020658B8 | 1;
+
+PaletteRAMArray = 0x05000000;
+
+GetMonNature = 0x0206FDFC | 1;
+BattleWork_GetTrainerIndex = 0x0223A9AC | 1;

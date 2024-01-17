@@ -12,7 +12,7 @@ Volt Absorb
 Water Absorb
 Oblivious
 Cloud Nine
-Compoundeyes
+CompoundEyes
 Insomnia
 Color Change
 Immunity
@@ -29,7 +29,7 @@ Effect Spore
 Synchronize
 Clear Body
 Natural Cure
-Lightningrod
+LightningRod
 Serene Grace
 Swift Swim
 Chlorophyll
@@ -297,3 +297,15 @@ Toxic Debris
 Armor Tail
 Earth Eater
 Mycelium Might
+Hospitality
+Mind’s Eye
+Embody Aspect
+Embody Aspect
+Embody Aspect
+Embody Aspect
+Toxic Chain
+Supersweet Syrup
+Tera Shift
+Tera Shell
+Teraform Zero
+Poison Puppeteer

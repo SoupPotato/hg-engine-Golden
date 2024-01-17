@@ -5,6 +5,7 @@
 #include "../../include/types.h"
 #include "../../include/constants/ability.h"
 #include "../../include/constants/hold_item_effects.h"
+#include "../../include/constants/battle_message_constants.h"
 #include "../../include/constants/battle_script_constants.h"
 #include "../../include/constants/item.h"
 #include "../../include/constants/move_effects.h"
@@ -91,7 +92,7 @@ BOOL CalcAccuracy(void *bw, struct BattleStruct *sp, int attacker, int defender,
     s8 stat_stage_acc, stat_stage_evasion;
     int hold_effect;
     int hold_effect_atk;
-    u8 move_type;
+    u8 move_type UNUSED; // unused but will be needed
     u8 move_split;
 
     if (BattleTypeGet(bw) & BATTLE_TYPE_CATCHING_DEMO)
@@ -119,7 +120,7 @@ BOOL CalcAccuracy(void *bw, struct BattleStruct *sp, int attacker, int defender,
 
     int i;
 
-    for (i = 0; i < NELEMS(PowderMovesList); i++) {
+    for (i = 0; i < (s32)NELEMS(PowderMovesList); i++) {
         if (sp->current_move_index == PowderMovesList[i]) {
             if
             (
@@ -159,7 +160,7 @@ BOOL CalcAccuracy(void *bw, struct BattleStruct *sp, int attacker, int defender,
         stat_stage_evasion = 0;
     }
 
-    if (((sp->battlemon[defender].condition2 & STATUS2_FLAG_FORESIGHT) || (sp->battlemon[defender].effect_of_moves & MOVE_EFFECT_FLAG_MIRACLE_EYE))
+    if (((sp->battlemon[defender].condition2 & STATUS2_FORESIGHT) || (sp->battlemon[defender].effect_of_moves & MOVE_EFFECT_FLAG_MIRACLE_EYE))
      && (stat_stage_evasion < 0))
     {
         stat_stage_evasion = 0;
@@ -193,8 +194,8 @@ BOOL CalcAccuracy(void *bw, struct BattleStruct *sp, int attacker, int defender,
         return FALSE;
     }
 
-    if ((CheckSideAbility(bw, sp, CHECK_ALL_BATTLER_ALIVE, 0, ABILITY_CLOUD_NINE) == 0)
-     && (CheckSideAbility(bw, sp, CHECK_ALL_BATTLER_ALIVE, 0, ABILITY_AIR_LOCK) == 0))
+    if ((CheckSideAbility(bw, sp, CHECK_ABILITY_ALL_HP, 0, ABILITY_CLOUD_NINE) == 0)
+     && (CheckSideAbility(bw, sp, CHECK_ABILITY_ALL_HP, 0, ABILITY_AIR_LOCK) == 0))
     {
         if ((sp->field_condition & WEATHER_SUNNY_ANY) && (sp->moveTbl[move_no].effect == 152)) // thunder sucks in the sun
         {
@@ -223,8 +224,8 @@ BOOL CalcAccuracy(void *bw, struct BattleStruct *sp, int attacker, int defender,
         accuracy = accuracy * 110 / 100;
     }
 
-    if ((CheckSideAbility(bw, sp, CHECK_ALL_BATTLER_ALIVE, 0, ABILITY_CLOUD_NINE) == 0)
-     && (CheckSideAbility(bw, sp, CHECK_ALL_BATTLER_ALIVE, 0, ABILITY_AIR_LOCK) == 0))
+    if ((CheckSideAbility(bw, sp, CHECK_ABILITY_ALL_HP, 0, ABILITY_CLOUD_NINE) == 0)
+     && (CheckSideAbility(bw, sp, CHECK_ABILITY_ALL_HP, 0, ABILITY_AIR_LOCK) == 0))
     {
         if (sp->field_condition & WEATHER_SANDSTORM_ANY){
             if (MoldBreakerAbilityCheck(sp, attacker, defender, ABILITY_SAND_VEIL) == TRUE)
@@ -251,7 +252,7 @@ BOOL CalcAccuracy(void *bw, struct BattleStruct *sp, int attacker, int defender,
     }
 
     if ((MoldBreakerAbilityCheck(sp, attacker, defender, ABILITY_TANGLED_FEET) == TRUE)
-     && (sp->battlemon[defender].condition2 & STATUS2_FLAG_CONFUSED))
+     && (sp->battlemon[defender].condition2 & STATUS2_CONFUSED))
     {
         accuracy = accuracy * 50 / 100;
     }
@@ -277,9 +278,9 @@ BOOL CalcAccuracy(void *bw, struct BattleStruct *sp, int attacker, int defender,
         accuracy = accuracy * (100 + hold_effect_atk) / 100;
     }
 
-    if (sp->battlemon[attacker].moveeffect.boost_accuracy_once)
+    if (sp->battlemon[attacker].moveeffect.boostedAccuracy)
     {
-        sp->battlemon[attacker].moveeffect.boost_accuracy_once = 0;
+        sp->battlemon[attacker].moveeffect.boostedAccuracy = 0;
         accuracy = accuracy * 120 / 100;
     }
 
@@ -390,8 +391,8 @@ u8 CalcSpeed(void *bw, struct BattleStruct *sp, int client1, int client2, int fl
     speed1 = sp->battlemon[client1].speed * StatBoostModifiers[stat_stage_spd1][0] / StatBoostModifiers[stat_stage_spd1][1];
     speed2 = sp->battlemon[client2].speed * StatBoostModifiers[stat_stage_spd2][0] / StatBoostModifiers[stat_stage_spd2][1];
 
-    if ((CheckSideAbility(bw, sp, CHECK_ALL_BATTLER_ALIVE, 0, ABILITY_CLOUD_NINE)==0)
-     && (CheckSideAbility(bw, sp, CHECK_ALL_BATTLER_ALIVE, 0, ABILITY_AIR_LOCK)==0))
+    if ((CheckSideAbility(bw, sp, CHECK_ABILITY_ALL_HP, 0, ABILITY_CLOUD_NINE)==0)
+     && (CheckSideAbility(bw, sp, CHECK_ABILITY_ALL_HP, 0, ABILITY_AIR_LOCK)==0))
     {
         if (((ability1 == ABILITY_SWIFT_SWIM) && (sp->field_condition & WEATHER_RAIN_ANY))
          || ((ability1 == ABILITY_CHLOROPHYLL) && (sp->field_condition & WEATHER_SUNNY_ANY))
@@ -441,19 +442,19 @@ u8 CalcSpeed(void *bw, struct BattleStruct *sp, int client1, int client2, int fl
     }
 
     if ((ability1 == ABILITY_SLOW_START)
-     && ((sp->total_turn - sp->battlemon[client1].moveeffect.slow_start_count) < 5))
+     && ((sp->total_turn - sp->battlemon[client1].moveeffect.slowStartTurns) < 5))
     {
         speed1 /= 2;
     }
 
     if ((ability1 == ABILITY_UNBURDEN)
-     && (sp->battlemon[client1].moveeffect.unburden_flag)
+     && (sp->battlemon[client1].moveeffect.knockOffFlag)
      && (sp->battlemon[client1].item == 0))
     {
         speed1 *= 2;
     }
 
-    if (sp->side_condition[IsClientEnemy(bw, client1)] & SIDE_STATUS_TAILWIND)
+    if (sp->tailwindCount[IsClientEnemy(bw, client1)]) // new tailwind handling
     {
         speed1 *= 2;
     }
@@ -465,7 +466,7 @@ u8 CalcSpeed(void *bw, struct BattleStruct *sp, int client1, int client2, int fl
             quick_claw1 = 1;
             if (flag == 0)
             {
-                sp->battlemon[client1].moveeffect.quick_claw_flag = 1;
+                sp->battlemon[client1].moveeffect.quickClawFlag = 1;
             }
         }
     }
@@ -481,7 +482,7 @@ u8 CalcSpeed(void *bw, struct BattleStruct *sp, int client1, int client2, int fl
             quick_claw1 = 1;
             if (flag == 0)
             {
-                sp->battlemon[client1].moveeffect.raise_speed_once = 1;
+                sp->battlemon[client1].moveeffect.custapBerryFlag = 1;
             }
         }
     }
@@ -523,19 +524,19 @@ u8 CalcSpeed(void *bw, struct BattleStruct *sp, int client1, int client2, int fl
     }
 
     if ((ability2 == ABILITY_SLOW_START)
-     && ((sp->total_turn - sp->battlemon[client2].moveeffect.slow_start_count) < 5))
+     && ((sp->total_turn - sp->battlemon[client2].moveeffect.slowStartTurns) < 5))
     {
         speed2 /= 2;
     }
 
     if ((ability2 == ABILITY_UNBURDEN)
-     && (sp->battlemon[client2].moveeffect.unburden_flag)
+     && (sp->battlemon[client2].moveeffect.knockOffFlag)
      && (sp->battlemon[client2].item == 0))
     {
         speed2 *= 2;
     }
 
-    if (sp->side_condition[IsClientEnemy(bw, client2)] & SIDE_STATUS_TAILWIND)
+    if (sp->tailwindCount[IsClientEnemy(bw, client2)]) // new tailwind handling
     {
         speed2 *= 2;
     }
@@ -544,10 +545,10 @@ u8 CalcSpeed(void *bw, struct BattleStruct *sp, int client1, int client2, int fl
     {
         if ((sp->agi_rand[client2] % (100 / hold_atk2)) == 0)
         {
-            quick_claw2=1;
+            quick_claw2 = 1;
             if (flag == 0)
             {
-                sp->battlemon[client2].moveeffect.quick_claw_flag = 1;
+                sp->battlemon[client2].moveeffect.quickClawFlag = 1;
             }
         }
     }
@@ -556,14 +557,14 @@ u8 CalcSpeed(void *bw, struct BattleStruct *sp, int client1, int client2, int fl
     {
         if (GetBattlerAbility(sp, client2) == ABILITY_GLUTTONY)
         {
-            hold_atk2/=2;
+            hold_atk2 /= 2;
         }
         if (sp->battlemon[client2].hp <= (s32)(sp->battlemon[client2].maxhp / hold_atk2))
         {
             quick_claw2 = 1;
-            if(flag == 0)
+            if (flag == 0)
             {
-                sp->battlemon[client2].moveeffect.raise_speed_once = 1;
+                sp->battlemon[client2].moveeffect.custapBerryFlag = 1;
             }
         }
     }
@@ -624,7 +625,7 @@ u8 CalcSpeed(void *bw, struct BattleStruct *sp, int client1, int client2, int fl
         (
             GetBattlerAbility(sp, client1) == ABILITY_GALE_WINGS
             && sp->moveTbl[move1].type == TYPE_FLYING
-            && sp->battlemon[client1].hp == sp->battlemon[client1].maxhp
+            && sp->battlemon[client1].hp == (s32)sp->battlemon[client1].maxhp
         ) {
             priority1++;
         }
@@ -633,7 +634,7 @@ u8 CalcSpeed(void *bw, struct BattleStruct *sp, int client1, int client2, int fl
         (
             GetBattlerAbility(sp, client2) == ABILITY_GALE_WINGS
             && sp->moveTbl[move2].type == TYPE_FLYING
-            && sp->battlemon[client2].hp == sp->battlemon[client2].maxhp
+            && sp->battlemon[client2].hp == (s32)sp->battlemon[client2].maxhp
         ) {
             priority2++;
         }
@@ -782,7 +783,7 @@ int CalcCritical(void *bw, struct BattleStruct *sp, int attacker, int defender, 
     move_effect = sp->battlemon[defender].effect_of_moves;
     ability = sp->battlemon[attacker].ability;
 
-    temp = (((condition2 & STATUS2_FLAG_FOCUS_ENERGY) != 0) * 2) + (hold_effect == HOLD_EFFECT_BOOST_CRITICAL_RATE) + critical_count + (ability == ABILITY_SUPER_LUCK)
+    temp = (((condition2 & STATUS2_FOCUS_ENERGY) != 0) * 2) + (hold_effect == HOLD_EFFECT_BOOST_CRITICAL_RATE) + critical_count + (ability == ABILITY_SUPER_LUCK)
          + (2 * ((hold_effect == HOLD_EFFECT_BOOST_CHANSEY_CRITICAL) && (species == SPECIES_CHANSEY)))
          + (2 * ((hold_effect == HOLD_EFFECT_BOOST_FARFETCHD_CRITICAL) && (species == SPECIES_FARFETCHD)));
 
@@ -846,26 +847,26 @@ void ServerHPCalc(void *bw, struct BattleStruct *sp)
 
         sp->client_no_hit[sp->defence_client] = sp->attack_client;
 
-        if ((sp->battlemon[sp->defence_client].condition2 & CONDITION2_SUBSTITUTE)
+        if ((sp->battlemon[sp->defence_client].condition2 & STATUS2_SUBSTITUTE)
          && (sp->damage < 0)
          && (GetBattlerAbility(sp, sp->attack_client) != ABILITY_INFILTRATOR))
         {
-            if ((sp->battlemon[sp->defence_client].moveeffect.substitute_hp + sp->damage) <= 0)
+            if ((sp->battlemon[sp->defence_client].moveeffect.substituteHp + sp->damage) <= 0)
             {
-                sp->oneSelfFlag[sp->attack_client].shell_bell_damage += (sp->battlemon[sp->defence_client].moveeffect.substitute_hp * -1);
-                sp->battlemon[sp->defence_client].condition2 &= CONDITION2_SUBSTITUTE_OFF;
-                sp->hit_damage = sp->battlemon[sp->defence_client].moveeffect.substitute_hp * -1;
-                sp->battlemon[sp->defence_client].moveeffect.substitute_hp = 0;
+                sp->oneSelfFlag[sp->attack_client].shell_bell_damage += (sp->battlemon[sp->defence_client].moveeffect.substituteHp * -1);
+                sp->battlemon[sp->defence_client].condition2 &= ~(STATUS2_SUBSTITUTE);
+                sp->hit_damage = sp->battlemon[sp->defence_client].moveeffect.substituteHp * -1;
+                sp->battlemon[sp->defence_client].moveeffect.substituteHp = 0;
             }
             else
             {
                 sp->oneSelfFlag[sp->attack_client].shell_bell_damage += sp->damage;
-                sp->battlemon[sp->defence_client].moveeffect.substitute_hp += sp->damage;
+                sp->battlemon[sp->defence_client].moveeffect.substituteHp += sp->damage;
                 sp->hit_damage = sp->damage;
             }
             sp->oneSelfFlag[sp->defence_client].status_flag |= SELF_STATUS_FLAG_SUBSTITUTE_HIT;
             sp->client_work = sp->defence_client;
-            LoadBattleSubSeqScript(sp, ARC_SUB_SEQ, SUB_SEQ_SUBSTITUTE_HIT);
+            LoadBattleSubSeqScript(sp, ARC_BATTLE_SUB_SEQ, SUB_SEQ_HIT_SUBSTITUTE);
             sp->server_seq_no = 22;
             sp->next_server_seq_no = 29;
         }
@@ -878,21 +879,33 @@ void ServerHPCalc(void *bw, struct BattleStruct *sp)
                     sp->damage = (sp->battlemon[sp->defence_client].hp - 1) * -1;
                 }
             }
-            if (sp->oneTurnFlag[sp->defence_client].prevent_one_hit_ko_ability == 0)
+            if (sp->oneTurnFlag[sp->defence_client].prevent_one_hit_ko_ability == FALSE)
             {
-                if ((MoldBreakerAbilityCheck(sp, sp->attack_client, sp->defence_client, ABILITY_STURDY) == TRUE) && (sp->battlemon[sp->defence_client].hp == sp->battlemon[sp->defence_client].maxhp))
+                if ((eqp == HOLD_EFFECT_FOCUS_BAND) && ((BattleRand(bw) % 100) < atk))
                 {
-                    sp->oneTurnFlag[sp->defence_client].prevent_one_hit_ko_ability = 1;
+                    sp->oneSelfFlag[sp->defence_client].prevent_one_hit_ko_item = TRUE;
                 }
-                else if ((eqp == HOLD_EFFECT_FOCUS_BAND) && ((BattleRand(bw) % 100) < atk))
+                else if ((eqp == HOLD_EFFECT_HP_MAX_SURVIVE_1_HP) && (sp->battlemon[sp->defence_client].hp == (s32)sp->battlemon[sp->defence_client].maxhp))
                 {
-                    sp->oneSelfFlag[sp->defence_client].prevent_one_hit_ko_item = 1;
+                    sp->oneSelfFlag[sp->defence_client].prevent_one_hit_ko_item = TRUE;
                 }
-                else if ((eqp == HOLD_EFFECT_HP_MAX_SURVIVE_1_HP) && (sp->battlemon[sp->defence_client].hp == sp->battlemon[sp->defence_client].maxhp))
+                else
                 {
-                    sp->oneSelfFlag[sp->defence_client].prevent_one_hit_ko_item = 1;
+                    sp->oneSelfFlag[sp->defence_client].prevent_one_hit_ko_item = FALSE;
                 }
             }
+
+            // handle sturdy--prevent one-hit ko's if hp == maxhp
+            if ((MoldBreakerAbilityCheck(sp, sp->attack_client, sp->defence_client, ABILITY_STURDY) == TRUE) && (sp->battlemon[sp->defence_client].hp == (s32)sp->battlemon[sp->defence_client].maxhp))
+            {
+                sp->oneTurnFlag[sp->defence_client].prevent_one_hit_ko_ability = TRUE;
+            }
+            // make sure to cancel sturdy if hp != maxhp.  necessary for multi-hit moves
+            else if (MoldBreakerAbilityCheck(sp, sp->attack_client, sp->defence_client, ABILITY_STURDY) == TRUE && (sp->battlemon[sp->defence_client].hp != (s32)sp->battlemon[sp->defence_client].maxhp))
+            {
+                sp->oneTurnFlag[sp->defence_client].prevent_one_hit_ko_ability = FALSE;
+            }
+
             if ((sp->oneTurnFlag[sp->defence_client].prevent_one_hit_ko_ability) || (sp->oneSelfFlag[sp->defence_client].prevent_one_hit_ko_item))
             {
                 if ((sp->battlemon[sp->defence_client].hp + sp->damage) <= 0)
@@ -906,29 +919,6 @@ void ServerHPCalc(void *bw, struct BattleStruct *sp)
                     {
                         sp->waza_status_flag |= MOVE_STATUS_FLAG_HELD_ON_ITEM;
                     }
-                }
-            }
-
-            //handle Mimikyu's Disguise
-            if ((sp->battlemon[sp->defence_client].species == SPECIES_MIMIKYU)
-             && (sp->battlemon->form_no == 0))
-            {
-                if (sp->damage)
-                {
-                    sp->damage = 0;
-                    sp->battlemon[sp->defence_client].condition2 |= CONDITION2_SUBSTITUTE;
-                }
-            }
-
-            //handle Eiscue's Ice Face
-            if ((sp->battlemon[sp->defence_client].species == SPECIES_EISCUE)
-                && (sp->battlemon->form_no == 0)
-                && (sp->moveTbl[sp->current_move_index].split == SPLIT_PHYSICAL))
-            {
-                if (sp->damage)
-                {
-                    sp->damage = 0;
-                    sp->battlemon[sp->defence_client].condition2 |= CONDITION2_SUBSTITUTE;
                 }
             }
 
@@ -973,7 +963,7 @@ void ServerHPCalc(void *bw, struct BattleStruct *sp)
             sp->client_work = sp->defence_client;
             sp->hp_calc_work = sp->damage;
 
-            LoadBattleSubSeqScript(sp, ARC_SUB_SEQ, SUB_SEQ_HP_CALC);
+            LoadBattleSubSeqScript(sp, ARC_BATTLE_SUB_SEQ, SUB_SEQ_HP_CHANGE);
             sp->server_seq_no = 22;
             sp->next_server_seq_no = 29;
 
@@ -1003,8 +993,20 @@ u16 gf_p_rand(const u16 denominator)
 }
 
 
-// return modified damage
-int ServerDoTypeCalcMod(void *bw, struct BattleStruct *sp, int move_no, int move_type, int attack_client, int defence_client, int damage, u32 *flag)
+/**
+ *  @brief set move status effects for super effective and calculate modified damage
+ *
+ *  @param bw battle work structure
+ *  @param sp global battle structure
+ *  @param move_no move index
+ *  @param move_type move type
+ *  @param attack_client attacker
+ *  @param defence_client defender
+ *  @param damage current damage
+ *  @param flag move status flags to mess around with
+ *  @return modified damage
+ */
+int ServerDoTypeCalcMod(void *bw UNUSED, struct BattleStruct *sp, int move_no, int move_type, int attack_client, int defence_client, int damage, u32 *flag)
 {
     int i;
     int modifier;
@@ -1012,7 +1014,7 @@ int ServerDoTypeCalcMod(void *bw, struct BattleStruct *sp, int move_no, int move
     u8  eqp_a;
     u8  eqp_d;
     u8  atk_a;
-    u8  atk_d;
+    u8  atk_d UNUSED; // not currently used but will be
 
     modifier = 1;
 
@@ -1046,13 +1048,21 @@ int ServerDoTypeCalcMod(void *bw, struct BattleStruct *sp, int move_no, int move
     {
         flag[0] |= MOVE_STATUS_FLAG_LEVITATE_MISS;
     }
-
-    else if ((sp->battlemon[defence_client].moveeffect.magnet_rise_count)
+    else if ((sp->battlemon[defence_client].moveeffect.magnetRiseTurns)
           && ((sp->battlemon[defence_client].effect_of_moves & MOVE_EFFECT_FLAG_INGRAIN) == 0)
+          && ((sp->field_condition & FIELD_STATUS_GRAVITY) == 0)
           && (move_type == TYPE_GROUND)
           && (eqp_d != HOLD_EFFECT_HALVE_SPEED))
     {
         flag[0] |= MOVE_STATUS_FLAG_MAGNET_RISE_MISS;
+    }
+    else if ((eqp_d == HOLD_EFFECT_UNGROUND_DESTROYED_ON_HIT) // has air balloon
+          && ((sp->battlemon[defence_client].effect_of_moves & MOVE_EFFECT_FLAG_INGRAIN) == 0)
+          && ((sp->field_condition & FIELD_STATUS_GRAVITY) == 0)
+          && (move_type == TYPE_GROUND)
+          && (eqp_d != HOLD_EFFECT_HALVE_SPEED))
+    {
+        flag[0] |= MOVE_STATUS_FLAG_MISS; // air balloon just misses for the moment
     }
     else
     {
@@ -1061,7 +1071,7 @@ int ServerDoTypeCalcMod(void *bw, struct BattleStruct *sp, int move_no, int move
         {
             if (TypeEffectivenessTable[i][0] == 0xfe) // handle foresight
             {
-                if ((sp->battlemon[defence_client].condition2 & STATUS2_FLAG_FORESIGHT) || (GetBattlerAbility(sp, attack_client) == ABILITY_SCRAPPY))
+                if ((sp->battlemon[defence_client].condition2 & STATUS2_FORESIGHT) || (GetBattlerAbility(sp, attack_client) == ABILITY_SCRAPPY))
                 {
                     break;
                 }
@@ -1142,10 +1152,303 @@ int ServerDoTypeCalcMod(void *bw, struct BattleStruct *sp, int move_no, int move
         }
         else
         {
-            flag[0] &= (MOVE_STATUS_FLAG_SUPER_EFFECTIVE ^ 0xFFFFFFFF);
-            flag[0] &= (MOVE_STATUS_FLAG_NOT_VERY_EFFECTIVE ^ 0xFFFFFFFF);
+            flag[0] &= ~(MOVE_STATUS_FLAG_SUPER_EFFECTIVE);
+            flag[0] &= ~(MOVE_STATUS_FLAG_NOT_VERY_EFFECTIVE);
         }
     }
 
     return damage;
+}
+
+
+/**
+ *  @brief tries to see if the player can even try to run.  queues up the proper message if not
+ *
+ *  @param bw battle work structure
+ *  @param ctx global battle structure
+ *  @param battlerId client to check for running
+ *  @param msg msg param to fill with values for printing a message that results from running
+ *  @return TRUE if the battler can not escape; FALSE if the battler can escape
+ */
+BOOL CantEscape(void *bw, struct BattleStruct *ctx, int battlerId, MESSAGE_PARAM *msg) {
+    int battlerIdAbility;
+    int maxBattlers UNUSED;
+    u8 side UNUSED;
+    int item;
+    u32 battleType;
+
+    battleType = BattleTypeGet(bw);
+    item = HeldItemHoldEffectGet(ctx, battlerId);
+
+    // if shed shell or no experience or has run away or has ghost type then there is nothing stopping the battler from escaping
+    if (item == HOLD_EFFECT_FLEE || (battleType & BATTLE_TYPE_NO_EXPERIENCE) || GetBattlerAbility(ctx, battlerId) == ABILITY_RUN_AWAY || BATTLE_MON_HAS_TYPE(ctx, battlerId, TYPE_GHOST)) {
+        return FALSE;
+    }
+
+    side = IsClientEnemy(bw, battlerId);
+    maxBattlers = BattleWorkClientSetMaxGet(bw);
+
+    battlerIdAbility = CheckSideAbility(bw, ctx, CHECK_ABILITY_ALL_HP_NOT_USER, battlerId, ABILITY_SHADOW_TAG);
+    if (battlerIdAbility && GetBattlerAbility(ctx, battlerId) != ABILITY_SHADOW_TAG) {
+        if (msg == NULL) {
+            return TRUE;
+        }
+        msg->msg_tag = TAG_NICK_ABILITY;
+        msg->msg_id = BATTLE_MSG_BATTLER_PREVENTS_ESCAPE_WITH;
+        msg->msg_para[0] = TagNickParaMake(ctx, battlerIdAbility);
+        msg->msg_para[1] = ABILITY_SHADOW_TAG;
+        return TRUE;
+    }
+
+    battlerIdAbility = CheckSideAbility(bw, ctx, CHECK_ABILITY_OPPOSING_SIDE_HP, battlerId, ABILITY_ARENA_TRAP);
+    if (battlerIdAbility) {
+        if (!(ctx->field_condition & FIELD_STATUS_GRAVITY) && item != HOLD_EFFECT_HALVE_SPEED) {
+            if (GetBattlerAbility(ctx, battlerId) != ABILITY_LEVITATE && !ctx->battlemon[battlerId].moveeffect.magnetRiseTurns && !BATTLE_MON_HAS_TYPE(ctx, battlerId, TYPE_FLYING)) {
+               if (msg == NULL) {
+                    return TRUE;
+                }
+                msg->msg_tag = TAG_NICK_ABILITY;
+                msg->msg_id = BATTLE_MSG_BATTLER_PREVENTS_ESCAPE_WITH;
+                msg->msg_para[0] = TagNickParaMake(ctx, battlerIdAbility);
+                msg->msg_para[1] = ABILITY_ARENA_TRAP;
+                return TRUE;
+            }
+        } else {
+            if (msg == NULL) {
+                return TRUE;
+            }
+            msg->msg_tag = TAG_NICK_ABILITY;
+            msg->msg_id = BATTLE_MSG_BATTLER_PREVENTS_ESCAPE_WITH;
+            msg->msg_para[0] = TagNickParaMake(ctx, battlerIdAbility);
+            msg->msg_para[1] = ABILITY_ARENA_TRAP;
+            return TRUE;
+        }
+    }
+
+    battlerIdAbility = CheckSideAbility(bw, ctx, CHECK_ABILITY_OPPOSING_SIDE_HP, battlerId, ABILITY_MAGNET_PULL);
+    if (battlerIdAbility && BATTLE_MON_HAS_TYPE(ctx, battlerId, TYPE_STEEL)) {
+        if (msg == NULL) {
+            return TRUE;
+        }
+        msg->msg_tag = TAG_NICK_ABILITY;
+        msg->msg_id = BATTLE_MSG_BATTLER_PREVENTS_ESCAPE_WITH;
+        msg->msg_para[0] = TagNickParaMake(ctx, battlerIdAbility);
+        msg->msg_para[1] = ABILITY_MAGNET_PULL;
+        return TRUE;
+    }
+
+    if ((ctx->battlemon[battlerId].condition2 & (STATUS2_BINDING_TURNS | STATUS2_MEAN_LOOK)) || (ctx->battlemon[battlerId].effect_of_moves & MOVE_EFFECT_FLAG_INGRAIN)){
+        if (msg == NULL) {
+            return TRUE;
+        }
+        msg->msg_tag = 0;
+        msg->msg_id = BATTLE_MSG_CANT_ESCAPE;
+        return TRUE;
+    }
+
+    return FALSE;
+}
+
+
+/**
+ *  @brief tries to see if the battler can switch
+ *
+ *  @param bw battle work structure
+ *  @param ctx global battle structure
+ *  @param battlerId client to check for running
+ *  @return TRUE if the battler can not switch; FALSE if the battler can switch
+ */
+BOOL BattlerCantSwitch(void *bw, struct BattleStruct *ctx, int battlerId) {
+    BOOL ret = FALSE;
+
+    // ghost types can switch from anything like they had shed skin
+    if (HeldItemHoldEffectGet(ctx, battlerId) == HOLD_EFFECT_SWITCH || BATTLE_MON_HAS_TYPE(ctx, battlerId, TYPE_GHOST)) {
+        return FALSE;
+    }
+
+    if ((ctx->battlemon[battlerId].condition2 & (STATUS2_BINDING_TURNS | STATUS2_MEAN_LOOK)) || (ctx->battlemon[battlerId].effect_of_moves & MOVE_EFFECT_FLAG_INGRAIN)) {
+        ret = TRUE;
+    }
+
+    if ((GetBattlerAbility(ctx, battlerId) != ABILITY_SHADOW_TAG && CheckSideAbility(bw, ctx, CHECK_ABILITY_OPPOSING_SIDE_HP, battlerId, ABILITY_SHADOW_TAG))
+     || (BATTLE_MON_HAS_TYPE(ctx, battlerId, TYPE_STEEL) && CheckSideAbility(bw, ctx, CHECK_ABILITY_OPPOSING_SIDE_HP, battlerId, ABILITY_MAGNET_PULL)))
+    {
+        ret = TRUE;
+    }
+
+    if (((GetBattlerAbility(ctx, battlerId) != ABILITY_LEVITATE
+       && ctx->battlemon[battlerId].moveeffect.magnetRiseTurns == 0
+       && !BATTLE_MON_HAS_TYPE(ctx, battlerId, TYPE_FLYING))
+      || HeldItemHoldEffectGet(ctx, battlerId) == HOLD_EFFECT_HALVE_SPEED
+      || (ctx->field_condition & FIELD_STATUS_GRAVITY))
+     && CheckSideAbility(bw, ctx, CHECK_ABILITY_OPPOSING_SIDE_HP, battlerId, ABILITY_ARENA_TRAP))
+    {
+        ret = TRUE;
+    }
+
+    return ret;
+}
+
+
+/**
+ *  @brief tries to see if the battler can run, sets escape_flag to 1 if it can via item or 2 if it can via ability
+ *         also takes into account the random chance to flee if none of the guaranteed chances work
+ *
+ *  @param bw battle work structure
+ *  @param ctx global battle structure
+ *  @param battlerId client to check for running
+ *  @return TRUE if the battler can run; FALSE if the battler can not switch
+ */
+BOOL BattleTryRun(void *bw, struct BattleStruct *ctx, int battlerId) {
+    BOOL ret;
+    u8 run;
+    int item;
+    u32 battleType;
+
+    battleType = BattleTypeGet(bw);
+    item = HeldItemHoldEffectGet(ctx, battlerId);
+    ret = FALSE;
+
+    if (item == HOLD_EFFECT_FLEE) {
+        ctx->oneTurnFlag[battlerId].escape_flag = 1;
+        ret = TRUE;
+    } else if (battleType & BATTLE_TYPE_NO_EXPERIENCE || BATTLE_MON_HAS_TYPE(ctx, battlerId, TYPE_GHOST)) { // ghost types can always escape regardless of speed
+        ret = TRUE;
+    } else if (GetBattlerAbility(ctx, battlerId) == ABILITY_RUN_AWAY) {
+        ctx->oneTurnFlag[battlerId].escape_flag = 2;
+        ret = TRUE;
+    } else {
+        if (ctx->battlemon[battlerId].speed < ctx->battlemon[battlerId ^ 1].speed) {
+            run = ctx->battlemon[battlerId].speed * 128 / ctx->battlemon[battlerId ^ 1].speed + ctx->escape_count * 30;
+            if (run > (BattleRand(bw) % 256)) {
+                ret = TRUE;
+            }
+        } else {
+            ret = TRUE;
+        }
+        if (!ret) {
+            SCIO_IncRecord(bw, battlerId, 0, 99);
+        }
+        ctx->escape_count++;
+    }
+    return ret;
+}
+
+/**
+ *  @brief see if a move has positive priority after adjustment
+ *
+ *  @param sp battle structure
+ *  @param attacker client to check
+ *  @return TRUE if the move has positive priority after adjustments
+ */
+BOOL adjustedMoveHasPositivePriority(struct BattleStruct *sp, int attacker) {
+    BOOL isTriageMove = FALSE;
+
+    for (u16 i = 0; i < NELEMS(TriageMovesList); i++) {
+        if (TriageMovesList[i] == sp->current_move_index) {
+            isTriageMove = TRUE;
+            break;
+        }
+    }
+
+    if (
+        (sp->moveTbl[sp->current_move_index].priority > 0) ||
+        ((GetBattlerAbility(sp, attacker) == ABILITY_PRANKSTER) &&
+         (sp->moveTbl[sp->current_move_index].split == SPLIT_STATUS) &&
+         (sp->moveTbl[sp->current_move_index].priority >= 0)  // Prankster is +1
+         ) ||
+        ((GetBattlerAbility(sp, attacker) == ABILITY_GALE_WINGS) &&
+         (sp->moveTbl[sp->current_move_index].type == TYPE_FLYING) &&
+         (sp->moveTbl[sp->current_move_index].priority >= 0)  // Gale Wings is +1
+         ) ||
+        ((GetBattlerAbility(sp, attacker) == ABILITY_TRIAGE) &&
+         (isTriageMove) &&
+         (sp->moveTbl[sp->current_move_index].priority >= -2)  // Triage is +3
+         )) {
+        return TRUE;
+    }
+    return FALSE;
+}
+
+/**
+ *  @brief see if the move should NOT be exempted from priority blocking effects
+ *
+ *  @param sp battle structure
+ *  @param attacker attacker client
+ *  @param defender defender client
+ *  @return TRUE if the move should NOT be exempted from priority blocking effects
+ */
+BOOL CurrentMoveShouldNotBeExemptedFromPriorityBlocking(struct BattleStruct *sp, int attacker, int defender) {
+    // Courtesy of The Pokeemerald Expansion (https://github.com/rh-hideout/pokeemerald-expansion/blob/selfhost-test/test/battle/terrain/psychic.c)
+
+    struct BattleMove currentMove = sp->moveTbl[sp->current_move_index];
+    u16 target = currentMove.target;
+
+    switch (target) {
+    // Psychic Terrain doesn't block priority moves that target the user
+    case MOVE_TARGET_USER:
+        return FALSE;
+        break;
+    
+    // Psychic Terrain doesn't block priority moves that target all battlers
+    // Psychic Terrain doesn't block priority field moves
+    case MOVE_TARGET_ACTIVE_FIELD:
+        return FALSE;
+        break;
+
+    // Psychic Terrain doesn't block priority moves that target all opponents
+    case MOVE_TARGET_OPPONENTS_FIELD:
+        return FALSE;
+        break;
+
+    // Psychic Terrain should not block Light Screen, Tailwind, etc.
+    case MOVE_TARGET_USER_SIDE:
+        return FALSE;
+        break;
+
+    default:
+        break;
+    }
+
+    //Psychic Terrain doesn't block priority moves that target allies
+    if (defender == BATTLER_ALLY(attacker)) {
+        return FALSE;
+    }
+
+    return TRUE;
+}
+
+/**
+ *  @brief Check if seed should activate
+ *
+ *  @param sp battle structure
+ *  @param heldItem held item
+ *  @return TRUE if seed should activate
+ */
+BOOL TerrainSeedShouldActivate(struct BattleStruct *sp, u16 heldItem) {
+    switch (heldItem) {
+        case ITEM_ELECTRIC_SEED:
+            if (sp->terrainOverlay.type == ELECTRIC_TERRAIN && sp->terrainOverlay.numberOfTurnsLeft > 0) {
+                return TRUE;
+            }
+            break;
+        case ITEM_GRASSY_SEED:
+            if (sp->terrainOverlay.type == GRASSY_TERRAIN && sp->terrainOverlay.numberOfTurnsLeft > 0) {
+                return TRUE;
+            }
+            break;
+        case ITEM_MISTY_SEED:
+            if (sp->terrainOverlay.type == MISTY_TERRAIN && sp->terrainOverlay.numberOfTurnsLeft > 0) {
+                return TRUE;
+            }
+            break;
+        case ITEM_PSYCHIC_SEED:
+            if (sp->terrainOverlay.type == PSYCHIC_TERRAIN && sp->terrainOverlay.numberOfTurnsLeft > 0) {
+                return TRUE;
+            }
+            break;
+        default:
+            return FALSE;
+    }
+    return FALSE;
 }
