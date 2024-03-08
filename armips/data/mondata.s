@@ -3499,7 +3499,7 @@ mondata SPECIES_LEDYBA, "Ledyba"
 
 
 mondata SPECIES_LEDIAN, "Ledian"
-    basestats 55, 35, 50, 85, 55, 110
+    basestats 55, 35, 40, 85, 85, 100
     types TYPE_BUG, TYPE_FLYING
     catchrate 90
     baseexp 0 // defined in baseexp.s
@@ -4591,7 +4591,7 @@ mondata SPECIES_URSARING, "Ursaring"
 
 
 mondata SPECIES_SLUGMA, "Slugma"
-    basestats 40, 40, 40, 20, 70, 40
+    basestats 50, 40, 50, 20, 70, 50
     types TYPE_FIRE, TYPE_FIRE
     catchrate 190
     baseexp 0 // defined in baseexp.s
@@ -4612,7 +4612,7 @@ mondata SPECIES_SLUGMA, "Slugma"
 
 
 mondata SPECIES_MAGCARGO, "Magcargo"
-    basestats 60, 50, 120, 30, 90, 80
+    basestats 80, 50, 120, 30, 90, 80
     types TYPE_FIRE, TYPE_ROCK
     catchrate 75
     baseexp 0 // defined in baseexp.s
