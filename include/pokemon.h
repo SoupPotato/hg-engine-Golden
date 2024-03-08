@@ -97,7 +97,8 @@
 #define GET_BOX_MON_NATURE_OVERRIDE(boxmon) (((GetBoxMonData(boxmon, MON_DATA_RESERVED_114, 0) & DUMMY_P2_2_NATURE_OVERRIDE) >> 1) & 0x1F)
 
 
-#define POW_RND (32)
+#define IS_SPECIES_PARADOX_FORM(species) ((species >= SPECIES_GREAT_TUSK && species <= SPECIES_IRON_THORNS) || (species == SPECIES_ROARING_MOON) || (species == SPECIES_IRON_VALIANT) || (species == SPECIES_WALKING_WAKE) \
+    || (species == SPECIES_IRON_LEAVES) || (species >= SPECIES_GOUGING_FIRE && species <= SPECIES_IRON_CROWN))
 
 
 // personal narc fields
@@ -740,6 +741,16 @@ enum
 #define TRAINER_DATA_EXTRA_TYPE_PP_COUNTS 0x100
 #define TRAINER_DATA_EXTRA_TYPE_NICKNAME 0x200
 
+// kinda weird, specifically tracked in the RAM
+typedef struct WildEncounterWork
+{
+    u16 species:11;
+    u16 form:5;
+    u16 padding;
+    u16 maxLevel;
+    u16 minLevel;
+} WildEncounterWork;
+
 
 /**
  *  @brief allocate enough space for a PartyPokemon and zero it out
@@ -1142,6 +1153,10 @@ void LONG_CALL WildMonSetRandomHeldItem(struct PartyPokemon *pokemon, u32 fight_
  */
 BOOL LONG_CALL GrabAndRegisterUnownForm(EncounterInfo *encounterInfo);
 
+// shiny convenience macro
+#define SHINY_VALUE(otid, pid) (((otid & 0xffff0000) >> 16) ^ (otid & 0xffff) ^ ((pid & 0xffff0000) >> 16) ^ (pid & 0xffff))
+#define SHINY_CHECK(otid, pid) (SHINY_VALUE(otid, pid) <= SHINY_ODDS)
+
 /**
  *  @brief check if PartyPokemon is shiny
  *
@@ -1333,6 +1348,37 @@ void LONG_CALL CopyBoxPokemonToPokemon(const struct BoxPokemon *src, struct Part
  */
 int LONG_CALL GetExpByGrowthRateAndLevel(int growthrate, u32 level);
 
+/**
+ *  @brief restore the pp of a BoxPokemon's moves
+ *
+ *  @param boxMon BoxPokemon whose move power points to restore
+ */
+void LONG_CALL RestoreBoxMonPP(struct BoxPokemon *boxMon);
+
+#define LEVEL_UP_LEARNSET_END 0xFFFF
+#define LEVEL_UP_LEARNSET_LEVEL_MASK 0xFFFF0000
+#define LEVEL_UP_LEARNSET_MOVE_MASK 0xFFFF
+#define LEVEL_UP_LEARNSET_LEVEL_SHIFT 16
+#define LEVEL_UP_LEARNSET_MOVE(move) (move & LEVEL_UP_LEARNSET_MOVE_MASK)
+#define LEVEL_UP_LEARNSET_LEVEL(move) ((move & LEVEL_UP_LEARNSET_LEVEL_MASK) >> LEVEL_UP_LEARNSET_LEVEL_SHIFT)
+
+/**
+ *  @brief load the level up learnset to a u32 destination array.  account for form for this one
+ *
+ *  @param species species to load
+ *  @param form form to account for (adjust the species if necessary)
+ *  @param levelUpLearnset u32 array to store the level up learnset to
+ */
+void LONG_CALL LoadLevelUpLearnset_HandleAlternateForm(int species, int form, u32 *levelUpLearnset);
+
+/**
+ *  @brief try appending a move to a mon's learnset
+ *
+ *  @param mon PartyPokemon to try to give a move to
+ *  @param move move index to try to give to the mon
+ *  @return (u16)-1u if the mon's learnset is full, (u16)-2u if the mon already knows the move, and the move index if the mon had the move successfully added
+ */
+u32 LONG_CALL TryAppendMonMove(struct PartyPokemon *mon, u16 move);
 
 #define gIconPalTable ((u8 *)(0x023D8000 + START_ADDRESS))
 
@@ -1684,6 +1730,24 @@ void LONG_CALL ClearMonMoves(struct PartyPokemon *pokemon);
  */
 u8 LONG_CALL GetBoxMonNatureCountMints(struct BoxPokemon *boxMon);
 
+/**
+ *  @brief perform shiny check given ot id and pid
+ *
+ *  @param otid original trainer id
+ *  @param pid personality id
+ *  @returns TRUE if otid and pid show a shiny pokémon; FALSE otherwise
+ */
+BOOL LONG_CALL CalcShininessByOtIdAndPersonality(u32 otid, u32 pid);
+
+/**
+ *  @brief adjust the pid to be shiny such that it keeps substructures in the same order
+ *
+ *  @param otid original trainer id
+ *  @param pid personality id
+ *  @returns adjusted pid to be a shiny without corrupting the mon
+ */
+u32 LONG_CALL GenerateShinyPIDKeepSubstructuresIntact(u32 otId, u32 pid);
+
 // defined in src/moves.c--can't just define in battles, sadly.  does need BattleMove structure from battle.h, though
 /**
  *  @brief get move data field requested from ARC_MOVE_DATA
@@ -1693,6 +1757,8 @@ u8 LONG_CALL GetBoxMonNatureCountMints(struct BoxPokemon *boxMon);
  *  @return requested data
  */
 u32 LONG_CALL GetMoveData(u16 id, u32 field);
+
+
 
 
 #endif

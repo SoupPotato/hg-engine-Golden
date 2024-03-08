@@ -42,7 +42,7 @@ CondChgTable = 0x226CB88;
 ItemDataIndex = 0x2100194;
 
 gf_rand = 0x0201FD44 |1;
-GF_ASSERT = 0x0202551C + 1;
+GF_ASSERT_INTERNAL = 0x0202551C | 1;
 SetPokemonGet = 0x0202A434 |1;
 SetPokemonSee = 0x0202A36C |1;
 UpdatePokedexWithReceivedSpecies = 0x0202ECC0 | 1;
@@ -238,7 +238,7 @@ Battle_GetClientPartyMon = 0x0223a880 | 1;
 /*Battle Script Functions*/
 IncrementBattleScriptPtr = 0x02245508 | 1;
 /*read_battle_script_param = 0x022454E8 | 1;*/
-TagNickParaMake = 0x022522E0 | 1;
+CreateNicknameTag = 0x022522E0 | 1;
 JumpToMoveEffectScript = 0x02245518 | 1;
 BGCallback_Waza = 0x0226748C | 1;
 
@@ -510,3 +510,74 @@ PaletteRAMArray = 0x05000000;
 
 GetMonNature = 0x0206FDFC | 1;
 BattleWork_GetTrainerIndex = 0x0223A9AC | 1;
+
+MIi_CpuClearFast = 0x020D4858;
+SaveDetectFlash = 0x020286F8 | 1;
+SaveData_InitSubstructs = 0x02027E5C | 1;
+//SaveData_InitSlotSpecs = 0x02027EFC | 1;
+Save_GetSaveFilesStatus = 0x020277D4 | 1;
+//Save_LoadDynamicRegion = 0x02027AD4 | 1;
+Save_GetPCBoxModifiedFlags = 0x02027170 | 1;
+Save_CheckFrontierData = 0x020279EC | 1;
+//Save_InitDynamicRegion = 0x020274A8 | 1;
+sSaveDataPtr = 0x021D2228;
+Sys_SetSleepDisableFlag = 0x0201A4BC | 1;
+FlashClobberChunkFooter = 0x02027DF8 | 1;
+FlashWriteChunk = 0x02028758 | 1;
+Sys_ClearSleepDisableFlag = 0x0201A4CC | 1;
+_NowWriteFlash = 0x02027DB4 | 1;
+//Save_PrepareForAsyncWrite = 0x02027550 | 1;
+//Save_WriteFileAsync = 0x02027564 | 1;
+Save_InitDynamicRegion_Internal = 0x02027FA8 | 1;
+//Save_WriteManInit = 0x02027BDC | 1;
+//HandleWriteSaveAsync_PCBoxes = 0x02028968 | 1;
+HandleWriteSaveAsync_NormalData = 0x02027C18 | 1;
+//Save_WriteManFinish = 0x02027CEC | 1;
+CancelAsyncSave = 0x02027D6C | 1;
+SaveArray_CalcCRC16MinusFooter = 0x020275D0 | 1;
+FlashLoadSaveDataFromChunk = 0x02027ABC | 1;
+GF_CalcCRC16 = 0x0201FF98 | 1;
+sub_020310A0 = 0x020310A0 | 1;
+sub_0202C6FC = 0x0202C6FC | 1;
+FlashWriteChunkInternal = 0x020287F8 | 1;
+GetChunkOffsetFromCurrentSaveSlot = 0x020275E0 | 1;
+sub_0202C714 = 0x0202C714 | 1;
+sub_02031084 = 0x02031084 | 1;
+Save_ResetPCBoxModifiedFlags = 0x02027180 | 1;
+CARD_TryWaitBackupAsync = 0x020DD1A4;
+CARD_CancelBackupAsync = 0x020DD1B0;
+CARD_UnlockBackup = 0x020DC9B4;
+OS_ReleaseLockID = 0x020D161C;
+//Save_CalcPCBoxModifiedFlags = 0x02028C70 | 1;
+//PCModifiedFlags_CountModifiedBoxes = 0x02028C9C | 1;
+sub_020271A0 = 0x020271A0 | 1;
+Save_SetAllPCBoxesModified = 0x02027190 | 1;
+//Save_WritePCBoxes = 0x02028AB4 | 1;
+WaitFlashWrite = 0x02028874 | 1;
+//Save_WriteNextPCBox = 0x02028BA8 | 1;
+//Save_WritePCFooter = 0x02028BF8 | 1;
+//PCModifiedFlags_GetIndexOfNthModifiedBox = 0x02028CD4 | 1;
+
+NewMsgDataFromNarc = 0x0200BAF8 | 1;
+ReadMsgDataIntoU16Array = 0x0200BBF4 | 1;
+DestroyMsgData = 0x0200BB44 | 1;
+RestoreBoxMonPP = 0x020728C4 | 1;
+//PCStorage_PlaceMonInBoxFirstEmptySlot = 0x02073BFC | 1;
+//PCStorage_SetBoxModified = 0x020740D8 | 1;
+CopyU16ArrayToString = 0x020269A0 | 1;
+CopyStringToU16Array = 0x02026A68 | 1;
+CheckMoveCallsOtherMove = 0x02252698 | 1;
+StruggleCheck = 0x022517EC | 1;
+
+GfGfxLoader_LoadCharData = 0x020078F0 | 1;
+PaletteData_LoadNarc = 0x02003200 | 1;
+Ground_ActorResourceSet = 0x02265FD4 | 1;
+BattleWorkGroundBGChg = 0x0223B874 | 1;
+GrabTimeOfDayFileAdjustment = 0x0223B52C | 1;
+
+gAnimScrTable = 0x02234DE8;
+DrawFrameAndWindow2	= 0x0200E998 | 1;
+AddWindowParameterized = 0x0201D40C | 1;
+
+LoadLevelUpLearnset_HandleAlternateForm = 0x02071FC8 | 1;
+TryAppendMonMove = 0x0207137C | 1;
